@@ -1,5 +1,7 @@
 package com.scilab.action;
 
+import java.io.File;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.scilab.manager.ScilabTaskHost;
 import com.scilab.manager.ScilabTaskHostService;
@@ -19,7 +21,7 @@ public class TaskAction extends BaseAction {
 		taskname = task.getTaskName();
 		content = task.getTaskContent();
 		userId = userinfo.getUserId();
-		resultFolder=getRequest().getRealPath("/")+"ScilabResult\\"+userId+"\\"+taskname+"\\"+userId+taskname+".txt";
+		resultFolder=getRequest().getRealPath("/")+"ScilabResult"+File.separatorChar+userId+File.separatorChar+taskname+File.separatorChar+userId+taskname+".txt";
 		// userId=1;
 		System.out.println(resultFolder);
 		boolean bool = ScilabTaskHostService.submitTask(taskname, content
