@@ -38,8 +38,9 @@ public class CheckTask extends BaseAction {
 			resultFolder = ScilabTaskHostService.getResult(userId + taskname);
 		else
 			return "resultFail";
-		if(new File("ScilabResult\\"+userId+"\\"+taskname+"\\"+"figure0.png") != null)
-			imgPath="ScilabResult\\"+userId+"\\"+taskname+"\\"+"figure0.png";
+		if(new File(getRequest().getRealPath("/")+"ScilabResult/"+userId+"/"+taskname+"/"+"figure0.png").exists()){
+			System.out.println(getRequest().getRealPath("/")+"ScilabResult/"+userId+"/"+taskname+"/"+"figure0.png");
+			imgPath="ScilabResult/"+userId+"/"+taskname+"/"+"figure0.png";}
 		else
 			imgPath=null;
 		if (resultFolder != null) {
