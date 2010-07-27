@@ -20,7 +20,7 @@ public class TaskInfo {
 	private String resultFolder;
 	private Date saveTime;
 	/**
-	 * 0Î´Íê³É£¬1Íê³É
+	 * 0Î´ï¿½ï¿½É£ï¿½1ï¿½ï¿½ï¿½
 	 */
 	private int taskStatue;
 	@Id
@@ -62,7 +62,7 @@ public class TaskInfo {
 	public void setTaskStatue(int taskStatue) {
 		this.taskStatue = taskStatue;
 	}
-	@Column(length=100, nullable=false)
+	@Column(length=500, nullable=false)
 	public String getResultFolder() {
 		return resultFolder;
 	}
