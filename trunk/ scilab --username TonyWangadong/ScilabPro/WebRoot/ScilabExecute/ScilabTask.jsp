@@ -72,7 +72,6 @@
 			alert("请输入任务名");
 			return false;
 		}
-		$("#checkForm").submit();
 	}
 	function statueAjax(){
 		var taskname = $("#checkForm_taskname").val();
@@ -104,7 +103,7 @@
 	}
 </script>
 	</head>
-	<body>00${sessionScope.user.userName }
+	<body>
 		<s:form action='TaskAction' method='post' id="myForm" target="_blank"
 			theme="simple" onsubmit="return validate()">
 			<p>
