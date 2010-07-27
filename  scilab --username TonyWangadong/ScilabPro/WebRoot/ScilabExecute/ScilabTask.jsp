@@ -22,6 +22,8 @@
 		<meta http-equiv="description" content="This is my page">
 		<script language="Javascript" type="text/javascript" src="<%=basePath%>edit_area/edit_area_full.js"></script>
 		<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
+		<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
+		
 		<script type="text/javascript">
 	editAreaLoader
 			.init( {
@@ -64,6 +66,14 @@
 			alert("请输入SCILAB代码");
 			return false;
 		}
+		var options = {
+				type: "post", url: "<s:url value='/TaskAction!submitTask'/>",
+				success:function(e){
+					$("#myTask").html(e);
+				}
+			};
+			$("#myForm").ajaxSubmit(options);
+			return false;
 	}
 	function validate1(){
 		var taskname = $("#checkForm_taskname").val();
@@ -72,7 +82,16 @@
 			alert("请输入任务名");
 			return false;
 		}
+		var options = {
+				type: "post", url: "<s:url value='/CheckTask!getResult'/>",
+				success:function(e){
+					$("#myResult").html(e);
+				}
+			};
+			$("#checkForm").ajaxSubmit(options);
+			return false;
 	}
+	
 	function statueAjax(){
 		var taskname = $("#checkForm_taskname").val();
 		taskname = $.trim(taskname);
@@ -104,6 +123,7 @@
 </script>
 	</head>
 	<body>
+	<div id="myTask">
 		<s:form action='TaskAction' method='post' id="myForm" target="_blank"
 			theme="simple" onsubmit="return validate()">
 			<p>
@@ -115,8 +135,9 @@
 			<br />
 			<s:submit value='提交任务' method="submitTask"/>
 		</s:form>
+    </div>
 
-
+     <div id="myResult">     
 		<s:form action="CheckTask" method="post" id="checkForm"
 			target="_blank" theme="simple" onsubmit="return validate1()">
 			<p>
@@ -127,5 +148,6 @@
 				<input type="button" value='保存任务' onclick="saveAjax()" />
 			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
 		</s:form>
+	</div>
 	</body>
 </html>
