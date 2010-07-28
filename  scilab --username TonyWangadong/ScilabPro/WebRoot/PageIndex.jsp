@@ -76,17 +76,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 <script>  
 $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});  
 </script> 
-
-	<script type="text/javascript">
-		function myajax(){
-			$.ajax({
-				type: "get", url: "user_pass", data: "param=中文&date="+new Date(),
-				success:function(e){
-					$("#myajaxdiv").html(e);
-				}
-			});
-		}
-	</script>
 <!-- InstanceEndEditable -->
 </head>
 
@@ -105,7 +94,7 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
         <td width="90" height="20"><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationLien','',1)" onmouseover="MM_nbGroup('over','NavigationLien','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationLien.png" alt="NavigationLien" name="NavigationLien" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
+        <td width="90" height="20"><a href="http://www.scilab.org.cn/bbs/" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationPresentation','',1)" onmouseover="MM_nbGroup('over','NavigationPresentation','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationPresentation.png" alt="NavigationPresentation" name="NavigationPresentation" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationContact.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
         </tr>
@@ -264,17 +253,13 @@ window.onload=function(){
     <s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
     <s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
     </s:form>
-      <a href="user_pass">跳过登陆</a>
-      <a href="javascript:myajax()">myajax</a>
-      <div id="myajaxdiv"></div>
       </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
       <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
    
 	<!-- InstanceEndEditable -->
-    <hr align="center" id="horizon" />
-   
+       
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
   </div>    
   <div id="RefreshDiv">
@@ -293,22 +278,27 @@ window.onload=function(){
              alt="The note of Sophie<i><a href='http://ivframes.com/'></a></i>" width="170" height="120" longdesc="images/NOTE.png" />
       </div>      
     <div id="select">
-      <div id="try"><img src="images/Try.png" width="250" height="60" alt="Try" longdesc="images/Try.png" /></div>
-      <div id="share"><img src="images/Share.png" width="250" height="60" alt="Share" longdesc="images/Share.png" /></div>
-      <div id="presentation"><img src="images/Presentation.png" width="250" height="60" alt="Presentation" longdesc="images/Presentation.png" /></div>
-      <div id="How"><img src="images/How.png" width="250" height="60" alt="How" longdesc="images/How.png" /></div>
+      <div id="try"><a href='PageRun.jsp'><img src="images/Try.png" width="250" height="60" alt="Try" longdesc="images/Try.png" /></a></div>
+      <div id="share"><a href='PageFunctionInput.jsp'><img src="images/Share.png" width="250" height="60" alt="Share" longdesc="images/Share.png" /></a></div>
+      <div id="presentation"><a href='PageRun.jsp'><img src="images/Presentation.png" width="250" height="60" alt="Presentation" longdesc="images/Presentation.png" /></a></div>
+      <div id="How"><a href='PageRun.jsp'><img src="images/How.png" width="250" height="60" alt="How" longdesc="images/How.png" /></a></div>
       </div>
-    <br clear="all" />
-    <script> 
+    <p><br clear="all" />
+      <script> 
  	      $('#slideshowHolder').jqFancyTransitions({navigation:false,direction: 'random',links : true,effect: 'curtain' });
-    </script>
-    <br clear="all" /> <!-- InstanceEndEditable -->     
+      </script>
+      </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>模版固定了右下角页面的大小，因此这边需要加点什么<br clear="all" />
+    </p>
+<!-- InstanceEndEditable -->     
   </div>
   <div id="aboutUs">
-    <table width="559" height="100" border="0" align="right">
+    <table width="437" height="100" border="0" align="right">
       <tr>
-        <td height="23">&nbsp;</td>
-        <td>电话:***********</td>
+        <td width="179" height="23">&nbsp;</td>
+        <td width="219">电话:***********</td>
         </tr>
       <tr>
         <td height="22">&nbsp;</td>
@@ -325,7 +315,8 @@ window.onload=function(){
       </table>
   </div>
   </div>
-</div>
+<div id="EcpknLogo"><img src="images/ecpknLOGO.png" width="210" height="100" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+  </div>
 </div>
 </div>
 </body>

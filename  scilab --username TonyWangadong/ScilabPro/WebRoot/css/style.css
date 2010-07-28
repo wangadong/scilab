@@ -41,7 +41,7 @@
 }
 #LoginDiv {
 	float: left;
-	height: 480px;
+	height: 533px;
 	width: 200px;
 	background-color: #fff;
 	font-size: 20px;
@@ -121,16 +121,11 @@
 }
 #RefreshDiv {
 	float: right;
-	height: 260px;
-	width: 600px;
-	border-top-width: 1px;
+	height: 430px;
+	width: 650px;
 	border-bottom-width: 1px;
-	border-left-width: 1px;
-	border-top-style: solid;
 	border-bottom-style: solid;
-	border-top-color: #B8D4E8;
 	border-bottom-color: #B8D4E8;
-	border-left-color: #B8D4E8;
 	margin-right: 80px;
 }
 #RefreshDiv #slideshowHolder {
@@ -156,14 +151,14 @@
 	height: 60px;
 }
 #SharePage {
-	margin-top: 15px;
-	margin-left: 10px;
-	margin-right: 10px;
-	height: 450px;
-	width: 550px;
+	height: 430px;
+	width: 460px;
 	background-color: #F0F5F8;
 	border: 1px ridge #B8D4E8;
 	float: left;
+}
+#SharePage #ShareContent {
+	margin-top: -30px;
 }
 #RefreshDiv #SharePage #form1 table {
 	font-family: Tahoma, Geneva, sans-serif;
@@ -172,6 +167,7 @@
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
+
 #RefreshDiv #SharePage #form1 table tr td #FonctionName {
 	height: 30px;
 	width: 200px;
@@ -189,17 +185,15 @@
 	width: 400px;
 }
 #Explication {
-	width: 200px;
+	width: 180px;
 	float: right;
-	margin-top: 15px;
-	margin-right: 10px;
-	height: 450px;
+	height: 430px;
 	background-color: #F0F5F8;
 	border: 1px solid #B8D4E8;
 }
 #Welcome {
 	height: 30px;
-	width: 200px;
+	width: 150px;
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bolder;
@@ -209,17 +203,12 @@
 	padding-top: 10px;
 }
 #aboutUs table    {
-	font-size: 12px;
+	font-size: 11px;
 	font-family: Verdana, Geneva, sans-serif;
-	margin-top: 10px;
 }
 #aboutUs   {
-	height: 100px;
-	float: right;
-	margin-top: -20px;
-	margin-right: 100px;
-	margin-bottom: 10px;
-	padding-top: 15px;
+	height: 80px;
+	float: left;
 }
 #ecpknlogo {
 	float: right;
@@ -253,4 +242,10 @@
 	margin: 3px 1px;
 
 	
+}
+#EcpknLogo {
+	float: right;
+	height: 100px;
+	width: 210px;
+	margin-right: 80px;
 }
