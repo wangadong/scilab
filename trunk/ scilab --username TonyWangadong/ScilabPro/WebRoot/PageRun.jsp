@@ -6,7 +6,8 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/PageModel.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/PageModel.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <base href="<%=basePath%>"/>
 	<meta http-equiv="pragma" content="no-cache"/>
@@ -71,8 +72,9 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <title>My JSP 'MyJsp.jsp' starting page</title>
- <script language="Javascript" type="text/javascript"
-			src="<%=basePath%>edit_area/edit_area_full.js"></script>
+		<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
+		<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
+        <script language="Javascript" type="text/javascript" src="<%=basePath%>edit_area/edit_area_full.js"></script>
 		<script type="text/javascript">
 	editAreaLoader
 			.init( {
@@ -88,7 +90,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 				toolbar : "new_document, save, load, |, search, go_to_line, |, undo, redo, |, select_font, |, highlight",
 				load_callback : "my_load",
 				save_callback : "my_save",
-				submit_callback : "my_submit",
 				plugins : "charmap",
 				charmap_default : "arrows",
 				is_multi_files : false
@@ -102,6 +103,73 @@ function MM_nbGroup(event, grpName) { //v6.0
 		editAreaLoader
 				.setValue(id,
 						"The content is loaded from the load_callback function into EditArea");
+	}
+	function validate(){
+		var taskName = $("#myForm_taskName").val();
+		taskName = $.trim(taskName);
+		var taskContent = $("#scilabtask_1").val();
+		taskContent = $.trim(taskContent);
+		if (taskName.length==0) {
+			alert("请输入任务名");
+			return false;
+		}
+		if (taskContent.length==0) {
+			alert("请输入SCILAB代码");
+			return false;
+		}
+		var options = {
+				type: "post", url: "<s:url value='/TaskAction!submitTask'/>",
+				success:function(e){
+					$("#myTask").html(e);
+				}
+			};
+			$("#myForm").ajaxSubmit(options);
+			return false;
+	}
+	function validate1(){
+		var taskname = $("#checkForm_taskname").val();
+		taskname = $.trim(taskname);
+		if (taskname.length==0) {
+			alert("请输入任务名");
+			return false;
+		}
+		var options = {
+				type: "post", url: "<s:url value='/CheckTask!getResult'/>",
+				success:function(e){
+					$("#myResult").html(e);
+				}
+			};
+			$("#checkForm").ajaxSubmit(options);
+			return false;
+	}
+	
+	function statueAjax(){
+		var taskname = $("#checkForm_taskname").val();
+		taskname = $.trim(taskname);
+		if (taskname.length==0) {
+			alert("请输入任务名");
+			return false;
+		}
+		$.ajax({
+			type: "post", url: "CheckTask!getStatue", data: "taskname="+taskname+"&date="+new Date(),
+			success:function(e){
+				$("#myajaxdiv").html(e);
+			}
+		});
+	}
+	function saveAjax(){
+		var taskname = $("#checkForm_taskname").val();
+		taskname = $.trim(taskname);
+		if (taskname.length==0) {
+			alert("请输入任务名");
+			return false;
+		}
+		$.ajax({
+			type: "post", url: "CheckTask!saveTask", data: "taskname="+taskname+"&date="+new Date(),
+			success:function(e){
+			$("#myajaxdiv").html(e);
+		}
+	});
 	}
 </script>
 <!-- InstanceEndEditable -->
@@ -122,7 +190,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td width="90" height="20"><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationLien','',1)" onmouseover="MM_nbGroup('over','NavigationLien','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationLien.png" alt="NavigationLien" name="NavigationLien" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
+        <td width="90" height="20"><a href="http://www.scilab.org.cn/bbs/" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationPresentation','',1)" onmouseover="MM_nbGroup('over','NavigationPresentation','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationPresentation.png" alt="NavigationPresentation" name="NavigationPresentation" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationContact.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
         </tr>
@@ -274,9 +342,16 @@ window.onload=function(){
     </div>
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
-  <s:form action="SignoutAction" method="post">
-    		<s:submit value="退出" method="signout"/>
-    	</s:form>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>
+      <s:form action="SignoutAction" method="post">
+        <s:submit value="退出" method="signout"/>
+      </s:form>
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp; </p>
     <hr align="center" id="horizon" />
 	<!-- InstanceEndEditable -->
        
@@ -284,34 +359,39 @@ window.onload=function(){
   </div>    
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="EditRegion2" -->
-<s:form action='TaskAction' method='post' id="myForm" target="_blank"
-			theme="simple">
+<div id="myTask">
+		<s:form action='TaskAction' method='post' id="myForm" target="_blank"
+			theme="simple" onsubmit="return validate()">
 			<p>
 				Task name:
-				<input type="text" name="task.taskName" />
+				<input type="text" name="task.taskName" id="myForm_taskName" />
 			</p>
-			<textarea id="scilabtask_1" style="height: 300px; width: 600px;"
+			<textarea id="scilabtask_1" style="height: 300px; width: 590px;"
 				name="task.taskContent">you can write scilab codes here!</textarea>
 			<br />
-			<s:submit value='提交任务' method="submitTask" />
+			<s:submit value='提交任务' method="submitTask"/>
 		</s:form>
+    </div>
+
+     <div id="myResult">     
 		<s:form action="CheckTask" method="post" id="checkForm"
-			target="_blank" theme="simple">
+			target="_blank" theme="simple" onsubmit="return validate1()">
 			<p>
 				taskname for check:
-				<input type="text" name="taskname" />
+				<input type="text" name="taskname" id="checkForm_taskname"/>
 				<s:submit value='查看结果' method="getResult" />
-				<s:submit value='查询状态' method="getStatue" />
-				<s:submit value='保存任务' method="saveTask" />
-			</p>
-		</s:form>  
+				<input type="button" value='查询状态' onclick="statueAjax()" />
+				<input type="button" value='保存任务' onclick="saveAjax()" />
+			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
+		</s:form>
+	</div>
 		<!-- InstanceEndEditable -->     
   </div>
   <div id="aboutUs">
-    <table width="559" height="100" border="0" align="right">
+    <table width="437" height="100" border="0" align="right">
       <tr>
-        <td height="23">&nbsp;</td>
-        <td>电话:***********</td>
+        <td width="179" height="23">&nbsp;</td>
+        <td width="219">电话:***********</td>
         </tr>
       <tr>
         <td height="22">&nbsp;</td>
@@ -328,7 +408,8 @@ window.onload=function(){
       </table>
   </div>
   </div>
-</div>
+<div id="EcpknLogo"><img src="images/ecpknLOGO.png" width="210" height="100" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+  </div>
 </div>
 </div>
 </body>

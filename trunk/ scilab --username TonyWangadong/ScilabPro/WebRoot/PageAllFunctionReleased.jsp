@@ -89,7 +89,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td width="90" height="20"><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationLien','',1)" onmouseover="MM_nbGroup('over','NavigationLien','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationLien.png" alt="NavigationLien" name="NavigationLien" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
+        <td width="90" height="20"><a href="http://www.scilab.org.cn/bbs/" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationPresentation','',1)" onmouseover="MM_nbGroup('over','NavigationPresentation','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationPresentation.png" alt="NavigationPresentation" name="NavigationPresentation" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationContact.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
         </tr>
@@ -241,18 +241,25 @@ window.onload=function(){
     </div>
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
-<s:form action="SignoutAction" method="post">
-    		<s:submit value="退出" method="signout"/>
-    	</s:form>
+此处需要一直显示着用户名等信息
+    <s:form action="SignoutAction" method="post">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>
+      <s:submit value="退出" method="signout" cssStyle="margin-right:80px"/>
+    	</p>
+    </s:form>
     <hr align="center" id="horizon" />
 <!-- InstanceEndEditable -->
        
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
   </div>    
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="EditRegion2" --><table border="1" width="1077" height="463px" >
+<!-- InstanceBeginEditable name="EditRegion2" -->
+<table border="1" width="640" height="430px" >
   <tr>
-  <td width="100%">
+  <td width="650px">
   <c:if test="${empty list}">
   对不起，暂时还没有相关资源</br>
   </c:if>
@@ -268,10 +275,10 @@ window.onload=function(){
   <!-- InstanceEndEditable -->     
   </div>
   <div id="aboutUs">
-    <table width="559" height="100" border="0" align="right">
+    <table width="437" height="100" border="0" align="right">
       <tr>
-        <td height="23">&nbsp;</td>
-        <td>电话:***********</td>
+        <td width="179" height="23">&nbsp;</td>
+        <td width="219">电话:***********</td>
         </tr>
       <tr>
         <td height="22">&nbsp;</td>
@@ -288,7 +295,8 @@ window.onload=function(){
       </table>
   </div>
   </div>
-</div>
+<div id="EcpknLogo"><img src="images/ecpknLOGO.png" width="210" height="100" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+  </div>
 </div>
 </div>
 </body>

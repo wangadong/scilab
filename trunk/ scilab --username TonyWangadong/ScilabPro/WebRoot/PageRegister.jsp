@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
@@ -257,13 +256,8 @@ window.onload=function(){
     <s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
     <s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
     </s:form>
-      <a href="user_pass">跳过登陆</a>
-      <a href="javascript:myajax()">myajax</a>
-      <div id="myajaxdiv"></div>
-      </div>
+   </div>
     <hr align="center" id="horizon" />
-    <div id="registerIcon" align="center">
-      <a href="EliseRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
 	  <!-- InstanceEndEditable -->
        
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
@@ -302,7 +296,7 @@ window.onload=function(){
 				</tr>
 			</table>
 		</s:form>
-		<s:fielderror cssStyle="color:red" />   
+		<s:fielderror cssStyle="color:red" />
 		<!-- InstanceEndEditable -->     
   </div>
   <div id="aboutUs">

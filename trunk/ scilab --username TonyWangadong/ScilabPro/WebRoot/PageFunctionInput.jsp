@@ -88,7 +88,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td width="90" height="20"><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationLien','',1)" onmouseover="MM_nbGroup('over','NavigationLien','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationLien.png" alt="NavigationLien" name="NavigationLien" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
+        <td width="90" height="20"><a href="http://www.scilab.org.cn/bbs/" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationPresentation','',1)" onmouseover="MM_nbGroup('over','NavigationPresentation','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationPresentation.png" alt="NavigationPresentation" name="NavigationPresentation" border="0"/></a></td>
         <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationContact.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
         </tr>
@@ -240,9 +240,15 @@ window.onload=function(){
     </div>
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
-  <s:form action="SignoutAction" method="post">
-    		<s:submit value="退出" method="signout"/>
-    	</s:form>
+  此处需要一直显示着用户名等信息
+    <s:form action="SignoutAction" method="post">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>
+      <s:submit value="退出" method="signout" cssStyle="margin-right:80px"/>
+    	</p>
+    </s:form>
     <hr align="center" id="horizon" />
 	<!-- InstanceEndEditable -->
        
@@ -251,35 +257,37 @@ window.onload=function(){
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="EditRegion2" -->
  <div id="SharePage">
-    <s:form action="FunInputAction" namespace="/" method="post">
-    	<s:textfield name="functionInfo.funName" label="函数名" size="10"  maxlength="100" cssStyle="width:450px"></s:textfield><br/>
-    	<s:textarea name="functionInfo.funContent" label="函数本体" cols="50" rows="20" ></s:textarea><br/>
-    	<s:textarea name="functionInfo.funExample" label="使用范例" cols="50" rows="20"></s:textarea><br/>
-    	<s:textarea name="functionInfo.funHelp" label="备注说明"cols="50" rows="20"></s:textarea><br/>
+ <div id="ShareContent" align="left" >
+   <s:form action="FunInputAction" namespace="/" method="post" cssStyle="Padding-left:10px">
+      <s:textfield name="functionInfo.funName" label="函数名" size="10"  maxlength="100" cssStyle="width:200px"></s:textfield><br/>
+    	<s:textarea name="functionInfo.funContent" label="函数本体" cols="42" rows="8" ></s:textarea><br/>
+    	<s:textarea name="functionInfo.funExample" label="使用范例" cols="42" rows="8"></s:textarea><br/>
+    	<s:textarea name="functionInfo.funHelp" label="备注说明"cols="42" rows="7"></s:textarea><br/>
     	<s:submit value="提交发布" method="Input"></s:submit>
     </s:form>
   </div>
+  </div>
   <div id="Explication">
-  <div id="Welcome">欢迎来到函数发布页面！</div>
-  <table width="205" height="401" border="0">
+  <div id="Welcome">欢迎发布函数！</div>
+  <table width="167" height="386" border="0">
     <tr>
-      <td height="132">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请将您要添加的函数的各项信息：函数名、函数本体、函数的帮助文档、以及适当的使用范例填写至对应框体内 。</td>
+      <td width="161" height="102" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请将您要添加的函数的各项信息：函数名、函数本体、函数的帮助文档、以及适当的使用范例填写至对应框体内 。</td>
     </tr>
     <tr>
-      <td height="145">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意不要漏填！请您提供完整的函数信息以方便别人查看和管理员审核！若您上传的不符合基本要求，管理员将删除您的上传！</td>
+      <td height="116" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意不要漏填！请您提供完整的函数信息以方便别人查看和管理员审核！若您上传的不符合基本要求，管理员将删除您的上传！</td>
     </tr>
     <tr>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您提交发布的函数网站管理员将在第一时间审核是否适合发布，审核完毕后将通过把结果通知给您，请确认您注册的邮箱地址是有效的！</td>
+      <td height="136">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您提交发布的函数网站管理员将在第一时间审核是否适合发布，审核完毕后将通过把结果通知给您，请确认您注册的邮箱地址是有效的！</td>
     </tr>
   </table>
   </div>   
   <!-- InstanceEndEditable -->     
   </div>
   <div id="aboutUs">
-    <table width="559" height="100" border="0" align="right">
+    <table width="437" height="100" border="0" align="right">
       <tr>
-        <td height="23">&nbsp;</td>
-        <td>电话:***********</td>
+        <td width="179" height="23">&nbsp;</td>
+        <td width="219">电话:***********</td>
         </tr>
       <tr>
         <td height="22">&nbsp;</td>
@@ -296,7 +304,8 @@ window.onload=function(){
       </table>
   </div>
   </div>
-</div>
+<div id="EcpknLogo"><img src="images/ecpknLOGO.png" width="210" height="100" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+  </div>
 </div>
 </div>
 </body>
