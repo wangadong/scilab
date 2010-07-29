@@ -1,6 +1,7 @@
 package com.scilab.action;
 
 import java.io.File;
+import java.util.Random;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.scilab.manager.ScilabTaskHost;
@@ -20,13 +21,21 @@ public class TaskAction extends BaseAction {
 		UserInfo userinfo = (UserInfo) getSession().getAttribute("user");
 		taskname = task.getTaskName();
 		content = task.getTaskContent();
-		userId = userinfo.getUserId();
+		if(userinfo==null){
+			UserInfo userinfo_tmp=new UserInfo();
+			userinfo_tmp.setUserId((long)new Random().nextInt(10000)+10000);
+			System.out.println(userinfo_tmp.getUserId());
+			userinfo_tmp.setUserName("usertmp");
+			getSession().setAttribute("usertmp", userinfo);
+			userId= userinfo_tmp.getUserId();
+		}else{
+			userId = userinfo.getUserId();
+		}
 		resultFolder=getRequest().getRealPath("/")+"ScilabResult"+File.separatorChar+userId+File.separatorChar+taskname+File.separatorChar+userId+taskname+".txt";
 		// userId=1;
 		System.out.println(resultFolder);
 		boolean bool = ScilabTaskHostService.submitTask(taskname, content
 				.replaceAll("\r\n", ""), userId, resultFolder);
-		getSession().setAttribute("task", task);
 		setMessage("任务名称：" + taskname + "  " + "scilab代码：" + content);
 		// ajax
 		if (bool)

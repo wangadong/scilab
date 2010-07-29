@@ -32,6 +32,9 @@ public class CheckTask extends BaseAction {
 	public String getResult() {
 		imgPath=null;
 		userinfo = (UserInfo) getSession().getAttribute("user");
+		if(userinfo==null){
+			userinfo=(UserInfo)getSession().getAttribute("usertmp");
+		}
 		userId=userinfo.getUserId();
 		System.out.println(userId + taskname);
 		if(ScilabTaskHostService.isExist(userId+taskname))
@@ -120,6 +123,8 @@ public class CheckTask extends BaseAction {
 	public String saveTask() throws IOException {
 		userinfo = (UserInfo) getSession().getAttribute("user");
 		userId=userinfo.getUserId();
+		if(userId == null)
+			userId=(long)1;
 		System.out.println("save ici" + userId + taskname);
 		String saveStatue = "保存失败";
 		if (ScilabTaskHost.getInstance().getTaskMap().containsKey(
