@@ -19,19 +19,24 @@ public class TaskAction extends BaseAction {
 
 	public String submitTask() {
 		UserInfo userinfo = (UserInfo) getSession().getAttribute("user");
+		if (userinfo == null)
+			userinfo = (UserInfo) getSession().getAttribute("usertmp");
 		taskname = task.getTaskName();
 		content = task.getTaskContent();
-		if(userinfo==null){
-			UserInfo userinfo_tmp=new UserInfo();
-			userinfo_tmp.setUserId((long)new Random().nextInt(10000)+10000);
+		if (userinfo == null) {
+			UserInfo userinfo_tmp = new UserInfo();
+			userinfo_tmp.setUserId((long) new Random().nextInt(10000) + 10000);
 			System.out.println(userinfo_tmp.getUserId());
 			userinfo_tmp.setUserName("usertmp");
-			getSession().setAttribute("usertmp", userinfo);
-			userId= userinfo_tmp.getUserId();
-		}else{
+			getSession().setAttribute("usertmp", userinfo_tmp);
+			userId = userinfo_tmp.getUserId();
+
+		} else {
 			userId = userinfo.getUserId();
 		}
-		resultFolder=getRequest().getRealPath("/")+"ScilabResult"+File.separatorChar+userId+File.separatorChar+taskname+File.separatorChar+userId+taskname+".txt";
+		resultFolder = getRequest().getRealPath("/") + "ScilabResult"
+				+ File.separatorChar + userId + File.separatorChar + taskname
+				+ File.separatorChar + userId + taskname + ".txt";
 		// userId=1;
 		System.out.println(resultFolder);
 		boolean bool = ScilabTaskHostService.submitTask(taskname, content
