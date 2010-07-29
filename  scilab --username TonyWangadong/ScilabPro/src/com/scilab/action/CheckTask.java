@@ -28,24 +28,26 @@ public class CheckTask extends BaseAction {
 	private File file;
 	private String imgPath;
 
-
 	public String getResult() {
-		imgPath=null;
+		imgPath = null;
 		userinfo = (UserInfo) getSession().getAttribute("user");
-		if(userinfo==null){
-			userinfo=(UserInfo)getSession().getAttribute("usertmp");
+		if (userinfo == null) {
+			userinfo = (UserInfo) getSession().getAttribute("usertmp");
 		}
-		userId=userinfo.getUserId();
+		userId = userinfo.getUserId();
 		System.out.println(userId + taskname);
-		if(ScilabTaskHostService.isExist(userId+taskname))
+		if (ScilabTaskHostService.isExist(userId + taskname)) {
 			resultFolder = ScilabTaskHostService.getResult(userId + taskname);
-		else
+		} else
 			return "resultFail";
-		if(new File(getRequest().getRealPath("/")+"ScilabResult/"+userId+"/"+taskname+"/"+"figure0.png").exists()){
-			System.out.println(getRequest().getRealPath("/")+"ScilabResult/"+userId+"/"+taskname+"/"+"figure0.png");
-			imgPath="ScilabResult/"+userId+"/"+taskname+"/"+"figure0.png";}
-		else
-			imgPath=null;
+		if (new File(getRequest().getRealPath("/") + "ScilabResult/" + userId
+				+ "/" + taskname + "/" + "figure0.png").exists()) {
+			System.out.println(getRequest().getRealPath("/") + "ScilabResult/"
+					+ userId + "/" + taskname + "/" + "figure0.png");
+			imgPath = "ScilabResult/" + userId + "/" + taskname + "/"
+					+ "figure0.png";
+		} else
+			imgPath = null;
 		if (resultFolder != null) {
 			try {
 				file = new File(resultFolder);
@@ -58,7 +60,7 @@ public class CheckTask extends BaseAction {
 					result.append(line);
 					result.append("<br>");
 				}
-				resultContent=result.toString();
+				resultContent = result.toString();
 				System.out.println(resultContent);
 			} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
@@ -100,15 +102,20 @@ public class CheckTask extends BaseAction {
 	}
 
 	public String getStatue() throws IOException {
-		// userId=userinfo.getUserId();
-		userId = (long) 1;
-		getResponse().setContentType("text/html; charset=utf-8"); 
-		getResponse().setHeader("Cache-Control", "no-cache"); //不定义缓存
+		userinfo = (UserInfo) getSession().getAttribute("user");
+		if (userinfo == null) {
+			userinfo = (UserInfo) getSession().getAttribute("usertmp");
+		}
+		userId = userinfo.getUserId();
+		System.out.println(userId + taskname);
+		getResponse().setContentType("text/html; charset=utf-8");
+		getResponse().setHeader("Cache-Control", "no-cache"); // 不定义缓存
 		getResponse().setCharacterEncoding("utf-8");
 		PrintWriter out = getResponse().getWriter();
-		
-		
-		if (ScilabTaskHostService.getTaskStatue(userId + taskname)) {
+
+		if (!ScilabTaskHostService.isExist(userId + taskname))
+			taskStatue = "无此任务,请先提交后再查询";
+		else if (ScilabTaskHostService.getTaskStatue(userId + taskname)) {
 			taskStatue = "任务已完成";
 
 		} else {
@@ -122,29 +129,36 @@ public class CheckTask extends BaseAction {
 
 	public String saveTask() throws IOException {
 		userinfo = (UserInfo) getSession().getAttribute("user");
-		userId=userinfo.getUserId();
-		if(userId == null)
-			userId=(long)1;
-		System.out.println("save ici" + userId + taskname);
-		String saveStatue = "保存失败";
-		if (ScilabTaskHost.getInstance().getTaskMap().containsKey(
-				userId + taskname)) {
-			Task task = ScilabTaskHostService.getTaskByQueryId(userId
-					+ taskname);
-			TaskInfo taskinfo = new TaskInfo();
-			taskinfo.setTaskName(task.getTaskName());
-			taskinfo.setUserId(userId);
-			taskinfo.setTaskStatue(1);
-			taskinfo.setTaskContent(task.getContent());
-			taskinfo.setResultFolder(task.getResultFolder());
-			taskinfo.setSaveTime(new Date());
-			TaskDao dao = new TaskDao();
-			if (dao.saveOrUpdateTask(taskinfo)) {
-				saveStatue="保存成功";
-			}
+		if (userinfo == null) {
+			userinfo = (UserInfo) getSession().getAttribute("usertmp");
 		}
-		getResponse().setContentType("text/html; charset=utf-8"); 
-		getResponse().setHeader("Cache-Control", "no-cache"); //不定义缓存
+		userId = userinfo.getUserId();
+		String saveStatue;
+		if (userId<10000) {
+			System.out.println(userId + taskname);
+			System.out.println("save ici" + userId + taskname);
+			saveStatue = "保存失败";
+			if (ScilabTaskHost.getInstance().getTaskMap().containsKey(
+					userId + taskname)) {
+				Task task = ScilabTaskHostService.getTaskByQueryId(userId
+						+ taskname);
+				TaskInfo taskinfo = new TaskInfo();
+				taskinfo.setTaskName(task.getTaskName());
+				taskinfo.setUserId(userId);
+				taskinfo.setTaskStatue(1);
+				taskinfo.setTaskContent(task.getContent());
+				taskinfo.setResultFolder(task.getResultFolder());
+				taskinfo.setSaveTime(new Date());
+				TaskDao dao = new TaskDao();
+				if (dao.saveOrUpdateTask(taskinfo)) {
+					saveStatue = "保存成功";
+				}
+			}
+		}else{
+			saveStatue="对不起，游客无法保存任务";
+		}
+		getResponse().setContentType("text/html; charset=utf-8");
+		getResponse().setHeader("Cache-Control", "no-cache"); // 不定义缓存
 		getResponse().setCharacterEncoding("utf-8");
 		PrintWriter out = getResponse().getWriter();
 		out.write(saveStatue);
