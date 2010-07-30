@@ -1,48 +1,64 @@
 @charset "utf-8";
 /* CSS Document */
+/* Download by http://www.codefans.net */
+img,a img{ border:none;}
+a{ text-decoration:none; color:#fff;}
+a:hover{ text-decoration:underline; color:#fff;}
+.fcnt{
+	display:block;
+	height:220px;
+	width:642px;
+	position:relative;
+	overflow:hidden;
+}
+.fcnt .mimg{ float:left; width:642px; height:340px; overflow:hidden;}
+.fcnt .mimg div{ display:none;}
+.mimg img{ width:642px; height:340px;} 
+.fcnt ul{ float:right; width:152px; height:340px;}
+*html .fcnt ul{ position:absolute; right:0; top:0; width:152px; height:340px;}
+.fcnt li{ display:block; height:82px; width:150px; margin-bottom:5px; cursor:pointer; overflow:hidden;}
+.fcnt li img{ width:150px; height:82px;filter:alpha(opacity=70);  -moz-opacity: 0.7; opacity: 0.7;   }
+.fcnt li.cur img{ width:142px; height:75px; margin:4px 0 0 4px;filter:alpha(opacity=100);  -moz-opacity: 1; opacity: 1;  }
+#tri{ position:absolute; top:0; right:2px; z-index:1000; width:155px; height:82px; background:url(images/point.png) no-repeat; cursor:pointer;}
+*html #tri {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="images/point.png");background:none;}
+.fcnt dl{ position:absolute; bottom:1px; left:0px; width:611px; height:80px; background:url(images/shadow.png) no-repeat; display:none;}
+.fcnt dt{ line-height:38px; text-align:center; font-size:22px; font-family:"黑体"; font-weight:900;}
+.fcnt dd{ line-height:24px; text-align:center; font-size:14px;}
+*html .fcnt dl{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="images/shadow.png");background:none;}
 #nav td:hover{border:1px solid #194bb4;}
-#grandbackground{
-	background-color:#666;
+body{
+	background:#999999;
+	width:857px;
+	margin:auto;
 	height: 900px;
-	width: 100%;
 }
 #global{
-	width:1024px;
+	width:857px;
 	height:900px;
 	background-color:#fff;
 }
 #logo {
-	height: 100px;
-	width: 860px;
-	margin-top: 3px;
-	margin-left: 0px;
-}
-#ecpknLOGO {
-	width: 300px;
 	height: 80px;
-	float: right;
-}
-#wholeLogo {
-	height: 110px;
+	width: 857px;
 }
 #navigation    {
 	height: 38px;
-	width: 1024px;
+	width: 860px;
 }
 #NewfunctionAndGrandpicture {
 	height: 220px;
-	background-image: url(../images/ImageMiddle.jpg);
+	background-image: url(../images/ImageMiddle1.jpg);
+	width: 857px;
 }
 #Bandpicture    {
-	width: 600px;
+	width: 642px;
 	height: 220px;
 	float: right;
-	margin-right: 85px;
 }
 #LoginDiv {
 	float: left;
-	height: 533px;
-	width: 200px;
+	height: 560px;
+	width: 213px;
 	background-color: #fff;
 	font-size: 20px;
 	font-style: normal;
@@ -61,7 +77,6 @@
 	border-right-color: #7396CC;
 	border-bottom-color: #7396CC;
 	border-left-color: #7396CC;
-	margin-left: 90px;
 }
 #LoginDiv form table {
 	width: 200px;
@@ -121,22 +136,22 @@
 }
 #RefreshDiv {
 	float: right;
-	height: 430px;
-	width: 650px;
+	height: 455px;
+	width: 640px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #B8D4E8;
-	margin-right: 80px;
 }
 #RefreshDiv #slideshowHolder {
 	width: 350px;
 	float: left;
 	height: 240px;
+	margin-left: 20px;
 }
 #RefreshDiv #select {
 	width: 250px;
 	height: 240px;
-	margin-left: 350px;
+	margin-left: 390px;
 }
 #RefreshDiv #select #try {
 	height: 60px;
@@ -150,14 +165,14 @@
 #RefreshDiv #select #How  {
 	height: 60px;
 }
-#SharePage {
+#RefreshDiv #SharePage {
 	height: 430px;
 	width: 460px;
 	background-color: #F0F5F8;
 	border: 1px ridge #B8D4E8;
 	float: left;
 }
-#SharePage #ShareContent {
+#RefreshDiv #SharePage #ShareContent {
 	margin-top: -30px;
 }
 #RefreshDiv #SharePage #form1 table {
@@ -185,7 +200,7 @@
 	width: 400px;
 }
 #Explication {
-	width: 180px;
+	width: 170px;
 	float: right;
 	height: 430px;
 	background-color: #F0F5F8;
@@ -207,45 +222,15 @@
 	font-family: Verdana, Geneva, sans-serif;
 }
 #aboutUs   {
-	height: 80px;
+	height: 95px;
+	margin-left: 1px;
+	z-index: -1;
 	float: left;
-}
-#ecpknlogo {
-	float: right;
-	height: 100px;
-	width: 450px;
-	margin-top: -100px;
-}
-
-.container, .container *{margin:0; padding:0;}
- 
-.container{width:600px; height:220px; overflow:hidden;}
- 
-.slider{
-	position:absolute;
-	left: 238px;
-	top: -24px;
-}
-.slider li{ list-style:none;display:inline;}
-.slider img{ width:600px; height:220px; display:block;}
- 
-.num{ position:absolute; right:5px; bottom:5px;font-size: 1px;}
-.num li{
-	float: left;
-	text-align: center;
-	line-height: 1px;
-	width: 1px;
-	height: 1px;
-	font-family: Arial;
-	font-size: 1px;
-	overflow: hidden;
-	margin: 3px 1px;
-
-	
 }
 #EcpknLogo {
-	float: right;
-	height: 100px;
-	width: 210px;
-	margin-right: 80px;
+	height: 59px;
+	margin-top: -80px;
+	float: left;
+	margin-left: 440px;
+	z-index: -2;
 }

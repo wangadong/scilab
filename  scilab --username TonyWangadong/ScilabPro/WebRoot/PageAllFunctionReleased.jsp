@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
@@ -16,6 +15,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script> 
+    <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -71,188 +72,103 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
   <title>>My JSP 'FunctionList.jsp' starting page</title>
+  <script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
+  <script type="text/javascript">
+		function login(){
+			var userName = $("#userName").val();
+			userName = $.trim(userName);
+			if(userName.length<1){
+				alert("请输入用户名！");
+				return false;
+			}
+			var password = $("#password").val();
+			if(password.length<1){
+				alert("请输入密码！");
+				return false;
+			}
+			var options = {
+				type: "post", url: "<s:url value='/LoginAction!login'/>",
+				success:function(e){
+					$("#loginDiv").html(e);
+				}
+			};
+			$("#loginForm").ajaxSubmit(options);
+			return false;
+		}
+</script>
 <!-- InstanceEndEditable -->
 </head>
 
 <body>
-<div id="grandbackground"  align="center">
   <div id="global">
-<div id="GlobalWhite">
   <div id="imageTop"><img src="images/ImageTop.gif" width="858" height="3" align="top" /></div>
   <div id="logo">
-    <img src="images/LOGO.png" name="OurLogo" width="318" height="86" hspace="7" vspace="7" align="left" id="OurLogo" /></div>
+    <img src="images/LOGO.png" name="OurLogo" width="198" height="80" hspace="7" align="left" id="OurLogo" /></div>
   <div id="navigation">
     <table border="0" cellpadding="0" cellspacing="1" id="nav">
       <tr>
-        <td width="90" height="20"><a href="PageIndex.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationIndex','',1)" onmouseover="MM_nbGroup('over','NavigationIndex','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationIndex.png" alt="NavigationIndex" name="NavigationIndex" border="0" id="index"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationRun','',1)" onmouseover="MM_nbGroup('over','NavigationRun','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationRun.png" alt="NavigationRun" name="NavigationRun" border="0"id="operation" /></a></td>
-        <td width="90" height="20"><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationLien','',1)" onmouseover="MM_nbGroup('over','NavigationLien','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationLien.png" alt="NavigationLien" name="NavigationLien" border="0"/></a></td>
-        <td width="90" height="20"><a href="http://www.scilab.org.cn/bbs/" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationPresentation','',1)" onmouseover="MM_nbGroup('over','NavigationPresentation','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationPresentation.png" alt="NavigationPresentation" name="NavigationPresentation" border="0"/></a></td>
-        <td width="90" height="20"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationContact.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
-        </tr>
-      </table>
+        <td width="90"><a href="PageIndex.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationIndex','',1)" onmouseover="MM_nbGroup('over','NavigationIndex','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationIndex.png" alt="NavigationIndex" name="NavigationIndex" border="0" id="index"/></a></td>
+        <td width="90" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationRun','',1)" onmouseover="MM_nbGroup('over','NavigationRun','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationRun.png" alt="NavigationRun" name="NavigationRun" border="0"id="operation" /></a></td>
+        <td width="90" ><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
+        <td width="90" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
+        <td width="90" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationLien','',1)" onmouseover="MM_nbGroup('over','NavigationLien','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationLien.png" alt="NavigationLien" name="NavigationLien" border="0"/></a></td>
+        <td width="90"><a href="http://www.scilab.org.cn/bbs/" target="_top" onclick="MM_nbGroup('down','group1','NavigationCommunicate','',1)" onmouseover="MM_nbGroup('over','NavigationCommunicate','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationCommunicate.png" alt="NavigationCommunicate" name="NavigationCommunicate" border="0"/></a></td>
+        <td width="90"><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationPresentation','',1)" onmouseover="MM_nbGroup('over','NavigationPresentation','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationPresentation.png" alt="NavigationPresentation" name="NavigationPresentation" border="0"/></a></td>
+        <td width="90" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationContact.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
+      </tr>
+    </table>
     </div>
   <div id="NewfunctionAndGrandpicture">
     <div id="Bandpicture">
-  <div class="container" id="idTransformView">
-    <ul class="slider" id="idSlider">
-    <li><img src="images/Picture1.jpg" width="452" height="131"/></li>
-      <li><img src="images/Picture2.jpg"/></li>
-      <li><img src="images/Picture3.jpg"/></li>
-      </ul>
-    <ul class="num" id="idNum">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      </ul>
-  </div>
-      
-  <script type="text/javascript"> 
-var $ = function (id) {
-	return "string" == typeof id ? document.getElementById(id) : id;
-};
- 
-var Class = {
-  create: function() {
-	return function() {
-	  this.initialize.apply(this, arguments);
-	}
-  }
-}
- 
-Object.extend = function(destination, source) {
-	for (var property in source) {
-		destination[property] = source[property];
-	}
-	return destination;
-}
- 
-var TransformView = Class.create();
-TransformView.prototype = {
-  //容器对象,滑动对象,切换参数,切换数量
-  initialize: function(container, slider, parameter, count, options) {
-	if(parameter <= 0 || count <= 0) return;
-	var oContainer = $(container), oSlider = $(slider), oThis = this;
- 
-	this.Index = 0;//当前索引
-	
-	this._timer = null;//定时器
-	this._slider = oSlider;//滑动对象
-	this._parameter = parameter;//切换参数
-	this._count = count || 0;//切换数量
-	this._target = 0;//目标参数
-	
-	this.SetOptions(options);
-	
-	this.Up = !!this.options.Up;
-	this.Step = Math.abs(this.options.Step);
-	this.Time = Math.abs(this.options.Time);
-	this.Auto = !!this.options.Auto;
-	this.Pause = Math.abs(this.options.Pause);
-	this.onStart = this.options.onStart;
-	this.onFinish = this.options.onFinish;
-	
-	oContainer.style.overflow = "hidden";
-	oContainer.style.position = "relative";
-	
-	oSlider.style.position = "absolute";
-	oSlider.style.top = oSlider.style.left = 0;
-  },
-  //设置默认属性
-  SetOptions: function(options) {
-	this.options = {//默认值
-		Up:			true,//是否向上(否则向左)
-		Step:		5,//滑动变化率
-		Time:		10,//滑动延时
-		Auto:		true,//是否自动转换
-		Pause:		2000,//停顿时间(Auto为true时有效)
-		onStart:	function(){},//开始转换时执行
-		onFinish:	function(){}//完成转换时执行
-	};
-	Object.extend(this.options, options || {});
-  },
-  //开始切换设置
-  Start: function() {
-	if(this.Index < 0){
-		this.Index = this._count - 1;
-	} else if (this.Index >= this._count){ this.Index = 0; }
-	
-	this._target = -1 * this._parameter * this.Index;
-	this.onStart();
-	this.Move();
-  },
-  //移动
-  Move: function() {
-	clearTimeout(this._timer);
-	var oThis = this, style = this.Up ? "top" : "left", iNow = parseInt(this._slider.style[style]) || 0, iStep = this.GetStep(this._target, iNow);
-	
-	if (iStep != 0) {
-		this._slider.style[style] = (iNow + iStep) + "px";
-		this._timer = setTimeout(function(){ oThis.Move(); }, this.Time);
-	} else {
-		this._slider.style[style] = this._target + "px";
-		this.onFinish();
-		if (this.Auto) { this._timer = setTimeout(function(){ oThis.Index++; oThis.Start(); }, this.Pause); }
-	}
-  },
-  //获取步长
-  GetStep: function(iTarget, iNow) {
-	var iStep = (iTarget - iNow) / this.Step;
-	if (iStep == 0) return 0;
-	if (Math.abs(iStep) < 1) return (iStep > 0 ? 1 : -1);
-	return iStep;
-  },
-  
-  
-};
- 
-window.onload=function(){
-	function Each(list, fun){
-		for (var i = 0, len = list.length; i < len; i++) { fun(list[i], i); }
-	};
-	
-	var objs = $("idNum").getElementsByTagName("li");
-	
-	var tv = new TransformView("idTransformView", "idSlider", 220, 3, {
-		onStart : function(){ Each(objs, function(o, i){ o.className = tv.Index == i ? "on" : ""; }) }//按钮样式
-	});
-	
-	tv.Start();
-	
-	Each(objs, function(o, i){
-		o.onmouseover = function(){
-			o.className = "on";
-			tv.Auto = false;
-			tv.Index = i;
-			tv.Start();
-		}
-		o.onmouseout = function(){
-			o.className = "";
-			tv.Auto = true;
-			tv.Start();
-		}
-	})
-}
-</script>
-      </div>
+ <div class="fcnt" id="ppt">
+    	<div class="mimg" id="mpc">
+        	<div style="display:block"><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
+            <div><a href="PageRun.jsp"><img src="images/Picture2.jpg" alt="" /></a></div>
+            <div><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
+            <div><a href="PageRun.jsp"><img src="images/Picture3.jpg" alt="" /></a></div>
+        </div>
+        <dl style="display:block">
+        	<dt><a href="PageRun.jsp">SciCloud</a></dt>
+            <dd>TeleScilab</dd>
+        </dl>
+        <dl>
+        	<dt><a href="PageRun.jsp">SciCloud</a></dt>
+            <dd>TeleScilab</dd>
+        </dl>
+        <dl>
+        	<dt><a href="PageRun.jsp">SciCloud</a></dt>
+            <dd>TeleScilab</dd>
+        </dl>
+        <dl>
+        	<dt><a href="PageRun.jsp">SciCloud</a></dt>
+            <dd>TeleScilab</dd>
+        </dl>
+        <div id="tri"></div>
+        <ul>
+        	<li class="cur"><img src="images/s0.jpg" alt="" /></li>
+            <li><img src="images/s2.jpg" alt="" /></li>
+            <li><img src="images/s1.jpg" alt="" /></li>
+            <li><img src="images/s3.jpg" alt="" /></li>
+        </ul>
+    </div>
+    </div>
     </div>
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
-此处需要一直显示着用户名等信息
-    <s:form action="SignoutAction" method="post">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>
-      <s:submit value="退出" method="signout" cssStyle="margin-right:80px"/>
-    	</p>
+<div id="LoginPersonal" align="center">
+      <p>登陆个人帐户：</p>
+  <s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
+    <s:textfield name="user.userName" id="userName" label="帐户"  cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    <s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    <s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
     </s:form>
-    <hr align="center" id="horizon" />
+      </div>
+  <hr align="center" id="horizon" />
+    <div id="registerIcon" align="center">
+      <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
 <!-- InstanceEndEditable -->
-       
+  <p>&nbsp;</p>
+    <p>&nbsp;</p>
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
   </div>    
   <div id="RefreshDiv">
@@ -272,32 +188,29 @@ window.onload=function(){
   </td>
   </tr>
   </table>
-  <!-- InstanceEndEditable -->     
+  <!-- InstanceEndEditable --><a href="PageModel1.dwt">PageModel1</a>     
   </div>
   <div id="aboutUs">
-    <table width="437" height="100" border="0" align="right">
+    <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
         <td width="219">电话:***********</td>
-        </tr>
+      </tr>
+      <tr>
+        <td height="19">&nbsp;</td>
+        <td>邮箱:**********@gmail.com</td>
+      </tr>
+      <tr>
+        <td height="23">Copyright 2010©www.****.com</td>
+        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
+      </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
-        </tr>
-      <tr>
-        <td height="23">&nbsp;</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
-        </tr>
-      <tr>
-        <td height="22">Copyright 2010 © www.****.com</td>
         <td>邮编：100191</td>
-        </tr>
-      </table>
+      </tr>
+    </table>
   </div>
   </div>
-<div id="EcpknLogo"><img src="images/ecpknLOGO.png" width="210" height="100" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
-  </div>
-</div>
-</div>
+<div id="EcpknLogo"><img src="images/ecpknLOGO.png" width="200" height="59" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
 </body>
 <!-- InstanceEnd --></html>
