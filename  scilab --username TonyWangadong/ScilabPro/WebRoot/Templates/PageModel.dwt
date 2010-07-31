@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
@@ -130,13 +129,20 @@ function MM_nbGroup(event, grpName) { //v6.0
     </div>
     </div>
   <div id="LoginDiv">
-  <!-- TemplateBeginEditable name="EditRegion1" -->EditRegion1<!-- TemplateEndEditable -->
+  <!-- TemplateBeginEditable name="EditRegion1" --><!-- TemplateEndEditable --><a href="../PageModel.dwt">PageModel</a>    
+  <div id="LoginPersonal" align="center">
+   <p>登陆个人帐户：</p>
+  <jsp:include page="login.jsp"></jsp:include> 
+      </div>
+  <hr align="center" id="horizon" />
+    <div id="registerIcon" align="center">
+      <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
   <p>&nbsp;</p>
     <p>&nbsp;</p>
     <div id="黑白LOGO" align="center"><img src="../images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
   </div>    
   <div id="RefreshDiv">
-<!-- TemplateBeginEditable name="EditRegion2" -->EditRegion2<!-- TemplateEndEditable --><a href="../PageModel1.dwt">PageModel1</a>     
+<!-- TemplateBeginEditable name="EditRegion2" -->EditRegion2<!-- TemplateEndEditable --><a href="../PageModel.dwt">PageModel</a>     
   </div>
   <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">

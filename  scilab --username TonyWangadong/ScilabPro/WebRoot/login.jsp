@@ -44,14 +44,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			return false;
 		}
 	</script>
+	<style type="text/css">
+		body{
+	width:210px;
+	margin:auto;
+	height: 300px;
+}
+  </style>
+
+
   </head>
   
-  <body>
+  <body >
   	<div id="loginDiv">
     	<s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
-    		<s:textfield name="user.userName" id="userName" label="用户名"/>
-    		<s:password name="user.password" id="password" label="密码"/>
-    		<s:submit value="登陆" method="login"/>
+    		<s:textfield name="user.userName" id="userName" label="帐户" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    		<s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    		<s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
     	</s:form>
     </div>
   </body>

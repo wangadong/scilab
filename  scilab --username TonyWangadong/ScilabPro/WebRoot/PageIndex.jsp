@@ -73,37 +73,11 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <title>Index</title>
-<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
-
 <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>  	
 <script src="js/jqFancyTransitions.1.8.min.js" type="text/javascript"></script> 
 <script>  
 $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});  
 </script> 
-
-<script type="text/javascript">
-		function login(){
-			var userName = $("#userName").val();
-			userName = $.trim(userName);
-			if(userName.length<1){
-				alert("请输入用户名！");
-				return false;
-			}
-			var password = $("#password").val();
-			if(password.length<1){
-				alert("请输入密码！");
-				return false;
-			}
-			var options = {
-				type: "post", url: "<s:url value='/LoginAction!login'/>",
-				success:function(e){
-					$("#loginDiv").html(e);
-				}
-			};
-			$("#loginForm").ajaxSubmit(options);
-			return false;
-		}
-</script>
 <!-- InstanceEndEditable -->
 </head>
 
@@ -162,20 +136,14 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
     </div>
     </div>
   <div id="LoginDiv">
-  <!-- InstanceBeginEditable name="EditRegion1" -->
-   <div id="LoginPersonal" align="center">
-      <p>登陆个人帐户：</p>
-  <s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
-    <s:textfield name="user.userName" id="userName" label="帐户"  cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    <s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    <s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
-    </s:form>
+  <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
+  <div id="LoginPersonal" align="center">
+   <p>登陆个人帐户：</p>
+  <jsp:include page="login.jsp"></jsp:include> 
       </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
       <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
-   
-	<!-- InstanceEndEditable -->
   <p>&nbsp;</p>
     <p>&nbsp;</p>
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
@@ -210,7 +178,7 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
     <p>&nbsp;</p>
     <p>模版固定了右下角页面的大小，因此这边需要加点什么<br clear="all" />
     </p>
-<!-- InstanceEndEditable --><a href="PageModel1.dwt">PageModel1</a>     
+<!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>     
   </div>
   <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
