@@ -131,18 +131,16 @@ function MM_nbGroup(event, grpName) { //v6.0
     </div>
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
-   此处需要一直显示着用户名等信息
-    <s:form action="SignoutAction" method="post">
+   	<!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
+  <div id="LoginPersonal" align="center">
+   <p>登陆个人帐户：</p>
+  <jsp:include page="login.jsp"></jsp:include> 
+      </div>
+  <hr align="center" id="horizon" />
+    <div id="registerIcon" align="center">
+      <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
+  <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>
-      <s:submit value="退出" method="signout" cssStyle="margin-right:80px"/>
-    	</p>
-    </s:form>
-    <hr align="center" id="horizon" />
-	<!-- InstanceEndEditable -->
-       
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
   </div>    
   <div id="RefreshDiv">
@@ -162,7 +160,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   </td>
   </tr>
   </table>   
-  <!-- InstanceEndEditable --><a href="PageModel1.dwt">PageModel1</a>     
+  <!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>     
   </div>
   <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
