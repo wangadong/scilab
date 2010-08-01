@@ -104,7 +104,7 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
     <div id="Bandpicture">
  <div class="fcnt" id="ppt">
     	<div class="mimg" id="mpc">
-        	<div style="display:block"><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
+        	<div style="display:block"><a href="PageRun.jsp"><img src="images/Picture0.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture2.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture3.jpg" alt="" /></a></div>
@@ -139,9 +139,8 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
   <div id="LoginPersonal" align="center">
    <p>登陆个人帐户：</p>
-   <s:if test="#session.user!=null"><jsp:include page="loginsucc.jsp"></jsp:include></s:if>
-   <s:else><jsp:include page="login.jsp"></jsp:include> </s:else>
-   </div>
+  <jsp:include page="login.jsp"></jsp:include> 
+      </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
       <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
@@ -181,7 +180,7 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
     </p>
 <!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>     
   </div>
-  <div id="aboutUs">
+<div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
