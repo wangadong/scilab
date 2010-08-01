@@ -3,6 +3,7 @@ package com.scilab.dao.impl;
 import java.util.List;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.exception.DataException;
@@ -118,6 +119,30 @@ public class BaseDao implements IBaseDao {
 			HibernateSessionFactory.closeSession();
 		}
 		return b;
+	}
+	public List findByHql(String hql, Object[] obj) {
+		Session session = null;
+		Transaction tx = null;
+		List list = null;
+		try {
+			session = HibernateSessionFactory.getSession();
+			tx = session.beginTransaction();
+			Query query = session.createQuery(hql);
+			if(obj!=null){
+				for(int i=0; i<obj.length; i++){
+					query.setParameter(i, obj[i]);
+				}
+			}
+			list = query.list();
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			HibernateSessionFactory.closeSession();
+		}
+		return list;
 	}
 
 }

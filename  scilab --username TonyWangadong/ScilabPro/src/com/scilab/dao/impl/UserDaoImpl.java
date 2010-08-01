@@ -1,43 +1,22 @@
 package com.scilab.dao.impl;
 
-import org.hibernate.HibernateException;  
+import java.util.List;
+
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 import com.scilab.dao.UserDao;
-import com.scilab.pojo.UserInfo;
 import com.scilab.hibernate.HibernateSessionFactory;
+import com.scilab.pojo.UserInfo;
 
-public class UserDaoImpl implements UserDao {
+public class UserDaoImpl extends BaseDao implements UserDao{
 
 	public UserInfo getUserInfo(long id) {
-		Session session = null;
-		UserInfo uinfo = null;
-		try{
-			session = HibernateSessionFactory.getSession();
-			uinfo = (UserInfo)session.get(UserInfo.class, id);
-		}catch(HibernateException e){
-			e.printStackTrace();
-		}finally{
-			HibernateSessionFactory.closeSession();
-		}
-		return uinfo;
+		return (UserInfo)this.findById(UserInfo.class, id);
 	}
 
-	public void saveUser(UserInfo uinfo) {
-		Session session = null;
-		Transaction tx = null;
-		try{
-			session = HibernateSessionFactory.getSession();
-			tx = session.beginTransaction();
-			session.save(uinfo);
-			tx.commit();
-		}catch(HibernateException e){
-			if(tx!=null) tx.rollback();
-			e.printStackTrace();
-		}finally{
-			HibernateSessionFactory.closeSession();
-		}
+	public boolean saveUser(UserInfo uinfo) {
+		return this.saveObj(uinfo);
 	}
 
 	
@@ -53,6 +32,15 @@ public class UserDaoImpl implements UserDao {
 			HibernateSessionFactory.closeSession();
 		}
 		return user;
+	}
+	
+	public boolean userNameisExist(String userName){
+		String hql = "from UserInfo where userName=?";
+		List list = this.findByHql(hql, new Object[]{userName});
+		if(list.size()==0){
+			return false;
+		}
+		return true;
 	}
 	
 }

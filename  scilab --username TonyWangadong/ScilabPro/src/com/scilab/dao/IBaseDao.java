@@ -16,4 +16,6 @@ public interface IBaseDao{
 	
 	public abstract boolean deleObj(Object obj);
 	
+	public abstract List findByHql(String hql, Object[] obj);
+	
 }

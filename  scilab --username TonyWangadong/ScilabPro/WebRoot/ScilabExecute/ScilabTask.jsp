@@ -23,6 +23,12 @@
 		<script language="Javascript" type="text/javascript" src="<%=basePath%>edit_area/edit_area_full.js"></script>
 		<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
 		<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
+		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
+		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
+		<!--[if IE]>
+			<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom-ie.css'/>" title="example" />
+		<![endif]-->
+		<script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
 		
 		<script type="text/javascript">
 	editAreaLoader
@@ -69,7 +75,11 @@
 		var options = {
 				type: "post", url: "<s:url value='/TaskAction!submitTask'/>",
 				success:function(e){
-					$("#myTask").html(e);
+					if($("#myTask div").size()==0){
+						$("#myTask").html(e);
+					}else{
+						$(e).insertBefore("#myTask div:eq(0)");
+					}
 				}
 			};
 			$("#myForm").ajaxSubmit(options);
@@ -106,24 +116,13 @@
 			}
 		});
 	}
-	function saveAjax(){
-		var taskname = $("#checkForm_taskname").val();
-		taskname = $.trim(taskname);
-		if (taskname.length==0) {
-			alert("请输入任务名");
-			return false;
-		}
-		$.ajax({
-			type: "post", url: "CheckTask!saveTask", data: "taskname="+taskname+"&date="+new Date(),
-			success:function(e){
-			$("#myajaxdiv").html(e);
-		}
+	$(function(){
+		$.fn.colorbox.settings.bgOpacity = "0.3";
 	});
-	}
 </script>
 	</head>
 	<body>
-	<div id="myTask">
+
 		<s:form action='TaskAction' method='post' id="myForm" target="_blank"
 			theme="simple" onsubmit="return validate()">
 			<p>
@@ -135,7 +134,7 @@
 			<br />
 			<s:submit value='提交任务' method="submitTask"/>
 		</s:form>
-    </div>
+
 
      <div id="myResult">     
 		<s:form action="CheckTask" method="post" id="checkForm"
@@ -149,5 +148,6 @@
 			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
 		</s:form>
 	</div>
+		<div id="myTask"></div>
 	</body>
 </html>

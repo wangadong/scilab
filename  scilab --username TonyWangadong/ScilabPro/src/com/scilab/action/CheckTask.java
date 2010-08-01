@@ -142,7 +142,11 @@ public class CheckTask extends BaseAction {
 					userId + taskname)) {
 				Task task = ScilabTaskHostService.getTaskByQueryId(userId
 						+ taskname);
-				TaskInfo taskinfo = new TaskInfo();
+				//判断该用户的该任务名是否存在
+				TaskInfo taskinfo = dao.isExist(task.getTaskName(), userId);
+				if(taskinfo == null){
+					taskinfo = new TaskInfo();
+				}
 				taskinfo.setTaskName(task.getTaskName());
 				taskinfo.setUserId(userId);
 				taskinfo.setTaskStatue(1);
