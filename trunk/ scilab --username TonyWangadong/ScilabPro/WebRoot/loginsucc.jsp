@@ -27,15 +27,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	height: 300px;
 }
   </style>
-
+<script type="text/javascript">
+		function signout(){
+			
+			var options = {
+				type: "post", url: "<s:url value='/SignoutAction!signout'/>",
+				success:function(e){
+					$("#LoginPersonal").html(e);
+				}
+			};
+			$("#signoutForm").ajaxSubmit(options);
+			return false;
+		}
+	</script>
   </head>
   
   <body>
   	<s:if test="#session.user!=null">用户“${sessionScope.user.userName}”登陆成功！</s:if>
   	<s:else>登陆失败！</s:else>
-  	<s:form action="SignoutAction" method="post">
+  	<div id=signoutDiv>
+    	<s:form action="SignoutAction" method="post" id="signoutForm" onsubmit="return signout()">
     		<s:submit value="退出" method="signout"/>
     	</s:form>
+    </div>
   	<s:a href="./ScilabExecute/ScilabTask.jsp"></>Click Here TO Run Scilab Online!<br>
   	<a href="fun_getAllFunctions">查看资源</a></br><a href="fun_getReleasedFunList">查看所有资源</a></s:a>
   </body>

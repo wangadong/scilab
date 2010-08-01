@@ -20,18 +20,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<style type="text/css">
-		body{
-	width:210px;
-	margin:auto;
-	height: 300px;
-}
-  </style>	
+<script type="text/javascript">
+		function signout(){
+			
+			var options = {
+				type: "post", url: "<s:url value='/SignoutAction!signout'/>",
+				success:function(e){
+					$("#signoutDiv").html(e);
+				}
+			};
+			$("#signoutForm").ajaxSubmit(options);
+			return false;
+		}
+	</script>
   </head>
   
   <body>
-    	<s:form action="SignoutAction" method="post">
+  		<div id=signoutDiv>
+    	<s:form action="SignoutAction" method="post" id="signoutForm">
     		<s:submit value="退出" method="signout"/>
     	</s:form>
+    	</div>
   </body>
 </html>
