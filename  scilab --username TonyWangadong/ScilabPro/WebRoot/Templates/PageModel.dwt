@@ -97,7 +97,7 @@ function MM_nbGroup(event, grpName) { //v6.0
     <div id="Bandpicture">
  <div class="fcnt" id="ppt">
     	<div class="mimg" id="mpc">
-        	<div style="display:block"><a href="../PageRun.jsp"><img src="../images/Picture1.jpg" alt="" /></a></div>
+        	<div style="display:block"><a href="../PageRun.jsp"><img src="../images/Picture0.jpg" alt="" /></a></div>
             <div><a href="../PageRun.jsp"><img src="../images/Picture2.jpg" alt="" /></a></div>
             <div><a href="../PageRun.jsp"><img src="../images/Picture1.jpg" alt="" /></a></div>
             <div><a href="../PageRun.jsp"><img src="../images/Picture3.jpg" alt="" /></a></div>
@@ -144,7 +144,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div id="RefreshDiv">
 <!-- TemplateBeginEditable name="EditRegion2" -->EditRegion2<!-- TemplateEndEditable --><a href="../PageModel.dwt">PageModel</a>     
   </div>
-  <div id="aboutUs">
+<div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
