@@ -35,13 +35,26 @@ public class TaskDao extends BaseDao {
 			TaskInfo taskinfo=(TaskInfo)it.next();
 			deleObj((TaskInfo)taskinfo);
 		}
-		Session session = null;
-		session = HibernateSessionFactory.getSession();
 		
 		if(getAllItems("from TaskInfo task where task.userId="+userId).isEmpty())
 			return true;
 		else return false;
 		
+	}
+	
+	/**
+	 * 判断某一用户的某一任务名是否存在
+	 * @param taskName 任务名
+	 * @param userId 用户ID
+	 * @return 如果存在返回TaskInfo对象，否则返回null
+	 */
+	public TaskInfo isExist(String taskName, long userId){
+		String hql = "from TaskInfo where taskName=? and userId=?";
+		List list = this.findByHql(hql, new Object[]{taskName, userId});
+		if(list.size()!=0){
+			return (TaskInfo)list.get(0);
+		}
+		return null;
 	}
 
 	/*public static void main(String[] args) {

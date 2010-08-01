@@ -139,8 +139,9 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
   <div id="LoginPersonal" align="center">
    <p>登陆个人帐户：</p>
-  <jsp:include page="login.jsp"></jsp:include> 
-      </div>
+   <s:if test="#session.user!=null"><jsp:include page="loginsucc.jsp"></jsp:include></s:if>
+   <s:else><jsp:include page="login.jsp"></jsp:include> </s:else>
+   </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
       <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>

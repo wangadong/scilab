@@ -18,7 +18,7 @@ public class LoginAction extends BaseAction {
 	private UserInfo user;
 	
 	public String login(){
-		System.out.println(user.getUserName()+user.getPassword());
+		getSession().removeAttribute("user");
 		try{UserInfo uinfo = dao.login(user.getUserName(), user.getPassword());
 		if(uinfo!=null){
 			getSession().setAttribute("user", uinfo);
