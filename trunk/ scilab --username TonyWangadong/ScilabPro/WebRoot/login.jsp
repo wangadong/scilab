@@ -44,15 +44,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			return false;
 		}
 	</script>
-	<style type="text/css">
-		body{
-	width:210px;
-	margin:auto;
-	height: 300px;
-}
-  </style>
-
-
   </head>
   
   <body >

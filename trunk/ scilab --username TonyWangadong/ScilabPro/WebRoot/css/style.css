@@ -29,8 +29,9 @@ a:hover{ text-decoration:underline; color:#fff;}
 body{
 	background:#999999;
 	width:857px;
-	margin:auto;
 	height: 900px;
+	margin-top: 0px;
+	margin: auto;
 }
 #global{
 	width:857px;
