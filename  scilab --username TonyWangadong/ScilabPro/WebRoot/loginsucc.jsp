@@ -51,6 +51,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</s:form>
     </div>
   	<s:a href="./ScilabExecute/ScilabTask.jsp"></>Click Here TO Run Scilab Online!<br>
-  	<a href="fun_getAllFunctions">查看资源</a></br><a href="fun_getReleasedFunList">查看所有资源</a></s:a>
+  	<a href="fun_getAllFunctions">查看资源</a></br><a href="fun_getReleasedFunList">查看所有资源</a></br><a href="task_getAllTask?id=${task.taskId}">查看任务</a></s:a>
   </body>
 </html>
