@@ -58,7 +58,7 @@ body{
 }
 #LoginDiv {
 	float: left;
-	height: 560px;
+	height: 558px;
 	width: 213px;
 	background-color: #fff;
 	font-size: 20px;
@@ -66,18 +66,14 @@ body{
 	font-weight: bolder;
 	font-variant: normal;
 	color: #333;
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
+	border-right-width: 1px;
+	border-left-width: 1px;
 	border-top-style: none;
 	border-right-style: solid;
-	border-bottom-style: solid;
 	border-left-style: solid;
-	border-top-color: #7396CC;
-	border-right-color: #7396CC;
-	border-bottom-color: #7396CC;
-	border-left-color: #7396CC;
+	border-top-color: #B8D4E8;
+	border-right-color: #B8D4E8;
+	border-left-color: #B8D4E8;
 }
 #LoginDiv form table {
 	width: 200px;
@@ -225,12 +221,14 @@ body{
 #aboutUs   {
 	height: 95px;
 	z-index: -1;
-	float: left;
+	float: right;
+	margin-right: 200px;
 }
 
 #EcpknLogo {
 	height: 59px;
 	margin-top: -80px;
-	float: right;
+	float: left;
 	z-index: -2;
+	margin-left: 440px;
 }
