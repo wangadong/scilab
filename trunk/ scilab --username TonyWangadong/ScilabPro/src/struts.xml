@@ -43,4 +43,10 @@
 			<result name="allfunList">/AllFunctionList.jsp</result>
 		</action>
 	</package>
+	<package name="myTaskDetail" extends="struts-default" namespace="/">
+	    <action name="task_*" method="{1}" class="com.scilab.action.TaskDetailAction">
+			<result name="taskList">/TaskList.jsp</result>
+			<result name="taskDetail">/TaskDetail.jsp</result>
+		</action>
+	</package>
 </struts> 
