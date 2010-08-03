@@ -17,6 +17,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script> 
     <script type="text/javascript" src="js/common.js"></script>
+    	<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
+	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
     <script type="text/javascript">
 <!--
 function MM_preloadImages() { //v3.0

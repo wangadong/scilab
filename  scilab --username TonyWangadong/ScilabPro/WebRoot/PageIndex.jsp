@@ -18,6 +18,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script> 
     <script type="text/javascript" src="js/common.js"></script>
+    	<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
+	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
     <script type="text/javascript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -73,7 +75,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <title>Index</title>
-<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>  	
 <script src="js/jqFancyTransitions.1.8.min.js" type="text/javascript"></script> 
 <script>  
 $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});  
@@ -138,7 +139,7 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
   <div id="LoginPersonal" align="center">
-   <p>登陆个人帐户：</p>
+   <p>登陆个人帐户2：</p>
   <jsp:include page="login.jsp"></jsp:include> 
       </div>
   <hr align="center" id="horizon" />
