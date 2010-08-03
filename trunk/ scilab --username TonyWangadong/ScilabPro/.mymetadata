@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="ScilabProOfficial"
+  name="ScilabPro"
   id="myeclipse.1278743994109"
   context-root="/ScilabPro"
   j2ee-spec="5.0"
-  archive="ScilabProOfficial.war">
+  archive="ScilabPro.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
