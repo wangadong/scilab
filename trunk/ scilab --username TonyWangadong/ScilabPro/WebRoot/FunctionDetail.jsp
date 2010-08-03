@@ -21,29 +21,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-</head>  
+  </head>  
   <body>
-  <table border="1" width="1077" height="463px" >
-  <tr>
-  <td width="100%">
-    ${userInfo.userName }
-    </br>
-    ${functionInfo.funContent} 
-    </br>
-    ${functionInfo.funExample} 
-    </br>
-    ${functionInfo.funHelp} 
-    </br>
-    ${functionInfo.funStatue} 
-    </br>
-    ${functionInfo.saveTime}
-     </br>
-  <c:if test="${sessionScope.user.userId == functionInfo.userId}">
-  <a href="fun_deleteById?id=${functionInfo.funId}">删除</a>
-  </c:if>
-   <br>
-  </td>
-  </tr>
+  <table border=1 cellspacing=0 cellpadding=0 width="500" height="387">
+  
+  
+   <tr><td>发布者</td><td>${userInfo.userName}</td></tr>
+    
+   <tr><td>源码</td><td>${functionInfo.funContent}</td></tr> 
+   
+   <tr><td>实例</td><td> ${functionInfo.funExample}</td></tr>
+   
+   <tr><td>帮助</td><td>${functionInfo.funHelp}</td></tr>
+  
+   <tr><td>发布状态</td><td>
+   <c:choose>
+   <c:when test="${functionInfo.funStatue==0}">未发布
+   </c:when>
+   <c:otherwise>    已发布 
+   </c:otherwise>
+   </c:choose></td></tr>   
+   <tr><td>发布时间</td><td>${functionInfo.saveTime}</td></tr>
+  <tr><td><c:if test="${sessionScope.user.userId == functionInfo.userId}">
+  <a href="fun_deleteById?id=${functionInfo.funId}">删除</a></c:if></td></tr>
+  
   </table>
   </body>
 </html>
