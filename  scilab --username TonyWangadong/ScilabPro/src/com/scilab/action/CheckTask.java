@@ -67,7 +67,7 @@ public class CheckTask extends BaseAction {
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				return "resultFail";
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
