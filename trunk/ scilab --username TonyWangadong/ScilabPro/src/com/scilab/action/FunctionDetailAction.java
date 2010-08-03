@@ -42,8 +42,10 @@ public class FunctionDetailAction extends BaseAction {
         	String str_id = getRequest().getParameter("id");
         	Long id = Long.parseLong(str_id);
         	FunctionInfo functionInfo = (FunctionInfo)dao.findById(FunctionInfo.class, id);
+        	Long userId=functionInfo.getUserId();
+        	UserInfo userInfo = (UserInfo)dao.findById(UserInfo.class, userId);
         	getRequest().setAttribute("functionInfo", functionInfo);
-        	
+        	getRequest().setAttribute("userInfo", userInfo);
         	return "funDetail";
         	}
         public String deleteById()
