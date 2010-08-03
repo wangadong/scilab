@@ -27,13 +27,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <tr>
   <td width="100%">
   <c:if test="${empty list}">
-  对不起，暂时还没有相关资源</br>
+     对不起，暂时还没有相关资源
   <a href="FunInput.jsp">上传</a></c:if>
   
   <c:forEach var="fun" items="${list}"> 
-    ${fun.funName} 
-  <a href="fun_getDetail?id=${fun.funId}">查看</a>
-   <br>
+  <tr>${fun.funName}<a href="fun_getDetail?id=${fun.funId}">查看</a></tr>
+  <br>
   </c:forEach>
   </td>
   </tr>

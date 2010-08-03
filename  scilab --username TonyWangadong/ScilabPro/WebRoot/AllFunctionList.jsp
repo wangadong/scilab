@@ -23,20 +23,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>  
   <body>
-  <table border="1" width="1077" height="463px" >
-  <tr>
-  <td width="100%">
+  <table cellspacing=0 cellpadding=0 border=1 width="1088" height="363px">
+  
+  
   <c:if test="${empty list}">
-  对不起，暂时还没有相关资源</br>
+    对不起，暂时还没有相关资源
   </c:if>
   
   <c:forEach var="fun" items="${list}"> 
-    ${fun.funName} 
-  <a href="fun_getReleasedFunDetail?id=${fun.funId}">查看</a>
-   <br>
+  <tr><td>${fun.funName}</td> 
+  <td><a href="fun_getReleasedFunDetail?id=${fun.funId}">查看</a></td></tr>
+  <br>
   </c:forEach>
-  </td>
-  </tr>
+ 
+  
   </table>
   </body>
 </html>
