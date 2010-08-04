@@ -139,7 +139,7 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
   <div id="LoginPersonal" align="center">
-   <p>登陆个人帐户2：</p>
+   <p>登陆个人帐户：</p>
   <jsp:include page="login.jsp"></jsp:include> 
       </div>
   <hr align="center" id="horizon" />
