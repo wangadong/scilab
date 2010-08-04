@@ -8,7 +8,7 @@
 			+ path + "/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
 		<base href="<%=basePath%>">
@@ -25,9 +25,7 @@
 		<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
 		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
 		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
-		<!--[if IE]>
-			<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom-ie.css'/>" title="example" />
-		<![endif]-->
+		
 		<script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
 		
 		<script type="text/javascript">

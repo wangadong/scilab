@@ -16,6 +16,6 @@
 	Because IE does not support CSS sprites while using the filter attribute 
 	this area is for declaring hover-state backgrounds so they can be preloaded
 */
-#preloadPrevious{background-image:url(images/previousHover.png);}
-#preloadNext{background-image:url(images/nextHover.png);}
-#preloadClose{background-image:url(images/closeHover.png);}
+#preloadPrevious{background-image:url(/ScilabPro/js/plugin/colorbox/images/previousHover.png);}
+#preloadNext{background-image:url(/ScilabPro/js/plugin/colorbox/images/nextHover.png);}
+#preloadClose{background-image:url(/ScilabPro/js/plugin/colorbox/images/closeHover.png);}

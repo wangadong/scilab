@@ -28,6 +28,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<s:if test="imgPath!=null"><img src="<%=basePath%>${imgPath}"></s:if>
   	<s:else><br/>No IMAGE!  </s:else>	
   	<s:property value="imgPath"/>
-  	<s:a href="./ScilabExecute/ScilabTask.jsp"></>返回运算页面</s:a>
   </body>
 </html>
