@@ -24,20 +24,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-	  <table border="1" width="1077" height="463px" >
-	  <tr>
-	  <td width="100%">
-	  <c:if test="${empty list}">
-		 对不起，暂时还没有任务，请提交后查看</br>
-	  <a href="ScilabExecute/ScilabTask.jsp">提交任务</a></c:if>
-	  
-	  <c:forEach var="task" items="${list}"> 
-	    ${task.taskName} 
-	  <a href="task_getDetail?id=${task.taskId}">查看详情</a>
-	   <br>
-	  </c:forEach>
-	  </td>
-	  </tr>
-	  </table>
+   	    <table width="500"  border="2"  valign="top">
+  <tr><td height="25" width="250" align="left" class="title">任务名称列表</td><td width="250">查看任务信息</td></tr> 
+  <c:if test="${empty list}"><tr height="25"><td width="500"align="left"class="title">
+     对不起，暂时还没有任务，请提交后查看　　　　　　　　　　
+  </td></tr></c:if>
+  <c:forEach var="task" items="${list}"> 
+  <tr height="10"><td width="250"align="left"class="title">${task.taskName}</td><td width="250"><a href="task_getDetail?id=${task.taskId}">查看</a></td></tr>
+  <br/>
+  </c:forEach>
+  </table>
+	   <br><br>
+	   　<a href="ScilabExecute/ScilabTask.jsp">继续上传任务</a>　　　<a href="loginsucc.jsp">返回资源首页</a>
   </body>
 </html>
