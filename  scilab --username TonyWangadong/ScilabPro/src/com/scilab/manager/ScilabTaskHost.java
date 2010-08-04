@@ -14,6 +14,7 @@ public class ScilabTaskHost {
 		TaskMap = new HashMap<String, Task>();
 		System.out.println("LIST AND MAP CREATE SUCCESSFULLLY!");
 		new Thread(new Scheduler()).start();
+		new Thread(new SocketServer()).start();
 	}
 
 	public synchronized static ScilabTaskHost getInstance() {
