@@ -23,20 +23,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>  
   <body>
-  <table cellspacing=0 cellpadding=0 border=1 width="1088" height="363px">
+  <table width="500"  border="2"  valign="top" >
   
+  <tr><td height="25" width="250" align="left" class="title">函数名称列表</td><td width="250">查看函数信息</td></tr> 
+  <c:if test="${empty list}"><tr height="25"><td width="500"align="left"class="title">
+     对不起，暂时还没有相关资源　　　　　　　　　　
+  </td></tr></c:if>
   
-  <c:if test="${empty list}">
-    对不起，暂时还没有相关资源
-  </c:if>
-  
-  <c:forEach var="fun" items="${list}"> 
-  <tr><td>${fun.funName}</td> 
-  <td><a href="fun_getReleasedFunDetail?id=${fun.funId}">查看</a></td></tr>
-  <br>
-  </c:forEach>
- 
-  
+<c:forEach var="fun" items="${list}"> 
+  <tr height="10"><td width="250"align="left"class="title">${fun.funName}</td><td width="250"><a href="fun_getDetail?id=${fun.funId}">查看详细信息</a></td></tr>
+  <br/>
+  </c:forEach>  
   </table>
+  <br/>
+  <a href="FunInput.jsp">上传函数</a>　　　　　　　　　　　　<a href="loginsucc.jsp">返回初始功能列表</a>   
   </body>
 </html>
