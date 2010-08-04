@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-   ${msg}<a href="fun_getReleasedFunList">查看资源</a>
+   ${msg}<br><a href="fun_getAllFunctions">查看我的函数列表</a><br/>
+  <a href="fun_getReleasedFunList">查看所有函数列表</a><br/>
   </body>
 </html>
