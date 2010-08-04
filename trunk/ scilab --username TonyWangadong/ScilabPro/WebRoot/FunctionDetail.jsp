@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
@@ -23,29 +24,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>  
   <body>
-  <table border=1 cellspacing=0 cellpadding=0 width="500" height="387">
-  
-  
-   <tr><td>发布者</td><td>${userInfo.userName}</td></tr>
+  <table width="1000" height="495" border="2"  valign="top" >
+   
+   <tr height="20"><td width="100"align="center"class="title">函数名</td><td width="900">${functionInfo.funName}</td></tr>
     
-   <tr><td>源码</td><td>${functionInfo.funContent}</td></tr> 
+   <tr height="135"><td width="100"align="center"class="title">源码</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
    
-   <tr><td>实例</td><td> ${functionInfo.funExample}</td></tr>
+   <tr height="135"><td width="100"align="center"class="title">实例</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
    
-   <tr><td>帮助</td><td>${functionInfo.funHelp}</td></tr>
+   <tr height="135"><td width="100"align="center"class="title">帮助</td><td width="900"><div style="height:135;overflow:auto">${functionInfo.funHelp}</div></td></tr>
   
-   <tr><td>发布状态</td><td>
+   <tr height="20"><td width="100"align="center"class="title">发布状态</td><td width="900">
    <c:choose>
    <c:when test="${functionInfo.funStatue==0}">未发布
    </c:when>
    <c:otherwise>    已发布 
    </c:otherwise>
    </c:choose></td></tr>   
-   <tr><td>发布时间</td><td>${functionInfo.saveTime}</td></tr>
-  <tr><td><c:if test="${sessionScope.user.userId == functionInfo.userId}">
-  <a href="fun_deleteById?id=${functionInfo.funId}">删除</a></c:if></td></tr>
-  
+   <tr height="20"><td width="100"align="center"class="title">发布时间</td><td width="900">${functionInfo.saveTime}</td></tr>
+   <tr height="20"><c:if test="${sessionScope.user.userId != functionInfo.userId}"><td width="100"align="center">发布者</td><td width="900">${userInfo.userName}</td></c:if></tr>
+   
   </table>
+  <c:if test="${sessionScope.user.userId == functionInfo.userId}">
+  <br/><br/>
+  <a href="fun_deleteById?id=${functionInfo.funId}">从空间中删除此函数</a></c:if><br/>
+  <a href="fun_getAllFunctions">返回我的函数列表</a><br/>
+  <a href="fun_getReleasedFunList">返回所有函数列表</a><br/>
+  <br/><br/><br/>
   </body>
 </html>
 
