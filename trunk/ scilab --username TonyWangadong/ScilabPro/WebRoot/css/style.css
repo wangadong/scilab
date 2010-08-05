@@ -2,8 +2,16 @@
 /* CSS Document */
 /* Download by http://www.codefans.net */
 img,a img{ border:none;}
-a{ text-decoration:none; color:#fff;}
-a:hover{ text-decoration:underline; color:#fff;}
+a{
+	text-decoration:none;
+	color:#000;
+	font-size: 12px;
+}
+a:hover{
+	text-decoration:underline;
+	color:#000;
+	font-size: 14px;
+}
 .fcnt{
 	display:block;
 	height:220px;
@@ -75,6 +83,7 @@ body{
 	border-top-color: #B8D4E8;
 	border-right-color: #B8D4E8;
 	border-left-color: #B8D4E8;
+	overflow: hidden;
 }
 #LoginDiv form table {
 	width: 200px;
