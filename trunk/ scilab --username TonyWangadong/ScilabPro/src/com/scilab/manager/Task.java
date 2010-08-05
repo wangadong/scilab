@@ -48,7 +48,7 @@ public class Task implements Runnable {
 			DistributedServiceStub stub = new DistributedServiceStub(
 					"http://"+nodesIp+":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");
 			DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
-			host.setCodes(content);
+			host.setCodes(content.replaceAll("\r\n", "NewLineChar"));
 			host.setSavePath(resultFolder);
 			host.setHostIP(hostIP);
 			stub.submitTask(host);
