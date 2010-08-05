@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
@@ -75,6 +74,9 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <title>My JSP 'MyJsp.jsp' starting page</title>
+		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
+		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
+        <script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
 		<script language="Javascript" type="text/javascript" src="<%=basePath%>edit_area/edit_area_full.js"></script>
 		<script type="text/javascript">
 	editAreaLoader
@@ -121,7 +123,11 @@ function MM_nbGroup(event, grpName) { //v6.0
 		var options = {
 				type: "post", url: "<s:url value='/TaskAction!submitTask'/>",
 				success:function(e){
-					$("#myTask").html(e);
+					if($("#myTask div").size()==0){
+						$("#myTask").html(e);
+					}else{
+						$(e).insertBefore("#myTask div:eq(0)");
+					}
 				}
 			};
 			$("#myForm").ajaxSubmit(options);
@@ -158,20 +164,9 @@ function MM_nbGroup(event, grpName) { //v6.0
 			}
 		});
 	}
-	function saveAjax(){
-		var taskname = $("#checkForm_taskname").val();
-		taskname = $.trim(taskname);
-		if (taskname.length==0) {
-			alert("请输入任务名");
-			return false;
-		}
-		$.ajax({
-			type: "post", url: "CheckTask!saveTask", data: "taskname="+taskname+"&date="+new Date(),
-			success:function(e){
-			$("#myajaxdiv").html(e);
-		}
+	$(function(){
+		$.fn.colorbox.settings.bgOpacity = "0.3";
 	});
-	}
 </script>
 <!-- InstanceEndEditable -->
 </head>
@@ -184,7 +179,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div id="navigation">
     <table border="0" cellpadding="0" cellspacing="1" id="nav">
       <tr>
-        <td width="90"><a href="PageIndex.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationIndex','',1)" onmouseover="MM_nbGroup('over','NavigationIndex','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationIndex.png" alt="NavigationIndex" name="NavigationIndex" border="0" id="index"/></a></td>
+        <td width="90"><a href="index.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationIndex','',1)" onmouseover="MM_nbGroup('over','NavigationIndex','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationIndex.png" alt="NavigationIndex" name="NavigationIndex" border="0" id="index"/></a></td>
         <td width="90" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationRun','',1)" onmouseover="MM_nbGroup('over','NavigationRun','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationRun.png" alt="NavigationRun" name="NavigationRun" border="0"id="operation" /></a></td>
         <td width="90" ><a href="PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShare','',1)" onmouseover="MM_nbGroup('over','NavigationShare','','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/NavigationShare.png" alt="NavigationShare" name="NavigationShare" border="0"/></a></td>
         <td width="90" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHow','',1)" onmouseover="MM_nbGroup('over','NavigationHow','','',1)" onmouseout="MM_nbGroup('out')"><img src="images/NavigationHow.png" alt="NavigationHow" name="NavigationHow" border="0" /></a></td>
@@ -240,26 +235,25 @@ function MM_nbGroup(event, grpName) { //v6.0
       </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
-      <a href="PageRegister.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
+      <a href="register.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
   <p>&nbsp;</p>
     <p>&nbsp;</p>
     <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
   </div>    
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="EditRegion2" -->
-<div id="myTask">
-		<s:form action='TaskAction' method='post' id="myForm" target="_blank"
+<s:form action='TaskAction' method='post' id="myForm" target="_blank"
 			theme="simple" onsubmit="return validate()">
 			<p>
 				Task name:
 				<input type="text" name="task.taskName" id="myForm_taskName" />
 			</p>
-			<textarea id="scilabtask_1" style="height: 300px; width: 636px;"
+			<textarea id="scilabtask_1" style="height: 500px; width: 700px;"
 				name="task.taskContent">you can write scilab codes here!</textarea>
 			<br />
 			<s:submit value='提交任务' method="submitTask"/>
 		</s:form>
-    </div>
+
 
      <div id="myResult">     
 		<s:form action="CheckTask" method="post" id="checkForm"
@@ -273,6 +267,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
 		</s:form>
 	</div>
+		<div id="myTask"></div>
 		<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
 <div id="aboutUs">
