@@ -12,8 +12,10 @@ public class TestXML {
 		Map<Integer,SciNode> nodesMap=NodesManager.getAllNodes();
 		System.out.println(nodesMap.get(1).getID());
 		System.out.println(nodesMap.get(2).getIPAddress());
-		
-		
+		System.out.println(NodesManager.getHostIP());
+		if(NodesManager.getHostIP()=="")
+			System.out.println("hahaha");
+		System.out.println(NodesManager.getNodesNum());
 		
 	}
 }

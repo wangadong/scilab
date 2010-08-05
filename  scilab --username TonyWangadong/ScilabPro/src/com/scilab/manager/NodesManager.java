@@ -6,13 +6,12 @@ import org.dom4j.*;
 import org.dom4j.io.*;
 
 public class NodesManager {
+	static Map<Integer, SciNode> nodesMap = new HashMap<Integer, SciNode>();
 	public static Map<Integer, SciNode> getAllNodes() throws DocumentException {
 		SAXReader reader = new SAXReader();
 		Document document = reader.read(new File("src\\NodesManager.xml"));
-		Element rootElm = document.getRootElement();
-
-		Map<Integer, SciNode> nodesMap = new HashMap<Integer, SciNode>();
-		for (Iterator it = rootElm.elementIterator(); it.hasNext();) {
+		Element nodesinfo = document.getRootElement().element("NodesInfo");
+		for (Iterator it = nodesinfo.elementIterator(); it.hasNext();) {
 
 			Element element = (Element) it.next();
 			SciNode node = new SciNode(Integer.parseInt(element.attribute("ID")
@@ -23,5 +22,14 @@ public class NodesManager {
 			nodesMap.put(node.getID(), node);
 		}
 		return nodesMap;
+	}
+	public static String getHostIP() throws DocumentException{
+		SAXReader reader = new SAXReader();
+		Document document = reader.read(new File("src\\NodesManager.xml"));
+		String HostIP=document.getRootElement().element("HostIP").attributeValue("IPAddress");
+		return HostIP;
+	}
+	public static int getNodesNum(){
+		return nodesMap.size();
 	}
 }
