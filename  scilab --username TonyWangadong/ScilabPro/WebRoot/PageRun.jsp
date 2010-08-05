@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script> 
     <script type="text/javascript" src="js/common.js"></script>
-    	<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
+    <script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
 	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
     <script type="text/javascript">
 <!--
@@ -232,10 +232,11 @@ function MM_nbGroup(event, grpName) { //v6.0
     </div>
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
-   	<!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>    
+   	<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>    
   <div id="LoginPersonal" align="center">
    <p>登陆个人帐户：</p>
-  <jsp:include page="login.jsp"></jsp:include> 
+ <s:if test="#session.userinfo==null"><jsp:include page="login.jsp"></jsp:include></s:if>
+<s:else><jsp:include page="loginsucc.jsp"></jsp:include></s:else>  
       </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
@@ -272,7 +273,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
 		</s:form>
 	</div>
-		<!-- InstanceEndEditable --><a href="PageModel.dwt">PageModel</a>     
+		<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
 <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
