@@ -4,8 +4,6 @@ import java.io.File;
 import java.rmi.RemoteException;
 
 import org.apache.axis2.AxisFault;
-import org.apache.commons.lang.Validate;
-
 import client.DistributedServiceStub;
 
 public class Task implements Runnable {
@@ -46,9 +44,11 @@ public class Task implements Runnable {
 			System.out.println("tres bien!");
 			// ScilabService.executeCodes(content, resultPath);
 			DistributedServiceStub stub = new DistributedServiceStub(
-					"http://"+nodesIp+":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");
+					"http://"
+							+ nodesIp
+							+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");
 			DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
-			host.setCodes(content.replaceAll("\r\n", "NewLineChar"));
+			host.setCodes(content.replaceAll("\n", "NewLineChar"));
 			host.setSavePath(resultFolder);
 			host.setHostIP(hostIP);
 			stub.submitTask(host);
@@ -60,9 +60,12 @@ public class Task implements Runnable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		statue = true;
 		System.out.println(Thread.currentThread().toString() + "execute Task-"
 				+ taskName + " is " + "completed ");
+	}
+
+	public void setStatue(boolean statue) {
+		this.statue = statue;
 	}
 
 	public boolean getStatue() {

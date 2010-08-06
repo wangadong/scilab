@@ -4,8 +4,6 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.RejectedExecutionException;
-
 import org.dom4j.DocumentException;
 
 public class Scheduler implements Runnable {
@@ -17,13 +15,14 @@ public class Scheduler implements Runnable {
 		exec = Executors.newSingleThreadExecutor();
 		System.out.println("Executor Started");
 		try {
-			if(NodesManager.getHostIP()=="")
-			hostIP = InetAddress.getLocalHost().getHostAddress().toString();
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			hostIP = NodesManager.getHostIP();
+			if (hostIP.length() < 7)
+				hostIP = InetAddress.getLocalHost().getHostAddress().toString();
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
+
+		} catch (UnknownHostException e) {
+			System.out
+					.println("Please check your Host IPAddress configuration");
 			e.printStackTrace();
 		}
 	}
@@ -42,7 +41,6 @@ public class Scheduler implements Runnable {
 					exec.execute(currentTask);
 				}
 				System.out.println(currentTask.getStatue());
-				ScilabTaskHostService.setTaskMap(currentTask);
 				currentTask = null;
 			}
 		}

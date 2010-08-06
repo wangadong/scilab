@@ -3,10 +3,6 @@ package com.scilab.action;
 import java.io.IOException; 
 import java.io.PrintWriter;
 
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.struts2.ServletActionContext;
-
 import com.scilab.dao.UserDao;
 import com.scilab.dao.impl.UserDaoImpl;
 import com.scilab.pojo.UserInfo;

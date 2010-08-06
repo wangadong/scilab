@@ -1,5 +1,6 @@
 package com.scilab.test;
 
+import java.io.File;
 import java.util.Map;
 
 import org.dom4j.DocumentException;
@@ -15,7 +16,7 @@ public class TestXML {
 		System.out.println(NodesManager.getHostIP());
 		if(NodesManager.getHostIP()=="")
 			System.out.println("hahaha");
-		System.out.println(NodesManager.getNodesNum());
+		System.out.println(new File(Thread.currentThread().getContextClassLoader().getResource("").getFile()).getParent()+"\\NodesManager.xml");
 		
 	}
 }

@@ -39,10 +39,13 @@ public class TaskAction extends BaseAction {
 				+ File.separatorChar + userId + taskname + ".txt";
 		// userId=1;
 		System.out.println(resultFolder);
-		boolean bool = ScilabTaskHostService.submitTask(taskname, content
-				, userId, resultFolder);
-		//setMessage("任务名称：" + taskname + "  " + "scilab代码：" + content);
-		setMessage("任务名称：" + taskname + "<a href='./CheckTask!getResult?taskname="+taskname+"'>查看结果</a>     <a href='./CheckTask!saveTask?taskname="+taskname+"'>保存任务</a>");
+		boolean bool = ScilabTaskHostService.submitTask(taskname, content,
+				userId, resultFolder);
+		// setMessage("任务名称：" + taskname + "  " + "scilab代码：" + content);
+		setMessage("任务名称：" + taskname
+				+ "<a href='./CheckTask!getResult?taskname=" + taskname
+				+ "'>查看结果</a>     <a href='./CheckTask!saveTask?taskname="
+				+ taskname + "'>保存任务</a>");
 		// ajax
 		if (bool)
 			return SUCCESS;

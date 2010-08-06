@@ -3,4 +3,4 @@
 <NodesInfo>
 	<node1 ID="1" IPAddress="127.0.0.1" NodeName="本地节点" CpuCoreNum="2"></node1>
 	<node2 ID="2" IPAddress="192.168.16.77" NodeName="服务器1" CpuCoreNum="2"></node2></NodesInfo>
-<HostIP IPAddress=""></HostIP></DistributionConfiguration>
+<HostIP IPAddress="192.168.16.88"></HostIP></DistributionConfiguration>
