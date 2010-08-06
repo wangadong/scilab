@@ -6,6 +6,6 @@
   <p><input TYPE="button" VALUE="重新登陆" ONCLICK="NewWindow()"></p>
 </form>
 <script language="JavaScript"><!--
-function NewWindow(){window.open("PageIndex.jsp","PageIndex");}
+function NewWindow(){window.open("index.jsp","index");}
 // --></script>
  

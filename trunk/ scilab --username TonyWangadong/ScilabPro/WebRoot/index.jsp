@@ -140,8 +140,8 @@ $('#slideshowHolder').jqFancyTransitions({ width: 350, height: 240});
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt"></a>    
   <div id="LoginPersonal" align="center">
    <p>登陆个人帐户：</p>
- <s:if test="#session.userinfo==null"><jsp:include page="login.jsp"></jsp:include></s:if>
-<s:else><jsp:include page="loginsucc.jsp"></jsp:include></s:else>  
+  <s:if test="#session.user!=null"><jsp:include page="loginsucc.jsp"></jsp:include></s:if>
+<s:else><jsp:include page="login.jsp"></jsp:include></s:else>
       </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
