@@ -14,7 +14,8 @@ public class ScilabService implements Executor {
 
 	public ScilabService() {
 		tasks = new LinkedBlockingQueue<Runnable>();
-		executor = Executors.newSingleThreadExecutor();
+		int cpuCoreNumber = Runtime.getRuntime().availableProcessors();   
+        executor = Executors.newFixedThreadPool(cpuCoreNumber);		
 	}
 
 	public synchronized static ScilabService getInstance() {
@@ -47,13 +48,13 @@ public class ScilabService implements Executor {
 		File myFilePath = new File(savePath).getParentFile();
 		if (!myFilePath.exists()) {
 			if (myFilePath.mkdirs())
-				System.out.println("创建文件目录：" + myFilePath);
+				System.out.println("鍒涘缓鏂囦欢鐩綍" + myFilePath);
 		} else {
 			if (deleteFile(myFilePath))
-				System.out.println("删除目录");
+				System.out.println("鍒犻櫎鐩綍");
 			;
 			if (!myFilePath.exists())
-				System.out.println("更新成功");
+				System.out.println("鏇存柊鎴愬姛");
 			myFilePath.mkdirs();
 		}
 		execute(currentTask);
