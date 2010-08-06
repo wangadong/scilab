@@ -2,8 +2,6 @@ package com.scilab.manager;
 
 import java.util.*;
 
-import org.hibernate.mapping.Collection;
-
 public class ScilabTaskHost {
 	private static final ScilabTaskHost _INSTANCE = new ScilabTaskHost();
 	private static LinkedList<Task> TaskList;
@@ -38,7 +36,7 @@ public class ScilabTaskHost {
 	}
 
 	public synchronized boolean submitTask(String taskname, String content,
-			long userId,String resultFolder) {
+			long userId, String resultFolder) {
 		Task tasktmp = new Task(taskname, content, userId, resultFolder);
 		if (ScilabTaskHostService.setTaskMap(tasktmp)) {
 			System.out.println("set task map success!");
@@ -85,13 +83,12 @@ public class ScilabTaskHost {
 		return null;
 	}
 
-	public static HashMap<String, Task> getTaskMap() {
+	public HashMap<String, Task> getTaskMap() {
 		return TaskMap;
 	}
 
 	public boolean isExist(String taskQueryId) {
 		return TaskMap.containsKey(taskQueryId);
 	}
-
 
 }

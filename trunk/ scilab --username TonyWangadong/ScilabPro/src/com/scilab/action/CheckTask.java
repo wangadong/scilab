@@ -28,6 +28,7 @@ public class CheckTask extends BaseAction {
 	private File file;
 	private String imgPath;
 
+	@SuppressWarnings("deprecation")
 	public String getResult() {
 		imgPath = null;
 		userinfo = (UserInfo) getSession().getAttribute("user");
@@ -63,13 +64,10 @@ public class CheckTask extends BaseAction {
 				resultContent = result.toString();
 				System.out.println(resultContent);
 			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				return "resultFail";
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			return "resultSucc";

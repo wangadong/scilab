@@ -2,64 +2,70 @@ package com.scilab.manager;
 
 import java.io.*;
 import java.net.*;
+
 public class ServerThread extends Thread {
-	 private Socket socket;
+	private Socket socket;
 
-	 public ServerThread(Socket socket)
-	 {
-	  this.socket = socket;
-	 }
+	public ServerThread(Socket socket) {
+		this.socket = socket;
+	}
 
+	public void run() {
 
-	 public void run(){
+		try {
 
-	  try {
-
-	   DataInputStream inputStream = null;
-	   try {
-	    inputStream = new DataInputStream(new BufferedInputStream(
-	      socket.getInputStream()));
-	   } catch (Exception e) {
-	    System.out.print("½ÓÊÕÏûÏ¢»º´æ´íÎó\n");
-	    return;
-	   }
-	   try {
-	    // ±¾µØ±£´æÂ·¾¶£¬ÎÄ¼şÃû»á×Ô¶¯´Ó·şÎñÆ÷¶Ë¼Ì³Ğ¶øÀ´×îºÃÊÇweb¹¤³ÌÀïµÄÒ»¸öÂ·¾¶¡£
-	    int bufferSize = 8192;
-	    byte[] buf = new byte[bufferSize];
-	    long len = 0;
-	    String savePath = inputStream.readUTF();
-	    DataOutputStream fileOut = new DataOutputStream(
-	      new BufferedOutputStream(new BufferedOutputStream(
-	        new FileOutputStream(savePath))));
-	    len = inputStream.readLong();
-	    System.out.println("ÎÄ¼şµÄ³¤¶ÈÎª:" + len + "\n");
-	    System.out.println("¿ªÊ¼½ÓÊÕÎÄ¼ş!" + "\n");
-	    while (true) {
-	     int read = 0;
-	     if (inputStream != null) {
-	      read = inputStream.read(buf);
-	     }
-	     if (read == -1) {
-	      break;
-	     }
-	     //System.out.println(buf.toString());
-	     fileOut.write(buf, 0, read);
-	    }
-	    System.out.println("½ÓÊÕÍê³É£¬ÎÄ¼ş´æÎª" + savePath + "\n");
-	    fileOut.flush();
-	    fileOut.close();
-	    inputStream.close();
-	   } catch (Exception e) {
-	    e.printStackTrace();
-	    return;
-	   }
-	  } catch (Exception e) {
-	   System.out.println("Error handling a client: " + e);
-	  }
-	  
-	 }
+			DataInputStream inputStream = null;
+			try {
+				inputStream = new DataInputStream(new BufferedInputStream(
+						socket.getInputStream()));
+			} catch (Exception e) {
+				System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+				return;
+			}
+			try {
+				// ï¿½ï¿½ï¿½Ø±ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼Ì³Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½webï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
+				int bufferSize = 8192;
+				byte[] buf = new byte[bufferSize];
+				long len = 0;
+				String savePath = inputStream.readUTF();
+				DataOutputStream fileOut = new DataOutputStream(
+						new BufferedOutputStream(new BufferedOutputStream(
+								new FileOutputStream(savePath))));
+				len = inputStream.readLong();
+				System.out.println("ï¿½Ä¼ï¿½ï¿½Ä³ï¿½ï¿½ï¿½Îª:" + len + "\n");
+				System.out.println("ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½!" + "\n");
+				while (true) {
+					int read = 0;
+					if (inputStream != null) {
+						read = inputStream.read(buf);
+					}
+					if (read == -1) {
+						break;
+					}
+					// System.out.println(buf.toString());
+					fileOut.write(buf, 0, read);
+				}
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Îª" + savePath + "\n");
+				fileOut.flush();
+				fileOut.close();
+				inputStream.close();
+				String taskQueryId=new File(savePath).getName();
+				if(taskQueryId.endsWith("txt")){
+					taskQueryId=taskQueryId.replaceAll(".txt", "");
+					Task currentTask=ScilabTaskHostService.getTaskByQueryId(taskQueryId);
+					currentTask.setStatue(true);
+					ScilabTaskHostService.setTaskMap(currentTask);
+					System.out.println("ä»»åŠ¡å®Œæˆ");
+				}
+					
+			} catch (Exception e) {
+				e.printStackTrace();
+				return;
+			}
+		} catch (Exception e) {
+			System.out.println("Error handling a client: " + e);
+		}
 
 	}
 
-
+}
