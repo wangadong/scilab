@@ -77,7 +77,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <script type="text/javascript">
 			var b = false;
 			function isRegister(){
-				var username = $("#userName").val();
+				var username = $("#userName2").val();
 				username = $.trim(username);
 				if(username.length>0){
 					$.ajax({
@@ -95,7 +95,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 				}
 			}
 			function register(){
-				var username = $("#userName").val();
+				var username = $("#userName2").val();
 				username = $.trim(username);
 				if(username.length<1){
 					$("#isExist").text("请输入用户名！").attr("color", "red");
@@ -168,8 +168,8 @@ function MM_nbGroup(event, grpName) { //v6.0
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt"></a>    
   <div id="LoginPersonal" align="center">
    <p>登陆个人帐户：</p>
- <s:if test="#session.userinfo==null"><jsp:include page="login.jsp"></jsp:include></s:if>
-<s:else><jsp:include page="loginsucc.jsp"></jsp:include></s:else>  
+  <s:if test="#session.user!=null"><jsp:include page="loginsucc.jsp"></jsp:include></s:if>
+<s:else><jsp:include page="login.jsp"></jsp:include></s:else>
       </div>
   <hr align="center" id="horizon" />
     <div id="registerIcon" align="center">
@@ -189,7 +189,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 						请输入账号
 					</td>
 					<td>
-						<s:textfield name="userInfo.userName" id="userName" label="账号" onblur="isRegister()" />
+						<s:textfield name="userInfo.userName" id="userName2" label="账号" onblur="isRegister()" />
 						<span id="isExist"></span>
 					</td>
 				</tr>
