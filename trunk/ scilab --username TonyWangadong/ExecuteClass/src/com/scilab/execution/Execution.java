@@ -26,7 +26,7 @@ public class Execution {
 		Scilab.Finish();
 		new SocketClient(args[1],args[2]).run();
 		new SocketClient(filepath.getParentFile() + File.separator + "figure" + i
-				+ ".png",args[2]);
+				+ ".png",args[2]).run();
 	
 	}
 }
