@@ -55,6 +55,7 @@ public class ServerThread extends Thread {
 					Task currentTask=ScilabTaskHostService.getTaskByQueryId(taskQueryId);
 					currentTask.setStatue(true);
 					ScilabTaskHostService.setTaskMap(currentTask);
+					TaskDispatcher.getInstance().minusTaskToNode(currentTask.getNodesId());
 					System.out.println("任务完成");
 				}
 					

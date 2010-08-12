@@ -14,6 +14,7 @@ public class Scheduler implements Runnable {
 	public Scheduler() {
 		exec = Executors.newSingleThreadExecutor();
 		System.out.println("Executor Started");
+		new TaskDispatcher().start();
 		try {
 			hostIP = NodesManager.getHostIP();
 			if (hostIP.length() < 7)
@@ -36,9 +37,15 @@ public class Scheduler implements Runnable {
 						.pop();
 
 				if (currentTask != null) {
-					currentTask.setNodesIp(hostIP);
+					SciNode currentNode=TaskDispatcher.getInstance().getCurrentNode();
+					currentTask.setNodesId(currentNode.getID());
+					currentTask.setNodesIp(currentNode.getIPAddress());
 					currentTask.setHostIP(hostIP);
 					exec.execute(currentTask);
+					TaskDispatcher.getInstance().addTaskToNode(currentNode.getID());
+					System.out.println("任务节点号"+currentTask.getNodesId());
+					System.out.println("nodeiP"+currentTask.getNodesIp());
+					System.out.println("currentNodesTaskNum:"+currentNode.getTaskNumCnt());
 				}
 				System.out.println(currentTask.getStatue());
 				currentTask = null;
