@@ -190,41 +190,7 @@ function MM_nbGroup(event, grpName) { //v6.0
     </table>
     </div></div>
   
-  <div id="NewfunctionAndGrandpicture">
-    <div id="Bandpicture">
- <div class="fcnt" id="ppt">
-    	<div class="mimg" id="mpc">
-        	<div style="display:block"><a href="PageRun.jsp"><img src="images/Picture0.jpg" alt="" /></a></div>
-            <div><a href="PageRun.jsp"><img src="images/Picture2.jpg" alt="" /></a></div>
-            <div><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
-            <div><a href="PageRun.jsp"><img src="images/Picture3.jpg" alt="" /></a></div>
-        </div>
-        <dl style="display:block">
-        	<dt><a href="PageRun.jsp" class="TextInPic">SciCloud</a></dt>
-            <dd>TeleScilab</dd>
-        </dl>
-        <dl>
-        	<dt><a href="PageRun.jsp" class="TextInPic">SciCloud</a></dt>
-            <dd>TeleScilab</dd>
-        </dl>
-        <dl>
-        	<dt><a href="PageRun.jsp" class="TextInPic">SciCloud</a></dt>
-            <dd>TeleScilab</dd>
-        </dl>
-        <dl>
-        	<dt><a href="PageRun.jsp" class="TextInPic">SciCloud</a></dt>
-            <dd>TeleScilab</dd>
-        </dl>
-        <div id="tri"></div>
-        <ul>
-        	<li class="cur"><img src="images/s0.jpg" alt="" /></li>
-            <li><img src="images/s2.jpg" alt="" /></li>
-            <li><img src="images/s1.jpg" alt="" /></li>
-            <li><img src="images/s3.jpg" alt="" /></li>
-        </ul>
-    </div>
-    </div>
-    </div>
+ 
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" -->
    	<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>    
