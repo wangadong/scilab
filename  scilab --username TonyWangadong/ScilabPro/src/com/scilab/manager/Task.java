@@ -7,9 +7,10 @@ import org.apache.axis2.AxisFault;
 import client.DistributedServiceStub;
 
 public class Task implements Runnable {
+	private static int nodesId = 0;
 	boolean statue = true;
 	private String taskName;
-	private String nodesIp;
+	private static String nodesIp;
 	private String hostIP;
 
 	private String content;
@@ -112,6 +113,7 @@ public class Task implements Runnable {
 		return this.taskQueryId;
 	}
 
+
 	public boolean deleteFile(File f) {
 		if (f.exists()) {
 			if (f.isFile())
@@ -127,5 +129,13 @@ public class Task implements Runnable {
 				return false;
 		} else
 			return true;
+	}
+
+	public void setNodesId(int nodesId) {
+		Task.nodesId = nodesId;
+	}
+
+	public int getNodesId() {
+		return nodesId;
 	}
 }
