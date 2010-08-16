@@ -11,8 +11,8 @@ import com.scilab.manager.SciNode;
 public class TestXML {
 	public static void main(String[] args) throws DocumentException {
 		Map<Integer,SciNode> nodesMap=NodesManager.getAllNodes();
-		System.out.println(nodesMap.get(1).getID());
-		System.out.println(nodesMap.get(2).getIPAddress());
+		System.out.println(nodesMap.get(1).getMainFrequence());
+		System.out.println(nodesMap.get(0).getIPAddress());
 		System.out.println(NodesManager.getHostIP());
 		if(NodesManager.getHostIP()=="")
 			System.out.println("hahaha");

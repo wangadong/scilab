@@ -14,7 +14,6 @@ public class Scheduler implements Runnable {
 	public Scheduler() {
 		exec = Executors.newSingleThreadExecutor();
 		System.out.println("Executor Started");
-		new TaskDispatcher().start();
 		try {
 			hostIP = NodesManager.getHostIP();
 			if (hostIP.length() < 7)
