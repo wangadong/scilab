@@ -15,10 +15,10 @@ public class NodesManager {
 
 			Element element = (Element) it.next();
 			SciNode node = new SciNode(Integer.parseInt(element.attribute("ID")
-					.getValue()), (String) element.attribute("NodeName")
-					.getValue(), (String) element.attribute("IPAddress")
+					.getValue()),element.attribute("NodeName")
+					.getValue(), element.attribute("IPAddress")
 					.getValue(), Integer.parseInt(element.attribute(
-					"CpuCoreNum").getValue()));
+					"CpuCoreNum").getValue()), Float.parseFloat(element.attribute("MainFrequence").getValue()));
 			nodesMap.put(node.getID(), node);
 		}
 		return nodesMap;
