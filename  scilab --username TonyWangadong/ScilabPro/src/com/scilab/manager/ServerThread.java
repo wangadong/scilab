@@ -53,7 +53,7 @@ public class ServerThread extends Thread {
 				if(taskQueryId.endsWith("txt")){
 					taskQueryId=taskQueryId.replaceAll(".txt", "");
 					Task currentTask=ScilabTaskHostService.getTaskByQueryId(taskQueryId);
-					currentTask.setStatue(true);
+					currentTask.setStatue("FINISHED");
 					ScilabTaskHostService.setTaskMap(currentTask);
 					TaskDispatcher.getInstance().minusTaskToNode(currentTask.getNodesId());
 					System.out.println("任务完成");

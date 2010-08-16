@@ -65,7 +65,7 @@ public class ScilabTaskHost {
 
 	}
 
-	public boolean getTaskStatue(String taskQueryId) {
+	public String getTaskStatue(String taskQueryId) {
 		System.out.println("people want to get the statue of task "
 				+ taskQueryId);
 		if (TaskMap.containsKey(taskQueryId)) {
@@ -73,7 +73,7 @@ public class ScilabTaskHost {
 					+ taskQueryId);
 			return TaskMap.get(taskQueryId).getStatue();
 		}
-		return false;
+		return "TASKERROR ";
 	}
 
 	public String getResult(String taskQueryId) {
