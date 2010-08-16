@@ -132,20 +132,7 @@
 			<br />
 			<s:submit value='提交任务' method="submitTask"/>
 		</s:form>
-
-
-     <div id="myResult">     
-		<s:form action="CheckTask" method="post" id="checkForm"
-			target="_blank" theme="simple" onsubmit="return validate1()">
-			<p>
-				taskname for check:
-				<input type="text" name="taskname" id="checkForm_taskname"/>
-				<s:submit value='查看结果' method="getResult" />
-				<input type="button" value='查询状态' onclick="statueAjax()" />
-				<input type="button" value='保存任务' onclick="saveAjax()" />
-			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
-		</s:form>
-	</div>
+		
 		<div id="myTask"></div>
 	</body>
 </html>

@@ -1,6 +1,11 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" errorPage="ErrorPage.html"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<style type="text/css">
+<!--
 
+
+-->
+</style>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -26,34 +31,24 @@
 		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
 		
 		<script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
-
-	<script type="text/javascript">
-		function login(){
-			var userName = $("#userName").val();
-			userName = $.trim(userName);
-			if(userName.length<1){
-				alert("请输入用户名！");
-				return false;
-			}
-			var password = $("#password").val();
-			if(password.length<1){
-				alert("请输入密码！");
-				return false;
-			}
-			var options = {
-				type: "post", url: "<s:url value='/LoginAction!login'/>",
-				success:function(e){
-					$("#loginDiv").html(e);
-				}
-			};
-			$("#loginForm").ajaxSubmit(options);
+<script type="text/javascript">
+<!--
+	
+	$(function(){
+		$("a.loginAction").colorbox({contentWidth:"300px", contentHeight:"150px", contentIframe:true});
+		$("a.registerAction").colorbox({contentWidth:"450px", contentHeight:"180px", contentIframe:true});
 			return false;
-		}
-	</script>
-   	<div id="loginDiv">
-    	<s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
-    		<s:textfield name="user.userName" id="userName" label="帐户" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    		<s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    		<s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
-    	</s:form>
-    </div>
+		});
+		$(function(){
+		$.fn.colorbox.settings.bgOpacity = "0.3";
+		});
+//-->
+</script>
+<div id="longinandregister">
+  <tr>
+     <div id="loginhref"><a href="./login.jsp" class="loginAction" >Login</a></div>
+     <div id="registerhref"><a href="./register.jsp" class="registerAction">Register</a></div>
+  </tr>
+</div>
+<!--<s:property value="message"/>-->
+
