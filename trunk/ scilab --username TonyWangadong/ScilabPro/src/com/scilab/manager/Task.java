@@ -8,9 +8,9 @@ import client.DistributedServiceStub;
 
 public class Task implements Runnable {
 	private static int nodesId = 0;
-	boolean statue = true;
+	String statue = "QUEUEING";
 	private String taskName;
-	private static String nodesIp;
+	private String nodesIp;
 	private String hostIP;
 
 	private String content;
@@ -55,21 +55,19 @@ public class Task implements Runnable {
 			stub.submitTask(host);
 			System.out.println(content + resultFolder);
 		} catch (AxisFault e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("服务节点"+getNodesId()+"Connection Error");
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(Thread.currentThread().toString() + "execute Task-"
 				+ taskName + " is " + "completed ");
 	}
 
-	public void setStatue(boolean statue) {
+	public void setStatue(String statue) {
 		this.statue = statue;
 	}
 
-	public boolean getStatue() {
+	public String getStatue() {
 		return this.statue;
 	}
 
@@ -112,7 +110,6 @@ public class Task implements Runnable {
 	public String getTaskQueryId() {
 		return this.taskQueryId;
 	}
-
 
 	public boolean deleteFile(File f) {
 		if (f.exists()) {

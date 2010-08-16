@@ -42,6 +42,8 @@ public class Scheduler implements Runnable {
 					currentTask.setHostIP(hostIP);
 					exec.execute(currentTask);
 					TaskDispatcher.getInstance().addTaskToNode(currentNode.getID());
+					currentTask.setStatue("SUBMITTED");
+					ScilabTaskHostService.setTaskMap(currentTask);
 					System.out.println("任务节点号"+currentTask.getNodesId());
 					System.out.println("nodeiP"+currentTask.getNodesIp());
 					System.out.println("currentNodesTaskNum:"+currentNode.getTaskNumCnt());

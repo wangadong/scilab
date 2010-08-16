@@ -110,15 +110,7 @@ public class CheckTask extends BaseAction {
 		getResponse().setHeader("Cache-Control", "no-cache"); // 不定义缓存
 		getResponse().setCharacterEncoding("utf-8");
 		PrintWriter out = getResponse().getWriter();
-
-		if (!ScilabTaskHostService.isExist(userId + taskname))
-			taskStatue = "无此任务,请先提交后再查询";
-		else if (ScilabTaskHostService.getTaskStatue(userId + taskname)) {
-			taskStatue = "任务已完成";
-
-		} else {
-			taskStatue = "任务排队中";
-		}// ajax
+		ScilabTaskHostService.getTaskStatue(userId+taskname);
 		out.write(taskStatue);
 		out.close();
 		System.out.println(taskStatue);
@@ -147,10 +139,11 @@ public class CheckTask extends BaseAction {
 				}
 				taskinfo.setTaskName(task.getTaskName());
 				taskinfo.setUserId(userId);
-				taskinfo.setTaskStatue(1);
+				taskinfo.setTaskStatue(task.getStatue());
 				taskinfo.setTaskContent(task.getContent());
 				taskinfo.setResultFolder(task.getResultFolder());
 				taskinfo.setSaveTime(new Date());
+				taskinfo.setNodeID(task.getNodesId());
 				TaskDao dao = new TaskDao();
 				if (dao.saveOrUpdateTask(taskinfo)) {
 					saveStatue = "保存成功";

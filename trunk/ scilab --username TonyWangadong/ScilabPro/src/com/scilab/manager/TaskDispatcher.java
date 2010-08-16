@@ -2,7 +2,6 @@ package com.scilab.manager;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -22,7 +21,6 @@ public class TaskDispatcher extends Thread {
 		try {
 			nodesMap = NodesManager.getAllNodes();
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -59,7 +57,6 @@ public class TaskDispatcher extends Thread {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		super.run();
 	}
 

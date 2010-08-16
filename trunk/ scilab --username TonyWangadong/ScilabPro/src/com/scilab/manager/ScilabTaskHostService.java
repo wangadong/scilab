@@ -19,7 +19,7 @@ public class ScilabTaskHostService {
 		return ScilabTaskHost.getInstance().getTaskByQueryId(taskQueryId);
 	}
 
-	public static boolean getTaskStatue(String taskQueryId) {
+	public static String getTaskStatue(String taskQueryId) {
 		return ScilabTaskHost.getInstance().getTaskStatue(taskQueryId);
 	}
 
