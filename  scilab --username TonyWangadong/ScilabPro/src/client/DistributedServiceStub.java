@@ -6,8 +6,13 @@
  */
 package client;
 
-/*
+/**
+ * 
  *  DistributedServiceStub java implementation
+ *  分页式计算节点服务的客户端stub
+ *  @author wangadong
+ *  @see Task
+ *  @version 1.0
  */
 
 public class DistributedServiceStub extends org.apache.axis2.client.Stub {
