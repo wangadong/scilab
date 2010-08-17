@@ -1,20 +1,41 @@
 package com.scilab.manager;
 
+/**
+ * Description: 分布式节点服务器的信息类
+ * 
+ * @author wangadong
+ * 
+ */
 public class SciNode implements Comparable<SciNode> {
-	private int ID;
-	private String NodeName;
-	private String IPAddress;
-	private int CpuCoreNum;
-	private int TaskNumCnt;
-	private float MainFrequence;
-	private float NodePriorityValue;
+	private int ID;// 节点ID
+	private String NodeName;// 节点服务器名
+	private String IPAddress;// IP地址
+	private int CpuCoreNum;// 节点服务器CPU核心数
+	private int TaskNumCnt;// 节点正在运行任务数
+	private float MainFrequence;// 节点服务器CPU主频
+	private float NodePriorityValue;// 节点调度优先值
 
-	public SciNode(int ID, String NodeName, String IPAddress, int CpuCoreNum ,float MainFrequence) {
+	/**
+	 * 节点信息构造函数
+	 * 
+	 * @param ID
+	 *            节点ID
+	 * @param NodeName
+	 *            节点服务器名
+	 * @param IPAddress
+	 *            IP地址
+	 * @param CpuCoreNum
+	 *            节点服务器CPU核心数
+	 * @param MainFrequence
+	 *            节点服务器CPU主频
+	 */
+	public SciNode(int ID, String NodeName, String IPAddress, int CpuCoreNum,
+			float MainFrequence) {
 		this.ID = ID;
 		this.NodeName = NodeName;
 		this.IPAddress = IPAddress;
 		this.CpuCoreNum = CpuCoreNum;
-		this.MainFrequence=MainFrequence;
+		this.MainFrequence = MainFrequence;
 	}
 
 	public int getID() {
@@ -66,11 +87,18 @@ public class SciNode implements Comparable<SciNode> {
 		TaskNumCnt = taskNumCnt;
 	}
 
+	/**
+	 * 获取节点优先值<br>
+	 * 优先值计算公式为NodePriorityValue = CpuCoreNum * MainFrequence / TaskNumCnt
+	 * 即优先分配任务到任务较少的节点，若任务数相同则分配给运算能力较强的节点
+	 * 
+	 * @return float 节点当优先值
+	 */
 	public float getNodePriorityValue() {
-		if(TaskNumCnt!=0)
-		NodePriorityValue=CpuCoreNum*MainFrequence/TaskNumCnt;
+		if (TaskNumCnt != 0)
+			NodePriorityValue = CpuCoreNum * MainFrequence / TaskNumCnt;
 		else
-			NodePriorityValue=CpuCoreNum*MainFrequence/(float)0.5;
+			NodePriorityValue = CpuCoreNum * MainFrequence / (float) 0.5;// 避免出现无穷大
 		return NodePriorityValue;
 	}
 
@@ -86,6 +114,9 @@ public class SciNode implements Comparable<SciNode> {
 		return MainFrequence;
 	}
 
+	/**
+	 * 实现Comparable接口
+	 */
 	public int compareTo(SciNode o) {
 		float arg0 = this.getNodePriorityValue();
 		float arg1 = o.getNodePriorityValue();

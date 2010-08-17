@@ -1,12 +1,19 @@
 package com.scilab.manager;
 
+/**
+ * 调用ScilabTaskHost,简化singleton模式调用代码
+ * 
+ * @author wangadong
+ * @version 1.0
+ * @see ScilabTaskHost
+ */
 public class ScilabTaskHostService {
 	public static boolean setTaskMap(Task task) {
 		return ScilabTaskHost.getInstance().setTaskMap(task);
 	}
 
 	public static boolean submitTask(String taskname, String content,
-			long userId,String resultFolder) {
+			long userId, String resultFolder) {
 		return ScilabTaskHost.getInstance().submitTask(taskname, content,
 				userId, resultFolder);
 	}

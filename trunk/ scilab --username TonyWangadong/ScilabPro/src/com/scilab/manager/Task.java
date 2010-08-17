@@ -6,17 +6,36 @@ import java.rmi.RemoteException;
 import org.apache.axis2.AxisFault;
 import client.DistributedServiceStub;
 
+/**
+ * Scilab任务<br>
+ * 实现Runnable接口，可由Scheduler类中的执行器执行
+ * 
+ * @author wangadong
+ * 
+ */
 public class Task implements Runnable {
-	private static int nodesId = 0;
+	private static int nodesId = 0;// 初始化节点ID
 	String statue = "QUEUEING";
-	private String taskName;
-	private String nodesIp;
-	private String hostIP;
+	private String taskName;// 任务名
+	private String nodesIp;// 节点服务IP地址
+	private String hostIP;// 主机IP地址
 
-	private String content;
-	private String taskQueryId;
-	private String resultFolder;
+	private String content;// scilab代码
+	private String taskQueryId;// 任务查询ID
+	private String resultFolder;// 任务结果保存路径
 
+	/**
+	 * 任务构造函数
+	 * 
+	 * @param taskname
+	 *            任务名
+	 * @param content
+	 *            scilab代码
+	 * @param userId
+	 *            用户ID
+	 * @param resultFolder
+	 *            结果保存路径
+	 */
 	public Task(String taskname, String content, long userId,
 			String resultFolder) {
 		this.taskName = taskname;
@@ -26,6 +45,10 @@ public class Task implements Runnable {
 		System.out.println("Create Task-" + taskname + " belong to " + userId);
 	}
 
+	/**
+	 * 任务保存路径的创建及任务的提交<br>
+	 * 将任务代码提交给节点计算服务(由axis2实现的Webservice)
+	 */
 	public void run() {
 
 		try {
@@ -40,22 +63,19 @@ public class Task implements Runnable {
 				if (!myFilePath.exists())
 					System.out.println("成功更新");
 				myFilePath.mkdirs();
-			}
-
-			System.out.println("tres bien!");
-			// ScilabService.executeCodes(content, resultPath);
+			}// 创建保存路径的文件夹
 			DistributedServiceStub stub = new DistributedServiceStub(
 					"http://"
 							+ nodesIp
-							+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");
+							+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
 			DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
-			host.setCodes(content.replaceAll("\n", "NewLineChar"));
+			host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
 			host.setSavePath(resultFolder);
 			host.setHostIP(hostIP);
-			stub.submitTask(host);
-			System.out.println(content + resultFolder);
+			stub.submitTask(host);//执行计算服务中的submitTask方法
+//			System.out.println(content + resultFolder);
 		} catch (AxisFault e) {
-			System.out.println("服务节点"+getNodesId()+"Connection Error");
+			System.out.println("服务节点" + getNodesId() + "Connection Error");
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -110,7 +130,11 @@ public class Task implements Runnable {
 	public String getTaskQueryId() {
 		return this.taskQueryId;
 	}
-
+/**
+ * 删除多级文件夹及其内容，用于结果文件的更新
+ * @param f 文件或文件夹的路径
+ * @return
+ */
 	public boolean deleteFile(File f) {
 		if (f.exists()) {
 			if (f.isFile())
