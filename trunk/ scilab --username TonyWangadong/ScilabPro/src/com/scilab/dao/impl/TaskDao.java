@@ -6,7 +6,12 @@ import org.hibernate.Session;
 import com.scilab.hibernate.HibernateSessionFactory;
 import com.scilab.manager.Task;
 import com.scilab.pojo.TaskInfo;
-
+/**
+ * 任务持久化接口
+ * @author wangadong
+ * @version 1.0
+ * @see TaskAction
+ */
 public class TaskDao extends BaseDao {
 	public boolean saveOrUpdateTask(TaskInfo taskinfo) {
 		if (saveOrUpdateObj(taskinfo)) {
