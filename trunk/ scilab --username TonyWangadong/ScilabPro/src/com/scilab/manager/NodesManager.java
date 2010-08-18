@@ -30,7 +30,7 @@ public class NodesManager {
 		SAXReader reader = new SAXReader();
 		Document document = reader.read(new File(Thread.currentThread()
 				.getContextClassLoader().getResource("").getFile()).getParent()
-				+ "\\NodesManager.xml");
+				+ File.separator+"NodesManager.xml");
 		Element nodesinfo = document.getRootElement().element("NodesInfo");
 		for (Iterator<?> it = nodesinfo.elementIterator(); it.hasNext();) {
 
@@ -56,7 +56,7 @@ public class NodesManager {
 		SAXReader reader = new SAXReader();
 		Document document = reader.read(new File(Thread.currentThread()
 				.getContextClassLoader().getResource("").getFile()).getParent()
-				+ "\\NodesManager.xml");
+				+ File.separator+"NodesManager.xml");
 		String HostIP = document.getRootElement().element("HostIP")
 				.attributeValue("IPAddress");
 		return HostIP;
