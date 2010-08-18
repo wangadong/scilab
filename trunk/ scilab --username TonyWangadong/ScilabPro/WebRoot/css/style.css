@@ -1,63 +1,36 @@
 @charset "utf-8";
 /* CSS Document */
 /* Download by http://www.codefans.net */
-.mesWindow{border:#666 1px solid;background:#fff;}
-.mesWindowTop{border-bottom:#eee 1px solid;margin-left:4px;padding:3px;font-weight:bold;text-align:left;font-size:12px;}
-.mesWindowContent{margin:4px;font-size:12px;}
-.mesWindow .close{height:15px;width:40px;border:none;cursor:pointer;text-decoration:underline;background:#fff;}
-img,a img{ border:none;}
-.TextInPic {
-	text-decoration:none;
-	color:#000;
-	font-size: 12px;}
-a{
-	text-decoration:none;
-	color:#000;
-	font-size: 12px;
-}
-a:hover{
-	text-decoration:underline;
-	color:#06F;
-	font-size: 14px;
-}
+/*Picture Start*/
 .fcnt{
 	display:block;
-	height:220px;
-	width:642px;
+	height:172px;
+	width:453px;
 	position:relative;
 	overflow:hidden;
+	right: 78px;
+	top: 5px;
 }
-.fcnt .mimg{ float:left; width:642px; height:220px; overflow:hidden;}
+.fcnt .mimg{ float:left; width:453px; height:172px; overflow:hidden;}
 .fcnt .mimg div{ display:none;}
-.mimg img{ width:642px; height:220px;} 
+.mimg img{ width:453px; height:172px;} 
 .fcnt ul{ float:right; width:152px; height:340px;}
 *html .fcnt ul{ position:absolute; right:0; top:0; width:152px; height:340px;}
 .fcnt li{ display:block; height:82px; width:150px; margin-bottom:5px; cursor:pointer; overflow:hidden;}
 .fcnt li img{ width:150px; height:82px;filter:alpha(opacity=70);  -moz-opacity: 0.7; opacity: 0.7;   }
 .fcnt li.cur img{ width:142px; height:75px; margin:4px 0 0 4px;filter:alpha(opacity=100);  -moz-opacity: 1; opacity: 1;  }
-#tri{ position:absolute; top:0; right:2px; z-index:1000; width:155px; height:82px; background:url(images/point.png) no-repeat; cursor:pointer;}
-*html #tri {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="images/point.png");background:none;}
-.fcnt dl{ position:absolute; bottom:1px; left:0px; width:611px; height:80px; background:url(images/shadow.png) no-repeat; display:none;}
-.fcnt dt{ line-height:38px; text-align:center; font-size:22px; font-family:"黑体"; font-weight:900;}
-.fcnt dd{ line-height:24px; text-align:center; font-size:14px;}
-*html .fcnt dl{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="images/shadow.png");background:none;}
+/*Picture Stop*/
 body{
 	background:#999999;
 	width:857px;
-	height: 900px;
+	height: 1000px;
 	margin-top: 0px;
 	margin: auto;
-	cursor: url(../images/mouse.png);
 }
 #global{
 	width:857px;
-	height:900px;
+	height:1000px;
 	background-color:#fff;
-}
-#BlueTopImage {
-	height: 188px;
-	width: 857px;
-	background-image: url(../images/BlueTopImage.jpg);
 }
 #LoginAndRegister {
 	height: 134px;
@@ -75,20 +48,39 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	color: #FFF;
 }
+#BlueTopImage {
+	height: 188px;
+	width: 857px;
+	background-image: url(../images/BlueTopImage.jpg);
+}
 #navigation    {
 	height: 38px;
 	width: 700px;
 	margin-left: 48px;
 }
-#NewfunctionAndGrandpicture {
-	height: 220px;
-	background-image: url(../images/ImageMiddle1.jpg);
+#PictureChange {
+	height: 177px;
 	width: 857px;
+	position: relative;
+}
+#BandPictureLeft {
+	position: absolute;
+	height: 172px;
+	width: 243px;
+	visibility: visible;
+	z-index: 5;
+	top: 5px;
+	left: 78px;
+	overflow: visible;
+	float: none;
 }
 #Bandpicture    {
-	width: 642px;
-	height: 220px;
+	width: 453px;
+	height: 172px;
 	float: right;
+	visibility: visible;
+	overflow: visible;
+	z-index: -5;
 }
 #LoginDiv {
 	float: left;
@@ -261,9 +253,8 @@ body{
 }
 
 #EcpknLogo {
-	height: 59px;
 	margin-top: -80px;
 	float: left;
 	z-index: -2;
-	margin-left: 440px;
+	margin-left: 580px;
 }

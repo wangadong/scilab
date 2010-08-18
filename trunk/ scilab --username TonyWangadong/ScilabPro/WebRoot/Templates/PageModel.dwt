@@ -78,23 +78,56 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- TemplateEndEditable -->
 </head>
 
-<body onload="MM_preloadImages('../images/HomeMouseOn.png','../images/OperationMouseOn.png','../images/FunctionMouseOn.png','../images/ShowMouseOn.png','../images/TeamMouseOn.png','../images/ContactMouseOn.png')">
+<body onload="MM_preloadImages('../images/HomeMouseOn.png','../images/OperationMouseOn.png','../images/FunctionMouseOn.png','../images/ShowMouseOn.png','../images/TeamMouseOn.png','../images/ContactMouseOn.png','../images/LinkMouseOn.png','../images/BBSMouseOn.png')">
   <div id="global">
   <div id="BlueTopImage">
   <div id="LoginAndRegister" align="left"><a class="LoginAndRegister" href="Login.jsp">Login</a> | <a class="LoginAndRegister" href="Register.jsp">Register</a></div>
   <div id="navigation">
     <table width="558" border="0" cellpadding="0" cellspacing="1" id="nav">
       <tr>
-        <td width="80"><a href="../index.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationHome','',1)" onmouseover="MM_nbGroup('over','NavigationHome','../images/HomeMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="../images/HomeNormal.png" alt="NavigationHome" name="NavigationHome" width="80" height="43" border="0" id="index"/></a></td>
-        <td width="110" ><a href="../PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationOperation','',1)" onmouseover="MM_nbGroup('over','NavigationOperation','../images/OperationMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/OperationNormal.png" alt="NavigationOperation" name="NavigationOperation" border="0"id="operation" /></a></td>
-        <td width="106" ><a href="../PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationFunction','',1)" onmouseover="MM_nbGroup('over','NavigationFunction','../images/FunctionMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="../images/FunctionNormal.png" alt="NavigationFunction" name="NavigationFunction" border="0"/></a></td>
-        <td width="80" ><a href="../PageShow.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationShow','',1)" onmouseover="MM_nbGroup('over','NavigationShow','../images/ShowMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/ShowNormal.png" alt="NavigationShow" name="NavigationShow" border="0" /></a></td>
-        <td width="80"><a href="../PageTeam.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationTeam','',1)" onmouseover="MM_nbGroup('over','NavigationTeam','../images/TeamMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/TeamNormal.png" alt="NavigationTeam" name="NavigationTeam" border="0"/></a></td>
-        <td width="215" ><a href="../PageContact.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavigationContact','',1)" onmouseover="MM_nbGroup('over','NavigationContact','../images/ContactMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/ContactNormal.png" alt="NavigationContact" name="NavigationContact" border="0"/></a></td>
+        <td width="80"><a href="../index.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavHome','',1)" onmouseover="MM_nbGroup('over','NavHome','../images/HomeMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="../images/HomeNormal.png" alt="NavHome" name="NavHome" width="80" height="43" border="0" id="index"/></a></td>
+        <td width="110" ><a href="../PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavOperation','',1)" onmouseover="MM_nbGroup('over','NavOperation','../images/OperationMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/OperationNormal.png" alt="NavOperation" name="NavOperation" border="0"id="operation" /></a></td>
+        <td width="106" ><a href="../PageFunctionInput.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavFunction','',1)" onmouseover="MM_nbGroup('over','NavFunction','../images/FunctionMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="../images/FunctionNormal.png" alt="NavFunction" name="NavFunction" border="0"/></a></td>
+        <td width="80" ><a href="../PageShow.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavShow','',1)" onmouseover="MM_nbGroup('over','NavShow','../images/ShowMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/ShowNormal.png" alt="NavShow" name="NavShow" border="0" /></a></td>
+        <td width="80"><a href="../PageTeam.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavTeam','',1)" onmouseover="MM_nbGroup('over','NavTeam','../images/TeamMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/TeamNormal.png" alt="NavTeam" name="NavTeam" border="0"/></a></td>
+        <td width="215" ><a href="../PageContact.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavContact','',1)" onmouseover="MM_nbGroup('over','NavContact','../images/ContactMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="../images/ContactNormal.png" alt="NavContact" name="NavContact" border="0"/></a></td>
+        <td><a href="PageLink.jsp" target="_top" onClick="MM_nbGroup('down','group1','NavLink','',1)" onMouseOver="MM_nbGroup('over','NavLink','../images/LinkMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavLink" src="../images/LinkNormal.png" border="0" alt="NavLink" onLoad="" /></a></td>
+        <td><a href="www.scilab.org.cn/bbs/" target="_top" onClick="MM_nbGroup('down','group1','NavBBS','',1)" onMouseOver="MM_nbGroup('over','NavBBS','../images/BBSMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavBBS" src="../images/BBSNormal.png" border="0" alt="NavBBS" onLoad="" /></a></td>
       </tr>
     </table>
     </div></div>
-  
+ <div id="PictureChange">
+   <div id="BandPictureLeft"><img src="../images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
+ 
+    <div id="Bandpicture">
+ <div class="fcnt" id="ppt">
+    	<div class="mimg" id="mpc">
+        	<div style="display:block">
+                 <a href="../PageRun.jsp"><img src="../images/Picture0.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture2.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture1.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture3.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture4.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture5.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture6.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture7.jpg" alt="" /></a></div>
+            <div><a href="../PageRun.jsp"><img src="../images/Picture8.jpg" alt="" /></a></div>
+        </div>
+             
+        <ul>
+        	<li class="cur"><img src="../images/s0.jpg" alt="" /></li>
+            <li><img src="../images/s2.jpg" alt="" /></li>
+            <li><img src="../images/s1.jpg" alt="" /></li>
+            <li><img src="../images/s3.jpg" alt="" /></li>
+            <li><img src="../images/s4.jpg" alt="" /></li>
+            <li><img src="../images/s5.jpg" alt="" /></li>
+            <li><img src="../images/s6.jpg" alt="" /></li>
+            <li><img src="../images/s7.jpg" alt="" /></li>
+            <li><img src="../images/s8.jpg" alt="" /></li>
+        </ul>
+    </div>
+    </div>
+    </div>
  
   <div id="LoginDiv">
   <!-- TemplateBeginEditable name="EditRegion1" --><!-- TemplateEndEditable --><a href="../PageModel.dwt"></a>    
@@ -134,7 +167,7 @@ function MM_nbGroup(event, grpName) { //v6.0
     </table>
   </div>
   </div>
-<div id="EcpknLogo"><img src="../images/ecpknLOGO.png" width="200" height="59" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+<div id="EcpknLogo"><img src="../images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
 </body>
 </html>
 

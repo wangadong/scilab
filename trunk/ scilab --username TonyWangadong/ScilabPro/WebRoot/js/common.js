@@ -8,7 +8,7 @@ var fot=2000;//当前图片消失时间
 var fin=3000;//新图片呈现时间
 var amt=3000;//三角标志滑动时间
 var speed=3000;//自动播放间隔
-var maxpic=4;//切换图片个数
+var maxpic=9;//切换图片个数
 	$("#ppt").find("li").each(function(i){
 		$("#ppt").find("li").eq(i).mouseover(function(){											  
 			var cur=$("#mpc").find("div:visible").prevAll().length;
