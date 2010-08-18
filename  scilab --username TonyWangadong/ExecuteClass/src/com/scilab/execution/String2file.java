@@ -2,7 +2,23 @@ package com.scilab.execution;
 
 import java.io.*;
 
+/**
+ * 字符串保存为文件
+ * 
+ * @author wangadong
+ * @version 1.0
+ * @see Execution
+ */
 public class String2file {
+	/**
+	 * 将字符串保存成指定文件
+	 * 
+	 * @param res
+	 *            保存的字符串
+	 * @param filePath
+	 *            保存的文件路径
+	 * @return boolean 是否保存成功
+	 */
 	public static boolean string2File(String res, String filePath) {
 		boolean flag = true;
 		BufferedReader bufferedReader = null;
@@ -12,7 +28,8 @@ public class String2file {
 			File distFile = new File(filePath);
 			if (!distFile.getParentFile().exists())
 				distFile.getParentFile().mkdirs();
-			bufferedReader = new BufferedReader(new StringReader(res.replaceAll("NewLineChar", "\r\n")));
+			bufferedReader = new BufferedReader(new StringReader(res
+					.replaceAll("NewLineChar", "\r\n")));
 			bufferedWriter = new BufferedWriter(new FileWriter(distFile));
 			while ((tmp = bufferedReader.readLine()) != null) {
 				bufferedWriter.write(tmp);
@@ -35,9 +52,5 @@ public class String2file {
 			}
 		}
 		return flag;
-	}
-
-	public static void main(String[] args) {
-		string2File("sdf\r\n;lsdkfs\r\\n", "c:/2.sci");
 	}
 }
