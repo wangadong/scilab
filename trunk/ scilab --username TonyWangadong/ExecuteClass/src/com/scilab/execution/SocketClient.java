@@ -3,6 +3,14 @@ package com.scilab.execution;
 import java.io.*;
 import java.net.*;
 
+/**
+ * æ–‡ä»¶ä¼ è¾“å®¢æˆ·ç«¯ï¼Œå°†ç”Ÿæˆçš„ç»“æœæ–‡ä»¶ä¼ å›æœåŠ¡å™¨
+ * 
+ * @author wangadong
+ * @version 1.0
+ * @see Execution
+ * 
+ */
 public class SocketClient extends Thread {
 	protected String hostIp = "127.0.0.1";
 	protected int hostPort = 3000;
@@ -29,6 +37,9 @@ public class SocketClient extends Thread {
 		sendMessage();
 	}
 
+	/**
+	 * å»ºç«‹æ–‡ä»¶ä¼ è¾“è¿æ¥
+	 */
 	public void setUpConnection() {
 		try {
 			client = new Socket(hostIp, hostPort);
@@ -45,12 +56,14 @@ public class SocketClient extends Thread {
 
 	}
 
+	/**
+	 * ä¼ è¾“æ–‡ä»¶æµ
+	 */
 	public void sendMessage() {
 		setUpConnection();
 		if (client == null)
 			return;
 		try {
-			// ½«ÎÄ¼şÃû¼°³¤¶È´«¸ø¿Í»§¶Ë¡£
 			ps.writeUTF(path);
 			ps.flush();
 
@@ -74,13 +87,10 @@ public class SocketClient extends Thread {
 			e.printStackTrace();
 		} finally {
 
-			// ×¢Òâ¹Ø±ÕsocketÁ´½ÓÅ¶£¬²»È»¿Í»§¶Ë»áµÈ´ıserverµÄÊı¾İ¹ıÀ´£¬
-			// Ö±µ½socket³¬Ê±£¬µ¼ÖÂÊı¾İ²»ÍêÕû¡£
 			try {
 				ps.close();
 				fis.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
