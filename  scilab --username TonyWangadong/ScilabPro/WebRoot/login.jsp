@@ -7,26 +7,6 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-	<head>
-		<base href="<%=basePath%>">
-
-		<title>My JSP 'MyJsp.jsp' starting page</title>
-
-		<meta http-equiv="pragma" content="no-cache">
-		<meta http-equiv="cache-control" content="no-cache">
-		<meta http-equiv="expires" content="0">
-		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-		<meta http-equiv="description" content="This is my page">
-		<script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
-		<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
-		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
-		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
-		
-		<script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
-
 	<script type="text/javascript">
 		function login(){
 			var userName = $("#userName").val();
@@ -50,10 +30,17 @@
 			return false;
 		}
 	</script>
-   	<div id="loginDiv">
-    	<s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
-    		<s:textfield name="user.userName" id="userName" label="帐户" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    <style type="text/css">
+<!--
+#loginDiv{
+	padding-top:30px;
+}
+-->
+</style>
+   	<div id="loginDiv" align="center">
+      <s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
+      <s:textfield name="user.userName" id="userName" label="帐户" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
     		<s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    		<s:submit value="登陆" method="login" cssStyle="height:30px; width:50px; font-size:16px;"/>
+    		<s:submit value="登陆" method="login" cssStyle="height:25px; width:40px; font-size:14px;"/>
     	</s:form>
     </div>

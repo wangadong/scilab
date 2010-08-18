@@ -19,7 +19,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script> 
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
-	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script>
+	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script> 
+    <script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
+    <link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
+	<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
+    
+         
     <script type="text/javascript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -83,7 +88,10 @@ function MM_nbGroup(event, grpName) { //v6.0
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
   <div id="global">
   <div id="BlueTopImage">
-  <div id="LoginAndRegister" align="left"><a class="LoginAndRegister" href="Login.jsp">Login</a> | <a class="LoginAndRegister" href="Register.jsp">Register</a></div>
+  <div id="LoginAndRegister">
+  <s:if test="#session.user!=null"><jsp:include page="loginsucc1.jsp"></jsp:include></s:if>
+  <s:else><jsp:include page="loginregister1.jsp"></jsp:include></s:else>
+  </div>
   <div id="navigation">
     <table width="558" border="0" cellpadding="0" cellspacing="1" id="nav">
       <tr>
@@ -134,8 +142,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div id="LoginDiv">
   <!-- InstanceBeginEditable name="EditRegion1" --><!-- InstanceEndEditable --><a href="PageModel.dwt"></a>    
   <div id="LoginPersonal" align="center">
-   <p>登陆个人帐户：</p>
-  <s:if test="#session.user!=null"><jsp:include page="loginsucc.jsp"></jsp:include></s:if>
+   <s:if test="#session.user!=null"><jsp:include page="loginsucc2.jsp"></jsp:include></s:if>
 <s:else><jsp:include page="login.jsp"></jsp:include></s:else>
     </div>
   <hr align="center" id="horizon" />
