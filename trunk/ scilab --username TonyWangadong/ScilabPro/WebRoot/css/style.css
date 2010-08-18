@@ -2,6 +2,7 @@
 /* CSS Document */
 /* Download by http://www.codefans.net */
 /*Picture Start*/
+img {border:none}
 .fcnt{
 	display:block;
 	height:172px;
@@ -32,17 +33,37 @@ body{
 	height:1000px;
 	background-color:#fff;
 }
-#LoginAndRegister {
+#LoginAndRegister{
 	height: 134px;
 	width: 847px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 9px;
-	color: #FFF;
 	padding-top: 10px;
 	padding-left: 10px;
+	color: #FFF;
 }
-
-.LoginAndRegister {
+.loginAction {
+	font-size: 14px;
+	text-decoration: underline;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+}
+.registerAction {
+	font-size: 14px;
+	text-decoration: underline;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+}
+#LoginSucc{
+	width:200px;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	float:left;
+}
+#signoutDiv{
+	width:100px;
+	float:left;
+}
+.SignOutTop{
 	font-size: 14px;
 	text-decoration: underline;
 	font-family: Arial, Helvetica, sans-serif;
@@ -81,6 +102,9 @@ body{
 	visibility: visible;
 	overflow: visible;
 	z-index: -5;
+}
+#loginDiv{
+	padding-top: 80px;
 }
 #LoginDiv {
 	float: left;

@@ -41,6 +41,7 @@
 	</head>
 
 	<body>
+    <div id=regis align="center">
 		请填写注册信息：
 		</br>
 		<s:form action="RegisterAction" namespace="/" method="post" theme="simple" onsubmit="return register()" >
@@ -75,6 +76,7 @@
 			</table>
 		</s:form>
 		<s:fielderror cssStyle="color:red" />
+        </div>
 	</body>
 </html>
 
