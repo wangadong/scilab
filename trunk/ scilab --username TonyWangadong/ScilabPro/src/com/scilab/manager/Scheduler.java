@@ -6,6 +6,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.dom4j.DocumentException;
 
+import com.scilab.util.LinuxLocalIP;
+
 /**
  * Scheduler.java Description: 任务监视器<br>
  * 任务提交后执行任务列表中的任务<br>
@@ -30,9 +32,15 @@ public class Scheduler implements Runnable {
 		exec = Executors.newSingleThreadExecutor();// 定义单线程任务执行器
 		System.out.println("Executor Started");
 		try {
-			hostIP = NodesManager.getHostIP();// 从节点管理器中获取主机ip地址
-			if (hostIP.length() < 7)
+			if (System.getProperty("os.name").equals("Linux"))
+				hostIP = LinuxLocalIP.getLocalIP();// 获取Linux主机IP
+			else
+				hostIP = NodesManager.getHostIP();// 从节点管理器中获取主机ip地址
+			if (hostIP.length() < 7) {
+
 				hostIP = InetAddress.getLocalHost().getHostAddress().toString();// 若xml中未设置主机IP则自动获取
+			}
+
 		} catch (DocumentException e) {
 
 		} catch (UnknownHostException e) {
@@ -55,6 +63,7 @@ public class Scheduler implements Runnable {
 							.getCurrentNode();// 任务调度器返回一个当前可用的计算节点
 					currentTask.setNodesId(currentNode.getID());
 					currentTask.setNodesIp(currentNode.getIPAddress());
+					currentTask.setNodeName(currentNode.getNodeName());
 					currentTask.setHostIP(hostIP);// 设置任务节点信息
 					exec.execute(currentTask);// 提交当前任务到计算节点服务
 					TaskDispatcher.getInstance().addTaskToNode(

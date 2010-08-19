@@ -29,6 +29,8 @@ public class CheckTask extends BaseAction {
 	private String resultContent;// scilab代码，与页面代码对应
 	private File file;
 	private String imgPath;// 结果图片保存相对地址
+	private String nodeName;
+	private String nodeIP;
 
 	/**
 	 * 获取结果<br>
@@ -49,6 +51,8 @@ public class CheckTask extends BaseAction {
 		System.out.println(userId + taskname);
 		if (ScilabTaskHostService.isExist(userId + taskname)) {
 			resultFolder = ScilabTaskHostService.getResult(userId + taskname);// 根据任务查询ID获取结果保存路径
+			nodeName=ScilabTaskHostService.getTaskByQueryId(userId + taskname).getNodeName();
+			nodeIP=ScilabTaskHostService.getTaskByQueryId(userId + taskname).getNodesIp();
 		} else
 			return "resultFail";// 若不存在此任务则跳转到错误页面
 		// 若存在图像，则提取图像保存路径
@@ -207,4 +211,19 @@ public class CheckTask extends BaseAction {
 		this.resultFolder = resultFolder;
 	}
 
+	public String getNodeName() {
+		return nodeName;
+	}
+
+	public void setNodeName(String nodeName) {
+		nodeName = nodeName;
+	}
+
+	public void setNodeIP(String nodeIP) {
+		this.nodeIP = nodeIP;
+	}
+
+	public String getNodeIP() {
+		return nodeIP;
+	}
 }
