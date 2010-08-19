@@ -254,7 +254,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 				Task name:
 				<input type="text" name="task.taskName" id="myForm_taskName" />
 			</p>
-			<textarea id="scilabtask_1" style="height: 500px; width: 700px;"
+			<textarea id="scilabtask_1" style="height: 500px; width: 600px;"
 				name="task.taskContent">you can write scilab codes here!</textarea>
 			<br />
 			<s:submit value='提交任务' method="submitTask"/>
