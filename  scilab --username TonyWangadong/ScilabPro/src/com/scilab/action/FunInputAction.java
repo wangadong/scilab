@@ -1,6 +1,8 @@
 package com.scilab.action;
 
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -51,6 +53,17 @@ public class FunInputAction extends BaseAction {
 		
 		Username=user.getUserName();
 		
+		String regEx1="function"; 
+		String regEx2="endfunction";
+		    
+		    Pattern p1=Pattern.compile(regEx1);
+		    Matcher m1=p1.matcher(functionInfo.getFunContent());
+	        boolean result1=m1.find();
+	        
+	        Pattern p2=Pattern.compile(regEx2);
+		    Matcher m2=p2.matcher(functionInfo.getFunContent());
+	        boolean result2=m2.find();
+	        if(result1 || result2){
 		boolean valid = true;
 		if (functionInfo.getFunName() == null
 				|| functionInfo.getFunName().equals(""))
@@ -64,20 +77,24 @@ public class FunInputAction extends BaseAction {
 		if (functionInfo.getFunHelp() == null
 				|| functionInfo.getFunHelp().equals(""))
 			valid = false;
-		if (valid) {
+		
+		   if (valid) {
 			boolean b = dao.saveObj(functionInfo);
 
 			if (b) {
-				msg = "恭喜您！"+Username +"“" +functionInfo.getFunName() + "”上传成功！请等待审核LoL!"
-						+ " 上传时间为： " + functionInfo.getSaveTime();
+				msg = "Congratulations!! "+Username +"“" +functionInfo.getFunName() + "” uploaded successfully! "
+						+ " Operation time : " + functionInfo.getSaveTime();
 			} else {
-				msg = "“" + functionInfo.getFunName()
-						+ "”上传失败！可能是数据库出现错误请您稍后再试~：（" + " 错误发生时间为： "
+				msg = " Ooops!! “" + functionInfo.getFunName()
+						+ "”upload Failed! Please try later! " + " Error time: "
 						+ functionInfo.getSaveTime();
 			}
 		} else {
-			msg = "框体不能为空！";
+			msg = "Ouch~ some of your blanks are still empty ! Please fullfill them !";
 		}
+	        }else{
+				msg="It's a pity !! But your function is not in a propre form !! (Have 'function' and 'endfunction' at least..)";
+			}
 		return "Inputsucc";
 	}
 

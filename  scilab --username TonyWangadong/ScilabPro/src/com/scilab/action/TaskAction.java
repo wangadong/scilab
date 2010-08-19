@@ -56,10 +56,10 @@ public class TaskAction extends BaseAction {
 				userId, resultFolder);
 		// setMessage("任务名称：" + taskname + "  " + "scilab代码：" + content);
 		//创建页面新增任务列表代码
-		setMessage("任务名称：" + taskname
+		setMessage("Task Name：" + taskname
 				+ "<a href='./CheckTask!getResult?taskname=" + taskname
-				+ "'>查看结果</a>     <a href='./CheckTask!saveTask?taskname="
-				+ taskname + "'>保存任务</a>");
+				+ "'>Check the Result</a>     <a href='./CheckTask!saveTask?taskname="
+				+ taskname + "'>Save my Task</a>");
 		if (bool)
 			return SUCCESS;//提交成功则跳转成功页面
 		else

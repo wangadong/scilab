@@ -42,13 +42,13 @@
 
 	<body>
     <div id=regis align="center">
-		请填写注册信息：
+		Please fill in the registration information:
 		</br>
 		<s:form action="RegisterAction" namespace="/" method="post" theme="simple" onsubmit="return register()" >
 			<table>
 				<tr>
 					<td style="">
-						请输入账号
+						Please enter the Username
 					</td>
 					<td>
 						<s:textfield name="userInfo.userName" id="userName" label="账号" onblur="isRegister()" />
@@ -57,20 +57,20 @@
 				</tr>
 				<tr>
 					<td style="">
-						请输入密码
+						Please enter the Code
 					</td>
 					<td>
-						<s:password name="userInfo.password" label="密码" />
+						<s:password name="userInfo.password" label="code" />
 					</td>
 				</tr>
 
 				</tr>
 				<tr>
 					<td style="">
-						<s:submit value="注册" method="register"></s:submit>
+						<s:submit value="Regist" method="register"></s:submit>
 					</td>
 					<td style="">
-						<s:reset value="取消" />
+						<s:reset value="Cancel" />
 					</td>
 				</tr>
 			</table>

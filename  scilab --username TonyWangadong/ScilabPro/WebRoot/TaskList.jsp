@@ -185,9 +185,9 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="EditRegion2" -->    
 <table width="500"  border="2"  valign="top">
-  <tr><td height="25" width="250" align="left" class="title">任务名称列表</td><td width="250">查看任务信息</td></tr> 
+  <tr><td height="25" width="250" align="left" class="title">Task Name List</td><td width="250">View task information</td></tr> 
   <c:if test="${empty list}"><tr height="25"><td width="500"align="left"class="title">
-     对不起，暂时还没有任务，请提交后查看　　　　　　　　　　
+    Sorry, no task yet, please submit to view　　　　　　　　　
   </td></tr></c:if>
   <c:forEach var="task" items="${list}"> 
   <tr height="10"><td width="250"align="left"class="title">${task.taskName}</td><td width="250"><a href="task_getDetail?id=${task.taskId}">查看</a></td></tr>
@@ -195,25 +195,25 @@ function MM_nbGroup(event, grpName) { //v6.0
   </c:forEach>
   </table>
 	   <br><br>
-	   　<a href="PageRun.jsp">继续上传任务</a>　　　<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
+	   　<a href="PageRun.jsp">Continue to upload tasks</a>　　　<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
 <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
-        <td width="219">电话:***********</td>
+        <td width="219">Tel:***********</td>
       </tr>
       <tr>
         <td height="19">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
+        <td>E-mail:**********@gmail.com</td>
       </tr>
       <tr>
         <td height="23">Copyright 2010©www.****.com</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
+        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
       </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>邮编：100191</td>
+        <td>Zip Code：100191</td>
       </tr>
     </table>
   </div>

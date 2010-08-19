@@ -134,7 +134,7 @@ public class CheckTask extends BaseAction {
 		//userID<10000为注册用户
 		if (userId < 10000) {
 			System.out.println(userId + taskname);
-			saveStatue = "保存失败";
+			saveStatue = "Unable to save !";
 			// 判断该用户的该任务名是否存在
 			if (ScilabTaskHost.getInstance().getTaskMap().containsKey(
 					userId + taskname)) {
@@ -155,11 +155,11 @@ public class CheckTask extends BaseAction {
 				TaskDao dao = new TaskDao();//建立数据库连接
 				//保存任务到数据库
 				if (dao.saveOrUpdateTask(taskinfo)) {
-					saveStatue = "保存成功";
+					saveStatue = "Task saved successfully !";
 				}
 			}
 		} else {
-			saveStatue = "对不起，游客无法保存任务";//若用户ID>10000,则为游客访问，不允许保存任务
+			saveStatue = "Ooops! You can't save the task as a visitor!";//若用户ID>10000,则为游客访问，不允许保存任务
 		}
 		//Ajax
 		getResponse().setContentType("text/html; charset=utf-8");

@@ -33,12 +33,12 @@ public class RegisterAction extends BaseAction {
 		if (valid) {
 			boolean b = dao.saveUser(userInfo);
 			if (b) {
-				msg = "“" + userInfo.getUserName() + "”注册成功！";
+				msg = "“" + userInfo.getUserName() + "”Registe Successfully!";
 			} else {
-				msg = "“" + userInfo.getUserName() + "”注册失败！";
+				msg = "“" + userInfo.getUserName() + "”Registe Unsuccessfully!";
 			}
 		} else {
-			msg = "用户名密码均不能为空";
+			msg = "Username and Code should not be vide !";
 		}
 		return "Registersucc";
 	}

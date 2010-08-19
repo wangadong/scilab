@@ -13,9 +13,9 @@
 			return false;
 		}
 	</script>
-    <p>管理我的帐户：</p>
+    <p>Manage my account：</p>
   	<a href="./PageRun.jsp">Click Here TO Run Scilab Online!</a><br/>
-  	<a href="fun_getAllFunctions">查看我的函数列表</a><br/>
-  <a href="fun_getReleasedFunList">查看所有函数列表</a><br/>
-  <a href="task_getAllTask?id=${task.taskId}">查看任务</a>
+  	<a href="fun_getAllFunctions">View my function list</a><br/>
+  <a href="fun_getReleasedFunList">View a list of all functions</a><br/>
+  <a href="task_getAllTask?id=${task.taskId}">Check out the Task</a>
   
