@@ -64,34 +64,20 @@ public class Task implements Runnable {
 					System.out.println("成功更新");
 				myFilePath.mkdirs();
 			}// 创建保存路径的文件夹
-			if (System.getProperty("os.name").equals("Linux")) {
-				String str = "C:/ScilabDistribution/tomcat6.0/webapps";
-				String linuxToWindowsFolder = str
-						+ resultFolder.split("webapps")[1];
-				System.out.println("You are using linux");
-				DistributedServiceStub stub = new DistributedServiceStub(
-						"http://"
-								+ nodesIp
-								+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
-				DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
-				host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
+			String str = "C:/ScilabDistribution/tomcat6.0/webapps";
+			String submitFolder = str
+					+ resultFolder.split("webapps")[1];
+			System.out.println("You are using linux");
+			DistributedServiceStub stub = new DistributedServiceStub(
+					"http://"
+							+ nodesIp
+							+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
+			DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
+			host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
 
-				host.setSavePath(linuxToWindowsFolder);
-				host.setHostIP(hostIP);
-				stub.submitTask(host);// 执行计算服务中的submitTask方法
-			} else {
-				DistributedServiceStub stub = new DistributedServiceStub(
-						"http://"
-								+ nodesIp
-								+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
-				DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
-				host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
-				
-				host.setSavePath(resultFolder);
-				host.setHostIP(hostIP);
-				stub.submitTask(host);//执行计算服务中的submitTask方法
-			}
-
+			host.setSavePath(submitFolder);
+			host.setHostIP(hostIP);
+			stub.submitTask(host);// 执行计算服务中的submitTask方法
 			// System.out.println(content + resultFolder);
 		} catch (AxisFault e) {
 			System.out.println("服务节点" + getNodesId() + "Connection Error");

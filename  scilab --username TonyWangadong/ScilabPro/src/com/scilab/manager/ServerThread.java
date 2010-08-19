@@ -51,15 +51,14 @@ public class ServerThread extends Thread {
 						.getTaskByQueryId(taskQueryId);
 				if (System.getProperty("os.name").equals("Linux")) {
 					System.out.println("You are using linux");
-					if (savePath.endsWith("png")) {
-						savePath = new File(currentTask.getResultFolder())
-								.getParent()
-								+ "/figure0.png";
-						System.out.println("haa");
-					} else
-						savePath = currentTask.getResultFolder();
-
 				}
+				if (savePath.endsWith("png")) {
+					savePath = new File(currentTask.getResultFolder())
+							.getParent()
+							+ "/figure0.png";
+					System.out.println(savePath);
+				} else
+					savePath = currentTask.getResultFolder();
 				DataOutputStream fileOut = new DataOutputStream(
 						new BufferedOutputStream(new BufferedOutputStream(
 								new FileOutputStream(savePath))));
