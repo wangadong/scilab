@@ -41,8 +41,6 @@
 				language : "zh",
 				syntax : "php",
 				toolbar : "new_document, save, load, |, search, go_to_line, |, undo, redo, |, select_font, |, highlight",
-				load_callback : "my_load",
-				save_callback : "my_save",
 				plugins : "charmap",
 				charmap_default : "arrows",
 				is_multi_files : false
@@ -127,7 +125,7 @@
 				Task name:
 				<input type="text" name="task.taskName" id="myForm_taskName" />
 			</p>
-			<textarea id="scilabtask_1" style="height: 500px; width: 700px;"
+			<textarea id="scilabtask_1" style="height: 500px; width: 600px;"
 				name="task.taskContent">you can write scilab codes here!</textarea>
 			<br />
 			<s:submit value='提交任务' method="submitTask"/>
