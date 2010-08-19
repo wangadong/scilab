@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  	This task is executed by ${nodeName}:${nodeIP}<br>
   	${resultContent} <br>
   	<s:if test="imgPath!=null"><img src="<%=basePath%>${imgPath}"></s:if>
   	<s:else><br/>No IMAGE!  </s:else>	

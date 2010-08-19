@@ -19,7 +19,7 @@ public class Task implements Runnable {
 	private String taskName;// 任务名
 	private String nodesIp;// 节点服务IP地址
 	private String hostIP;// 主机IP地址
-
+	private String nodeName;
 	private String content;// scilab代码
 	private String taskQueryId;// 任务查询ID
 	private String resultFolder;// 任务结果保存路径
@@ -64,16 +64,35 @@ public class Task implements Runnable {
 					System.out.println("成功更新");
 				myFilePath.mkdirs();
 			}// 创建保存路径的文件夹
-			DistributedServiceStub stub = new DistributedServiceStub(
-					"http://"
-							+ nodesIp
-							+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
-			DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
-			host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
-			host.setSavePath(resultFolder);
-			host.setHostIP(hostIP);
-			stub.submitTask(host);//执行计算服务中的submitTask方法
-//			System.out.println(content + resultFolder);
+			if (System.getProperty("os.name").equals("Linux")) {
+				String str = "C:/ScilabDistribution/tomcat6.0/webapps";
+				String linuxToWindowsFolder = str
+						+ resultFolder.split("webapps")[1];
+				System.out.println("You are using linux");
+				DistributedServiceStub stub = new DistributedServiceStub(
+						"http://"
+								+ nodesIp
+								+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
+				DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
+				host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
+
+				host.setSavePath(linuxToWindowsFolder);
+				host.setHostIP(hostIP);
+				stub.submitTask(host);// 执行计算服务中的submitTask方法
+			} else {
+				DistributedServiceStub stub = new DistributedServiceStub(
+						"http://"
+								+ nodesIp
+								+ ":8080/axis2/services/DistributedService.DistributedServiceHttpSoap12Endpoint/");// 创建axis服务的
+				DistributedServiceStub.SubmitTask host = new DistributedServiceStub.SubmitTask();
+				host.setCodes(content.replaceAll("\n", "NewLineChar"));// 由于服务中命令行参数的传递会使换行符丢失，因此先将代码中的换行符用“NewLineChar”代替，再传入后再恢复，以解决命令行参数的问题
+				
+				host.setSavePath(resultFolder);
+				host.setHostIP(hostIP);
+				stub.submitTask(host);//执行计算服务中的submitTask方法
+			}
+
+			// System.out.println(content + resultFolder);
 		} catch (AxisFault e) {
 			System.out.println("服务节点" + getNodesId() + "Connection Error");
 		} catch (RemoteException e) {
@@ -130,11 +149,14 @@ public class Task implements Runnable {
 	public String getTaskQueryId() {
 		return this.taskQueryId;
 	}
-/**
- * 删除多级文件夹及其内容，用于结果文件的更新
- * @param f 文件或文件夹的路径
- * @return
- */
+
+	/**
+	 * 删除多级文件夹及其内容，用于结果文件的更新
+	 * 
+	 * @param f
+	 *            文件或文件夹的路径
+	 * @return
+	 */
 	public boolean deleteFile(File f) {
 		if (f.exists()) {
 			if (f.isFile())
@@ -158,5 +180,13 @@ public class Task implements Runnable {
 
 	public int getNodesId() {
 		return nodesId;
+	}
+
+	public String getNodeName() {
+		return this.nodeName;
+	}
+
+	public void setNodeName(String nodeName) {
+		this.nodeName = nodeName;
 	}
 }

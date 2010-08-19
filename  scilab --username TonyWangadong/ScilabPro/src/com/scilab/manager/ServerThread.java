@@ -40,10 +40,30 @@ public class ServerThread extends Thread {
 			try {
 				int bufferSize = 8192;
 				byte[] buf = new byte[bufferSize];
+				long len = 0;
 				String savePath = inputStream.readUTF();
+				System.out.println(savePath);
+				String taskQueryId = new File(savePath).getParentFile()
+						.getParentFile().getName()
+						+ new File(savePath).getParentFile().getName();// 获取与传回结果相对应的任务查询ID
+				System.out.println(taskQueryId);
+				Task currentTask = ScilabTaskHostService
+						.getTaskByQueryId(taskQueryId);
+				if (System.getProperty("os.name").equals("Linux")) {
+					System.out.println("You are using linux");
+					if (savePath.endsWith("png")) {
+						savePath = new File(currentTask.getResultFolder())
+								.getParent()
+								+ "/figure0.png";
+						System.out.println("haa");
+					} else
+						savePath = currentTask.getResultFolder();
+
+				}
 				DataOutputStream fileOut = new DataOutputStream(
 						new BufferedOutputStream(new BufferedOutputStream(
 								new FileOutputStream(savePath))));
+				len = inputStream.readLong();
 				while (true) {
 					int read = 0;
 					if (inputStream != null) {
@@ -58,11 +78,7 @@ public class ServerThread extends Thread {
 				fileOut.flush();
 				fileOut.close();
 				inputStream.close();
-				String taskQueryId = new File(savePath).getName();// 获取与传回结果相对应的任务查询ID
-				if (taskQueryId.endsWith("txt")) {
-					taskQueryId = taskQueryId.replaceAll(".txt", "");
-					Task currentTask = ScilabTaskHostService
-							.getTaskByQueryId(taskQueryId);
+				if (savePath.endsWith("txt")) {
 					currentTask.setStatue("FINISHED");
 					ScilabTaskHostService.setTaskMap(currentTask);// 更新任务状态为已完成
 					TaskDispatcher.getInstance().minusTaskToNode(
