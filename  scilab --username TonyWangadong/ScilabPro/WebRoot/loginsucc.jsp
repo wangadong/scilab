@@ -13,6 +13,7 @@
 			return false;
 		}
 	</script>
+   
   	<s:if test="#session.user!=null">用户“${sessionScope.user.userName}”登陆成功！</s:if>
   	<s:else>登陆失败！</s:else>
   	<p>请点击右上角退出登录框，并刷新一次页面</p>
