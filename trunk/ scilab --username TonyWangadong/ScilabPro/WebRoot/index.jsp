@@ -191,19 +191,19 @@ function MM_nbGroup(event, grpName) { //v6.0
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
-        <td width="219">电话:***********</td>
+        <td width="219">Tel:***********</td>
       </tr>
       <tr>
         <td height="19">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
+        <td>E-mail:**********@gmail.com</td>
       </tr>
       <tr>
         <td height="23">Copyright 2010©www.****.com</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
+        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
       </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>邮编：100191</td>
+        <td>Zip Code：100191</td>
       </tr>
     </table>
   </div>

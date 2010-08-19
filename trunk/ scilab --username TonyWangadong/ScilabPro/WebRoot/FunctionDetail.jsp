@@ -185,49 +185,49 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="EditRegion2" --><table width="1000" height="495" border="2"  valign="top" >
    
-   <tr height="20"><td width="100"align="center"class="title">函数名</td><td width="900">${functionInfo.funName}</td></tr>
+   <tr height="20"><td width="100"align="center"class="title">Function Name</td><td width="900">${functionInfo.funName}</td></tr>
     
-   <tr height="135"><td width="100"align="center"class="title">源码</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
+   <tr height="135"><td width="100"align="center"class="title">Source Code</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
    
-   <tr height="135"><td width="100"align="center"class="title">实例</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
+   <tr height="135"><td width="100"align="center"class="title">Examples</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
    
-   <tr height="135"><td width="100"align="center"class="title">帮助</td><td width="900"><div style="height:135;overflow:auto">${functionInfo.funHelp}</div></td></tr>
+   <tr height="135"><td width="100"align="center"class="title">Help</td><td width="900"><div style="height:135;overflow:auto">${functionInfo.funHelp}</div></td></tr>
   
-   <tr height="20"><td width="100"align="center"class="title">发布状态</td><td width="900">
+   <tr height="20"><td width="100"align="center"class="title">Publish Status</td><td width="900">
    <c:choose>
-   <c:when test="${functionInfo.funStatue==0}">未发布
+   <c:when test="${functionInfo.funStatue==0}">Unpublished
    </c:when>
-   <c:otherwise>    已发布 
+   <c:otherwise>    Published 
    </c:otherwise>
    </c:choose></td></tr>   
-   <tr height="20"><td width="100"align="center"class="title">发布时间</td><td width="900">${functionInfo.saveTime}</td></tr>
+   <tr height="20"><td width="100"align="center"class="title">Upload Time</td><td width="900">${functionInfo.saveTime}</td></tr>
    <tr height="20"><c:if test="${sessionScope.user.userId != functionInfo.userId}"><td width="100"align="center">发布者</td><td width="900">${userInfo.userName}</td></c:if></tr>
    
   </table>
   <c:if test="${sessionScope.user.userId == functionInfo.userId}">
   <br/><br/>
-  <a href="fun_deleteById?id=${functionInfo.funId}">从空间中删除此函数</a></c:if><br/>
-  <a href="fun_getAllFunctions">返回我的函数列表</a><br/>
-  <a href="fun_getReleasedFunList">返回所有函数列表</a><br/>
+  <a href="fun_deleteById?id=${functionInfo.funId}">Remove this function</a></c:if><br/>
+  <a href="fun_getAllFunctions">Back to my function list</a><br/>
+  <a href="fun_getReleasedFunList">Back to all function list</a><br/>
   <br/><br/><br/><!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
 <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
-        <td width="219">电话:***********</td>
+        <td width="219">Tel:***********</td>
       </tr>
       <tr>
         <td height="19">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
+        <td>E-mail:**********@gmail.com</td>
       </tr>
       <tr>
         <td height="23">Copyright 2010©www.****.com</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
+        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
       </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>邮编：100191</td>
+        <td>Zip Code：100191</td>
       </tr>
     </table>
   </div>

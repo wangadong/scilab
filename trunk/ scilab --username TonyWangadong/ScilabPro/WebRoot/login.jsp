@@ -39,8 +39,8 @@
 </style>
    	<div id="loginDiv" align="center">
       <s:form action="LoginAction" method="post" onsubmit="return login()" id="loginForm">
-      <s:textfield name="user.userName" id="userName" label="帐户" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    		<s:password name="user.password" id="password" label="密码" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
-    		<s:submit value="登陆" method="login" cssStyle="height:25px; width:40px; font-size:14px;"/>
+      <s:textfield name="user.userName" id="userName" label="Username" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    		<s:password name="user.password" id="password" label="Code" cssStyle="height: 18px; width: 130px; border: solid 1px #cadcb2; font-size: 12px; color: #81b432;"/>
+    		<s:submit value="Login" method="login" cssStyle="height:25px; width:40px; font-size:14px;"/>
     	</s:form>
     </div>

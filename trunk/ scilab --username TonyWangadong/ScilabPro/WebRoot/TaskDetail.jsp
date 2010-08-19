@@ -185,17 +185,17 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="EditRegion2" --> 
 <table border=1 cellspacing=0 cellpadding=0 width="800" height="387">
-	  <tr><td width="100">　任务名称 </td><td>　　　${taskInfo.taskName}</td></tr>
+	  <tr><td width="100">　Task name </td><td>　　　${taskInfo.taskName}</td></tr>
 	    </br>
-	  <tr><td width="100">　任务内容</td><td><div style="height:240;overflow:auto">${taskInfo.taskContent}</div></td></tr>
+	  <tr><td width="100">　Task content</td><td><div style="height:240;overflow:auto">${taskInfo.taskContent}</div></td></tr>
 	    </br>
-	  <tr><td width="100">　提交时间 </td><td>　　　${taskInfo.saveTime}</td></tr>
+	  <tr><td width="100">　Submit time </td><td>　　　${taskInfo.saveTime}</td></tr>
 	  </table>
 	  <br><br>
 	    <div id="myResult">     
 		<s:form action="CheckTask" method="post" id="checkForm"
 			target="_blank" theme="simple" onsubmit="return validate1()">
-			<p>	    <s:submit value='查看任务结果' method="getResult" />　　　<a href="task_deleteById?id=${taskInfo.taskId}">删除本项任务</a>　　　<a href="task_getAllTask">返回任务列表</a>
+			<p>	    <s:submit value='View Task Results' method="getResult" />　　　<a href="task_deleteById?id=${taskInfo.taskId}">删除本项任务</a>　　　<a href="task_getAllTask">返回任务列表</a>
 			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
 		</s:form>
 	</div>　  　　
@@ -205,19 +205,19 @@ function MM_nbGroup(event, grpName) { //v6.0
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
-        <td width="219">电话:***********</td>
+        <td width="219">Tel:***********</td>
       </tr>
       <tr>
         <td height="19">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
+        <td>E-mail:**********@gmail.com</td>
       </tr>
       <tr>
         <td height="23">Copyright 2010©www.****.com</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
+        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
       </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>邮编：100191</td>
+        <td>Zip Code：100191</td>
       </tr>
     </table>
   </div>

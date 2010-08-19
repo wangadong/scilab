@@ -30,9 +30,9 @@
 			return false;
 		}
 	</script>
-        <p>欢迎试用：</p>
+        <p>Welcome Trial：</p>
   	<a href="./PageRun.jsp">Click Here TO Run Scilab Online!</a><br/>
-  	<a href="fun_getReleasedFunList">查看所有函数列表</a><br/>
-        <p>注册、登陆后您还可以：</p>
-  建立或查看个人的函数列表<br/>
-  存储或查看个人的任务列表<br/>
+  	<a href="fun_getReleasedFunList">View a list of all functions!</a><br/>
+        <p>What's more after Login：</p>
+  Create your own Function List!<br/>
+  Create your own Task List!<br/>

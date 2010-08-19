@@ -186,36 +186,36 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- InstanceBeginEditable name="EditRegion2" -->
 <table width="500"  border="2"  valign="top" >
   
-  <tr><td height="25" width="250" align="left" class="title">函数名称列表</td><td width="250">查看函数信息</td></tr> 
-  <c:if test="${empty list}"><tr height="25"><td width="250"align="left"class="title">
-     对不起，暂时还没有相关资源  </td><td width="250">没有相关信息</td></tr></c:if>
+  <tr><td height="25" width="250" align="left" class="title">Function List</td><td width="250">Check Out the Function's Information</td></tr> 
+  <c:if test="${empty list}"><tr height="25"><td width="250"align="left"class="title"> 
+          Sorry, no related resources  </td><td width="250">No Information</td></tr></c:if>
   <c:forEach var="fun" items="${list}"> 
-  <tr height="10"><td width="250"align="left"class="title">${fun.funName}</td><td width="250"><a href="fun_getDetail?id=${fun.funId}">查看详细信息</a></td></tr>
+  <tr height="10"><td width="250"align="left"class="title">${fun.funName}</td><td width="250"><a href="fun_getDetail?id=${fun.funId}">View Details</a></td></tr>
   <br/>
   </c:forEach>
   
   </table>
   <br/>
-  <a href="PageFunctionInput.jsp">上传函数</a> 
+  <a href="PageFunctionInput.jsp">Upload Function</a> 
   <!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
 <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
-        <td width="219">电话:***********</td>
+        <td width="219">Tel:***********</td>
       </tr>
       <tr>
         <td height="19">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
+        <td>E-mail:**********@gmail.com</td>
       </tr>
       <tr>
         <td height="23">Copyright 2010©www.****.com</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
+        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
       </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>邮编：100191</td>
+        <td>Zip Code：100191</td>
       </tr>
     </table>
   </div>
