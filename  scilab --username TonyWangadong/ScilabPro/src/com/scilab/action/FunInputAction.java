@@ -1,6 +1,7 @@
 package com.scilab.action;
 
 import java.util.Date;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,10 +46,25 @@ public class FunInputAction extends BaseAction {
 		Date saveTime = new Date();
 		functionInfo.setSaveTime(saveTime);
 		
+		long uid;
 		HttpServletRequest request = ServletActionContext.getRequest();			
 		HttpSession sess=request.getSession();
 		user=(UserInfo)sess.getAttribute("user");
-		long uid = user.getUserId();
+		if (user == null) {
+			UserInfo userinfo_tmp = new UserInfo();
+			userinfo_tmp.setUserId((long) new Random().nextInt(10000) + 10000);//创建用户ID大于10000的session以区别注册用户
+			System.out.println(userinfo_tmp.getUserId());
+			userinfo_tmp.setUserName("usertmp");
+			getSession().setAttribute("usertmp", userinfo_tmp);
+			uid = userinfo_tmp.getUserId();
+
+		} else {
+			uid = user.getUserId();
+		}
+		if(uid>10000){
+			msg="Ooops! You CANNOT publish your function AS A VISITOR! Please regist!";
+			return "Inputsucc";
+		}else{
 		functionInfo.setUserId(uid);
 		
 		Username=user.getUserName();
@@ -97,7 +113,7 @@ public class FunInputAction extends BaseAction {
 			}
 		return "Inputsucc";
 	}
-
+	}
 	
 
 	public String getMsg() {
