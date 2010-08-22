@@ -35,7 +35,7 @@
 	</package>
 	<package name="mySignout" extends="struts-default" namespace="/">
 		<action name="SignoutAction" class="com.scilab.action.SignoutAction">
-			<result name="Signoutsucc">/signoutsucc.jsp</result>
+			<result name="Signoutsucc">/index.jsp</result>
 		</action>
 		<action name="fun_*" method="{1}" class="com.scilab.action.FunctionDetailAction">
 			<result name="funList">/FunctionList.jsp</result>

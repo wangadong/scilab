@@ -15,17 +15,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="Scilab Cloud Online"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script> 
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>"></script>
-	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script> 
-    <script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
     <link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
 	<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
-    
+	<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/swfobject_modified.js" ></script>
+	<script type="text/javascript" src="js/plugin/jquery.form.js"></script> 
+    <script type="text/javascript" src="js/plugin/colorbox/jquery.colorbox.js"></script>
          
     <script type="text/javascript">
-<!--
+<!--//导航条JS
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
@@ -76,7 +76,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 //-->
 </script>
 
-
+<!--头文件可编辑区域-->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
@@ -177,13 +177,42 @@ function MM_nbGroup(event, grpName) { //v6.0
 </script>
 <!-- InstanceEndEditable -->
 </head>
-
+<!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
-  <div id="global">
-  <div id="BlueTopImage">
+<div id="global">
+<!--题头开始-->
+ <div id="BlueTopImage">
   <div id="LoginAndRegister">
-  <s:if test="#session.user!=null"><jsp:include page="loginsucc1.jsp"></jsp:include></s:if>
-  <s:else><jsp:include page="loginregister1.jsp"></jsp:include></s:else>
+  <s:if test="#session.user!=null"><jsp:include page="Welcome.jsp"></jsp:include></s:if>
+  <s:else><jsp:include page="LoginAndRegister.jsp"></jsp:include></s:else>
+  </div>
+  <div id="Flash">
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="250" height="134" id="FlashID" title="AnimationForScilabOnline">
+      <param name="movie" value="images/Animation.swf" />
+      <param name="quality" value="high" />
+      <param name="swfversion" value="7.0.70.0" />
+      <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+      <param name="expressinstall" value="Scripts/expressInstall.swf" />
+      <param name="wmode" value="transparent" />
+      <param name="BGCOLOR" value="#004277" />
+      <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+      <!--[if !IE]>-->
+      <object type="application/x-shockwave-flash" data="images/Animation.swf" width="250" height="134">
+        <!--<![endif]-->
+        <param name="quality" value="high" />
+        <param name="swfversion" value="7.0.70.0" />
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <param name="wmode" value="transparent" />
+        <param name="BGCOLOR" value="#004277" />
+        <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+        <div>
+          <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+          <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+        </div>
+        <!--[if !IE]>-->
+      </object>
+      <!--<![endif]-->
+    </object>
   </div>
   <div id="navigation">
     <table width="558" border="0" cellpadding="0" cellspacing="1" id="nav">
@@ -198,15 +227,18 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td><a href="www.scilab.org.cn/bbs/" target="_top" onClick="MM_nbGroup('down','group1','NavBBS','',1)" onMouseOver="MM_nbGroup('over','NavBBS','images/BBSMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavBBS" src="images/BBSNormal.png" border="0" alt="NavBBS" onLoad="" /></a></td>
       </tr>
     </table>
-    </div></div>
+  </div>
+ </div>
+<!--题头结束-->
+<!--第二部分开始-->
  <div id="PictureChange">
+   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" --><img src="images/TextOperation.png" width="235" height="60" alt="TextOperation" longdesc="images/TextOperation.png" /><!-- InstanceEndEditable --></div>
    <div id="BandPictureLeft"><img src="images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
- 
-    <div id="Bandpicture">
+<!--第二部分：图片轮换开始-->
+   <div id="Bandpicture">
  <div class="fcnt" id="ppt">
     	<div class="mimg" id="mpc">
-        	<div style="display:block">
-                 <a href="PageRun.jsp"><img src="images/Picture0.jpg" alt="" /></a></div>
+        	<div style="display:block"><a href="PageRun.jsp"><img src="images/Picture0.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture2.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture3.jpg" alt="" /></a></div>
@@ -230,24 +262,20 @@ function MM_nbGroup(event, grpName) { //v6.0
         </ul>
     </div>
     </div>
-    </div>
- 
-  <div id="LoginDiv">
-  <!-- InstanceBeginEditable name="EditRegion1" -->
-   	<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>    
+<!--第二部分：图片轮换结束-->    
+ </div>
+<!--第二部分结束--> 
+  <div id="LeftDiv">
   <div id="LoginPersonal" align="center">
-   <s:if test="#session.user!=null"><jsp:include page="loginsucc2.jsp"></jsp:include></s:if>
-<s:else><jsp:include page="login.jsp"></jsp:include></s:else>
+   <s:if test="#session.user!=null"><jsp:include page="AlreadyLogin.jsp"></jsp:include></s:if>
+<s:else><jsp:include page="NotLogin.jsp"></jsp:include></s:else>
     </div>
-  <hr align="center" id="horizon" />
-    <div id="registerIcon" align="center">
-      <a href="register.jsp"><img src="images/Login.png" width="50" height="30" alt="Login" longdesc="images/Login.png" /></a></div>
-  <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <div id="黑白LOGO" align="center"><img src="images/SCILAB2.png" width="155" height="159" alt="ScilabLogo" longdesc="images/SCILAB2.png" /></div>
+    <p>&nbsp;</p>
+    <div id="黑白LOGO" align="center"></div>
   </div>    
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="EditRegion2" -->
+<!-- InstanceBeginEditable name="Refresh" -->
 <s:form action='TaskAction' method='post' id="myForm" target="_blank"
 			theme="simple" onsubmit="return validate()">
 			<p>
@@ -280,23 +308,28 @@ function MM_nbGroup(event, grpName) { //v6.0
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
-        <td width="219">Tel:***********</td>
+        <td width="219">电话:***********</td>
       </tr>
       <tr>
         <td height="19">&nbsp;</td>
-        <td>E-mail:**********@gmail.com</td>
+        <td>邮箱:**********@gmail.com</td>
       </tr>
       <tr>
         <td height="23">Copyright 2010©www.****.com</td>
-        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
+        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
       </tr>
       <tr>
         <td height="22">&nbsp;</td>
-        <td>Zip Code：100191</td>
+        <td>邮编：100191</td>
       </tr>
     </table>
   </div>
   </div>
 <div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+</script>
 </body>
 <!-- InstanceEnd --></html>

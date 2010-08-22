@@ -13,9 +13,10 @@
 			return false;
 		}
 	</script>
-    <p>Manage my account：</p>
-  	<a href="./PageRun.jsp">Click Here TO Run Scilab Online!</a><br/>
-  	<a href="fun_getAllFunctions">View my function list</a><br/>
-  <a href="fun_getReleasedFunList">View a list of all functions</a><br/>
-  <a href="task_getAllTask?id=${task.taskId}">Check out the Task</a>
-  
+	<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+	<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+	
+<div id=LoginSucc>
+<s:if test="#session.user!=null">您好，“${sessionScope.user.userName}”，欢迎体验ScilabOnline！</s:if>
+<s:else>登陆失败！</s:else></div>
+<div ><a href="SignoutAction!signout" class=SignOutTop>退出</a></div>  

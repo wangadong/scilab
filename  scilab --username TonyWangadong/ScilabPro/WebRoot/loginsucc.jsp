@@ -13,7 +13,13 @@
 			return false;
 		}
 	</script>
+    <script type="text/javascript"> 
    
-  	<s:if test="#session.user!=null">User“${sessionScope.user.userName}”login successfully!</s:if>
-  	<s:else>Login failed!</s:else>
-  	<p>Please click on the upper right corner exit login box, and refresh the page!</p>
+window.setTimeout("goUrl()",1000); //1000 表示1秒后刷新
+function goUrl(){
+window.location.href="index.jsp";//刷新
+}
+</script>
+  	<s:if test="#session.user!=null">用户“${sessionScope.user.userName}”登陆成功！</s:if>
+  	<s:else>登陆失败！</s:else>
+  	<p>页面即将刷新。</p>
