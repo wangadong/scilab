@@ -1,5 +1,7 @@
 package com.scilab.manager;
 
+import org.apache.commons.lang.Validate;
+
 /**
  * Description: 分布式节点服务器的信息类
  * 
@@ -11,7 +13,7 @@ public class SciNode implements Comparable<SciNode> {
 	private String NodeName;// 节点服务器名
 	private String IPAddress;// IP地址
 	private int CpuCoreNum;// 节点服务器CPU核心数
-	private int TaskNumCnt;// 节点正在运行任务数
+	private volatile int TaskNumCnt;// 节点正在运行任务数
 	private float MainFrequence;// 节点服务器CPU主频
 	private float NodePriorityValue;// 节点调度优先值
 

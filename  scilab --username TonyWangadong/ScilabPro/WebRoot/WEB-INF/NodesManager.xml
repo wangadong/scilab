@@ -4,4 +4,4 @@
 	<node1 ID="0" IPAddress="192.168.16.202" NodeName="服务器0" CpuCoreNum="2" MainFrequence="2.2"></node1>
 	<node2 ID="1" IPAddress="192.168.16.77" NodeName="服务器1" CpuCoreNum="2" MainFrequence="3.1"></node2>
 	</NodesInfo>
-<HostIP IPAddress="192.168.16.80"></HostIP></DistributionConfiguration>
+<HostIP IPAddress="192.168.16.139"></HostIP></DistributionConfiguration>
