@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="<s:url value="/js/jquery-1.4.2.min.js"/>
     <script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
-"></script>
+	</script>
 	<script type="text/javascript" src="<s:url value="/js/plugin/jquery.form.js"/>"></script> 
     <script type="text/javascript" src="<s:url value="/js/plugin/colorbox/jquery.colorbox.js"/>"></script>
     <link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
