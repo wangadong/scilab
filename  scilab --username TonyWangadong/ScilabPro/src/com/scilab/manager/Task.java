@@ -67,7 +67,6 @@ public class Task implements Runnable {
 			String str = "C:/ScilabDistribution/tomcat6.0/webapps";
 			String submitFolder = str
 					+ resultFolder.split("webapps")[1];
-			System.out.println("You are using linux");
 			DistributedServiceStub stub = new DistributedServiceStub(
 					"http://"
 							+ nodesIp
