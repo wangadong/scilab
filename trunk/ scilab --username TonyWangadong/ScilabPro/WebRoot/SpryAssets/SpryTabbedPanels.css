@@ -45,7 +45,16 @@
  */
 .TabbedPanelsTabGroup {
 	margin: 0px;
-	padding: 0px;
+	font-size: 36px;
+	font-style: normal;
+	background-image: url(../images/BookMark.png);
+	background-repeat: no-repeat;
+	height: 470px;
+	width: 270px;
+	padding-top: 50px;
+	padding-left: 50px;
+	background-position: 30px 30px;
+	float: left;
 }
 
 /* This is the selector for the TabbedPanelsTab. This container houses
@@ -66,20 +75,24 @@
  */
 .TabbedPanelsTab {
 	position: relative;
-	top: 1px;
 	float: left;
-	padding: 4px 10px;
-	margin: 0px 1px 0px 0px;
 	font: bold 0.7em sans-serif;
-	background-color: #DDD;
 	list-style: none;
-	border-left: solid 1px #CCC;
-	border-bottom: solid 1px #999;
-	border-top: solid 1px #999;
-	border-right: solid 1px #999;
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	cursor: pointer;
+	font-family: sans-serif;
+	margin-top: 0px;
+	margin-right: 1px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	text-align: center;
+	width: 200px;
+	height: 50px;
 }
 
 /* This selector is an example of how to change the appearnce of a tab button
@@ -87,10 +100,6 @@
  * programatically added and removed from the tab element as the mouse enters
  * and exits the container.
  */
-.TabbedPanelsTabHover {
-	background-color: #CCC;
-}
-
 /* This selector is an example of how to change the appearance of a tab button
  * container after the user has clicked on it to activate a content panel.
  * The class "TabbedPanelsTabSelected" is programatically added and removed
@@ -102,11 +111,6 @@
  * selected, we change its bottom border to match the background color of the
  * content panel so that it looks like the tab is part of the content panel.
  */
-.TabbedPanelsTabSelected {
-	background-color: #EEE;
-	border-bottom: 1px solid #EEE;
-}
-
 /* This selector is an example of how to make a link inside of a tab button
  * look like normal text. Users may want to use links inside of a tab button
  * so that when it gets focus, the text *inside* the tab button gets a focus
@@ -127,12 +131,9 @@
  * want to style the ContentGroup container.
  */
 .TabbedPanelsContentGroup {
-	clear: both;
-	border-left: solid 1px #CCC;
-	border-bottom: solid 1px #CCC;
-	border-top: solid 1px #999;
-	border-right: solid 1px #999;
-	background-color: #EEE;
+	width: 525px;
+	float: left;
+	height: 510px;
 }
 
 /* This is the selector for the Content panel. The Content panel holds the
@@ -146,6 +147,9 @@
  */
 .TabbedPanelsContent {
 	padding: 4px;
+	height: 500px;
+	width: 520px;
+	background-image: url(../images/Team1.jpg);
 }
 
 /* This selector is an example of how to change the appearnce of the currently
@@ -217,4 +221,3 @@
 	width: 30em;
 	height: 20em;
 }
-

@@ -13,10 +13,9 @@
 			return false;
 		}
 	</script>
-	<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-	<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
-	
-<div id=LoginSucc>
-<s:if test="#session.user!=null">Welcome back “${sessionScope.user.userName}”，Have a nice time on ScilabOnline！</s:if>
-<s:else>Login Failed</s:else></div>
-<div ><a href="SignoutAction!signout" class=SignOutTop>Quit</a></div>  
+    <p>管理我的帐户：</p>
+  	<a href="./PageRun.jsp">Operation</a><br/>
+  	<a href="fun_getAllFunctions">查看我的函数列表</a><br/>
+  <a href="fun_getReleasedFunList">查看所有函数列表</a><br/>
+  <a href="task_getAllTask?id=${task.taskId}">查看任务</a>
+  

@@ -30,9 +30,16 @@
 			return false;
 		}
 	</script>
-        <p>Welcome Trial：</p>
-  	<a href="./PageRun.jsp">Click Here TO Run Scilab Online!</a><br/>
-  	<a href="fun_getReleasedFunList">View a list of all functions!</a><br/>
-        <p>What's more after Login：</p>
-  Create your own Function List!<br/>
-  Create your own Task List!<br/>
+
+	
+        <p><a class="Theme"><strong> Have a try：</strong></a></p>
+    <p><a class="Big" href="./PageRun.jsp">Operation</a><br/>Run ScilabOnline    </p>
+    <p><a class="Big" href="fun_getReleasedFunList">Function</a><br/>See all the functions shared
+    </p><br/>
+<p><a class="Theme"><strong> If you login：</strong></a></p>
+  <p>you can also </p>
+  <p><br/>
+    Set up your own function list<br/>
+    Save and check your task list<br/>
+  </p>
+	

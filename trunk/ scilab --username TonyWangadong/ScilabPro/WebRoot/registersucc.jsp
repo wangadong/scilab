@@ -15,4 +15,4 @@
 	</script>
  ${msg}
 
-  	<p>click the upper right corner to exit, but you need to login again.</p>
+  	<p>请点击右上角退出注册框，但您需要重新登陆一次</p>
