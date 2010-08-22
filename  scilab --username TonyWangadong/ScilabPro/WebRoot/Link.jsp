@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" errorPage="ErrorPage.html"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
@@ -80,8 +79,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--头文件可编辑区域-->
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<title>Index</title>
+<!-- InstanceBeginEditable name="head" --><title>Untitled Document</title>
 <!-- InstanceEndEditable -->
 </head>
 <!--布局详见style.css-->
@@ -139,7 +137,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--题头结束-->
 <!--第二部分开始-->
  <div id="PictureChange">
-   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" --><img src="images/TextHome.png" width="235" height="60" alt="TextHome" longdesc="images/TextHome.png" /><!-- InstanceEndEditable --></div>
+   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" -->EditRegion3<!-- InstanceEndEditable --></div>
    <div id="BandPictureLeft"><img src="images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
 <!--第二部分：图片轮换开始-->
    <div id="Bandpicture">
@@ -187,9 +185,7 @@ function MM_nbGroup(event, grpName) { //v6.0
     <div id="黑白LOGO" align="center"></div>
   </div>    
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="Refresh" -->
-
-<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
+<!-- InstanceBeginEditable name="Refresh" -->EditRegion2<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
 <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
@@ -220,3 +216,4 @@ swfobject.registerObject("FlashID");
 </script>
 </body>
 <!-- InstanceEnd --></html>
+
