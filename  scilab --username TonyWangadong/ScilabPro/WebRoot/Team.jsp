@@ -172,8 +172,6 @@ function MM_nbGroup(event, grpName) { //v6.0
        <ul class="TabbedPanelsTabGroup">
          <li id="TeamTab1" class="TabbedPanelsTab" tabindex="0"> 项目指导老师<br />
          于雷</li>
-         <li class="TabbedPanelsTab" id="TeamTab2" tabindex="0" name="TeamTab2">项目指导老师<br />
-         黄永兴</li>
          <li id="TeamTab3" class="TabbedPanelsTab" tabindex="0">项目总负责人<br />
          宋鸽</li>
          <li id="TeamTab4" class="TabbedPanelsTab" tabindex="0">项目成员<br />
@@ -186,16 +184,18 @@ function MM_nbGroup(event, grpName) { //v6.0
          曲波</li>
          <li id="TeamTab8" class="TabbedPanelsTab" tabindex="0">项目成员<br />
          周琳</li>
+         <li class="TabbedPanelsTab" id="TeamTab2" tabindex="0" name="TeamTab2">项目外援<br />
+         黄永兴</li>
        </ul>
        <div class="TabbedPanelsContentGroup">
          <div id="TeamContent1" class="TabbedPanelsContent">于老师</div>
-         <div id="TeamContent2" class="TabbedPanelsContent">黄</div>
          <div id="TeamContent3" class="TabbedPanelsContent">宋鸽</div>
          <div id="TeamContent4" class="TabbedPanelsContent">王鑫东</div>
          <div id="TeamContent5" class="TabbedPanelsContent">董又维</div>
          <div id="TeamContent6" class="TabbedPanelsContent">海伟</div>
          <div id="TeamContent7" class="TabbedPanelsContent">曲波</div>
          <div id="TeamContent8" class="TabbedPanelsContent">周琳</div>
+         <div id="TeamContent2" class="TabbedPanelsContent">黄</div>
        </div>
      </div>
    </div>
