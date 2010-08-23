@@ -24,14 +24,15 @@ img {border:none}
 body{/*全局灰色背景*/
 	background:#999999;
 	width:857px;
-	height: 1280px;
 	top: 0px;
+	bottom:0px;
 	margin: auto;
 }
 #global{/*全局白色背景*/
 	width:857px;
-	height:1280px;
 	background-color:#fff;
+	height:auto!important; min-height:500px; height:500px; 
+	clear:both;
 }
 /*题头开始*/
 #BlueTopImage {/*题头大层*/
@@ -64,10 +65,9 @@ body{/*全局灰色背景*/
 	color: #FFF;
 }
 #LoginSucc{/*登陆注册层里欢迎*/
-	width:200px;
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #FFF;
+	color: #CCC;
 	float:left;
 }
 #signoutDiv{/*登陆注册层里退出层*/
@@ -78,7 +78,7 @@ body{/*全局灰色背景*/
 	font-size: 14px;
 	text-decoration: underline;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #FFF;
+	color: #CCC;
 }
 #Flash {
 	height:134px;
@@ -137,19 +137,82 @@ body{/*全局灰色背景*/
 }
 #LeftDiv {
 	float: left;
-	height: 558px;
-	width: 213px;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	color: #000;
+	height: 300px;
+	width: 270px;
 	overflow: hidden;
-	background-image: url(../images/LeftBackGround.png);
-	background-repeat: no-repeat;
-	text-align: left;
 	padding-top: 8px;
+	position:relative;
 }
+#ExplicationPossible{
+    float: left;
+	width: 270px;
+	overflow: hidden;
+}
+#LeftOperation {
+    width:250px;
+	position:absolute;
+	margin-left:20px;
+	z-index: 25;
+}
+#LeftFunction {
+    width:250px;
+	position:absolute;
+	margin-top:52px;
+	z-index: 20;
+}
+#LeftShow {
+    width:250px;
+	position:absolute;
+	margin-top:104px;
+	margin-left:20px;
+	z-index: 15;
+}
+#LeftTeam {
+    width:250px;
+	position:absolute;
+	margin-top:156px;
+	z-index: 10;
+}
+#LeftLinks {
+    width:250px;
+	position:absolute;
+	margin-top:208px;
+	margin-left:20px;
+	z-index: 5;
+}
+#LeftSignout {
+    width:250px;
+	position:absolute;
+	margin-left:20px;
+	z-index: 25;
+}
+#LeftRunScilabOnline {
+    width:250px;
+	position:absolute;
+	margin-top:52px;
+	z-index: 20;
+}
+#LeftViewMyTaskList {
+    width:250px;
+	position:absolute;
+	margin-top:104px;
+	margin-left:20px;
+	z-index: 15;
+}
+#LeftViewMyFunctions {
+    width:250px;
+	position:absolute;
+	margin-top:156px;
+	z-index: 10;
+}
+#LeftShareMyFunctions {
+    width:250px;
+	position:absolute;
+	margin-top:208px;
+	margin-left:20px;
+	z-index: 5;
+}
+
 .Theme {
 	font-family:Tahoma, Geneva, sans-serif;
 	font-size:20px;
@@ -162,8 +225,8 @@ body{/*全局灰色背景*/
 }
 #RefreshDiv {
 	float: right;
-	height: 455px;
-	width: 640px;
+	height: 600px;
+	width:580px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #B8D4E8;
@@ -193,7 +256,7 @@ body{/*全局灰色背景*/
 }
 #RefreshDiv #SharePage {
 	height: 430px;
-	width: 460px;
+	width: 580px;
 	background-color: #F0F5F8;
 	border: 1px ridge #B8D4E8;
 	float: left;
@@ -226,15 +289,15 @@ body{/*全局灰色背景*/
 	width: 400px;
 }
 #Explication {
-	width: 170px;
+	width:270x;
 	float: right;
-	height: 430px;
+	height: 200px;
 	background-color: #F0F5F8;
 	border: 1px solid #B8D4E8;
 }
 #Welcome {
 	height: 30px;
-	width: 150px;
+	width: 270px;
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bolder;
@@ -315,6 +378,7 @@ body{/*全局灰色背景*/
 }
 #TeamContent1 {
 	background-image: url(../images/Team1.jpg);
+	background-repeat: no-repeat;
 }
 #TeamContent2 {
 	background-image: url(../images/Team2.jpg);
@@ -337,4 +401,8 @@ body{/*全局灰色背景*/
 }
 #TeamContent8 {
 	background-image: url(../images/Team8.jpg);
+}
+#Third {
+	height: 700px;
+	width: 857px;
 }
