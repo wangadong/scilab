@@ -52,7 +52,7 @@ td #N4 {
 <script type="text/javascript">
 <!--
 	$(function(){
-		$("a.taskResult").colorbox({contentWidth:"800px", contentHeight:"450px", contentIframe:true});
+		$("a.taskResult:eq(0)").colorbox({contentWidth:"800px", contentHeight:"450px", contentIframe:true});
 		$("a.taskSave").click(function(){
 			$.ajax({
 				type: "post", url: $(this).attr("href"), data: "&date="+new Date(),
