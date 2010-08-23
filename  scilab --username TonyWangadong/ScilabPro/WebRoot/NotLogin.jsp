@@ -12,12 +12,12 @@
 			var userName = $("#userName").val();
 			userName = $.trim(userName);
 			if(userName.length<1){
-				alert("请输入用户名！");
+				alert("Please enter a username!");
 				return false;
 			}
 			var password = $("#password").val();
 			if(password.length<1){
-				alert("请输入密码！");
+				alert("Please enter your password!");
 				return false;
 			}
 			var options = {

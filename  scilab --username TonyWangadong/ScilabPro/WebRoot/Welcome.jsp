@@ -17,6 +17,6 @@
 	<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
 	
 <div id="LoginSucc">
-<s:if test="#session.user!=null">您好，“${sessionScope.user.userName}”，欢迎体验ScilabOnline！</s:if>
-<s:else>登陆失败！</s:else></div>
-<div ><a href="SignoutAction!signout" class="SignOutTop">退出</a></div>  
+<s:if test="#session.user!=null">Have a nice day! Dear&ldquo;${sessionScope.user.userName}&rdquo;，Enjoy your journey on ScilabOnline！</s:if>
+<s:else>Sign In Failed</s:else></div>
+<div ><a href="SignoutAction!signout" class="SignOutTop">Quit</a></div>  
