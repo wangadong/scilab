@@ -20,6 +20,6 @@ function goUrl(){
 window.location.href="index.jsp";//刷新
 }
 </script>
-  	<s:if test="#session.user!=null">用户“${sessionScope.user.userName}”登陆成功！</s:if>
-  	<s:else>登陆失败！</s:else>
-  	<p>页面即将刷新。</p>
+  	<s:if test="#session.user!=null">Have a nice day, Dear “${sessionScope.user.userName}”,you have signed in successfully!</s:if>
+  	<s:else>Sign In Failed..</s:else>
+  	<p>The page will refresh.</p>

@@ -195,7 +195,7 @@ function MM_nbGroup(event, grpName) { //v6.0
     Sorry, no task yet, please submit to view　　　　　　　　　
   </td></tr></c:if>
   <c:forEach var="task" items="${list}"> 
-  <tr height="10"><td width="250"align="left"class="title">${task.taskName}</td><td width="250"><a href="task_getDetail?id=${task.taskId}">查看</a></td></tr>
+  <tr height="10"><td width="250"align="left"class="title">${task.taskName}</td><td width="250"><a href="task_getDetail?id=${task.taskId}">Inspect</a></td></tr>
   <br/>
   </c:forEach>
   </table>

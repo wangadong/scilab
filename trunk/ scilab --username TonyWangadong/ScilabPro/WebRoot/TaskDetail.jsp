@@ -200,7 +200,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 	    <div id="myResult">     
 		<s:form action="CheckTask" method="post" id="checkForm"
 			target="_blank" theme="simple" onsubmit="return validate1()">
-			<p>	    <s:submit value='View Task Results' method="getResult" />　　　<a href="task_deleteById?id=${taskInfo.taskId}">删除本项任务</a>　　　<a href="task_getAllTask">返回任务列表</a>
+			<p>	    <s:submit value='View Task Results' method="getResult" />　　　<a href="task_deleteById?id=${taskInfo.taskId}">Delete this task</a>　　　<a href="task_getAllTask">Back to the task list</a>
 			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
 		</s:form>
 	</div>　  　　

@@ -188,8 +188,8 @@ function MM_nbGroup(event, grpName) { //v6.0
 
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" -->
- ${msg}<br><a href="fun_getAllFunctions">查看我的函数列表</a><br/>
-  <a href="fun_getReleasedFunList">查看所有函数列表</a><br/>
+ ${msg}<br><a href="fun_getAllFunctions">View my function list</a><br/>
+  <a href="fun_getReleasedFunList">View the list of all functions</a><br/>
 <!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
   <div id="ExplicationPossible">
