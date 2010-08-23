@@ -291,21 +291,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 				name="task.taskContent">you can write scilab codes here!</textarea>
 			<br />
 			<s:submit value='Submit the task' method="submitTask"/>
-		</s:form>
-
-
-     <div id="myResult">     
-		<s:form action="CheckTask" method="post" id="checkForm"
-			target="_blank" theme="simple" onsubmit="return validate1()">
-			<p>
-				taskname for check:
-				<input type="text" name="taskname" id="checkForm_taskname"/>
-				<s:submit value='Check the result' method="getResult" />
-				<input type="button" value='Check the state' onclick="statueAjax()" />
-				<input type="button" value='Save the Task' onclick="saveAjax()" />
-			</p><div id="myajaxdiv"></div><div id="myajaxdiv"></div>
-		</s:form>
-	</div>
+		</s:form>   
 		<div id="myTask"></div>
 		<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>

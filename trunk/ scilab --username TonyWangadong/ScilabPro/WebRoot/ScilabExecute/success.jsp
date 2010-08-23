@@ -3,41 +3,49 @@
 <style type="text/css">
 <!--
 td #N1 {
-	border-right-width: 1px;
+	border-right-width: 2px;
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
 	width:100px;
 }
 td #N2 {
-	border-right-width: 1px;
+	border-right-width: 2px;
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
 	width:300px;
 }
 td #N3 {
-	border-right-width: 1px;
+	border-right-width: 2px;
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
 	width:100px;
 }
 td #N4 {
+  
 	height:20px;
 	width:100px;
 }
 #TaskListBottom {
 	border-top-width: 1px;
-	border-right-width: 1px;
-	border-left-width: 1px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	
 	border-top-style: solid;
 	border-right-style: solid;
 	border-left-style: solid;
+	
 	border-top-color: #000;
 	border-right-color: #000;
 	border-left-color: #000;
-	width:605px;
+	
+	  border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	
+	width:612px;
 }
 -->
 </style>
