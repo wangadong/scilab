@@ -13,10 +13,12 @@
 			return false;
 		}
 	</script>
-    <p>管理我的帐户：</p>
-  	<p><a class="Big" href="./PageRun.jsp">Operation</a><br/>Run ScilabOnline </p>
-    <p><a class="Big" href="fun_getReleasedFunList">Function</a><br/>See all the functions shared</p><br/>
-  	<p><a href="fun_getAllFunctions">查看我的函数列表</a><br/></p>
-  
-  <a href="task_getAllTask?id=${task.taskId}">查看任务</a>
+    <p>
+        <div id="LeftSignout"><a href="SignoutAction!signout" ><img src="images/LeftSignout.png" width="250" height="64" alt="LeftSignout" longdesc="images/LeftSignout.png" /></a></div>
+        <div id="LeftRunScilabOnline"><a href="./PageRun.jsp" ><img src="images/LeftRunScilabOnline.png" width="250" height="64" alt="LeftRunScilabOnline" longdesc="images/LeftRunScilabOnline.png" /></a></div>
+        <div id="LeftViewMyTaskList"><a href="fun_getAllFunctions"><img src="images/LeftViewMyTaskList.png" width="250" height="64" alt="LeftViewMyTaskList" longdesc="images/LeftViewMyTaskList.png" /></a></div>
+        <div id="LeftViewMyFunctions"><a href="fun_getAllFunctions"><img src="images/LeftViewMyFunctions.png" width="250" height="64" alt="LeftViewMyFunctions" longdesc="images/LeftViewMyFunctions.png" /></a></div>
+        <div id="LeftShareMyFunctions"><a href="./PageFunctionInput.jsp"><img src="images/LeftShareMyFunctions.png" width="250" height="64" alt="LeftShareMyFunctions" longdesc="images/LeftShareMyFunctions.png" /></a></div>
+    </p>
+
   

@@ -177,15 +177,16 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--第二部分：图片轮换结束-->    
  </div>
 <!--第二部分结束--> 
+<div id="Third">
+<!--左导航开始-->
   <div id="LeftDiv">
   <div id="LoginPersonal" align="center">
    <s:if test="#session.user!=null"><jsp:include page="AlreadyLogin.jsp"></jsp:include></s:if>
 <s:else><jsp:include page="NotLogin.jsp"></jsp:include></s:else>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div id="黑白LOGO" align="center"></div>
-  </div>    
+  </div>   
+<!--左导航结束-->
+
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" -->
 <table width="500"  border="2"  valign="top" >
@@ -203,7 +204,10 @@ function MM_nbGroup(event, grpName) { //v6.0
   <a href="PageFunctionInput.jsp">Upload Function</a> 
   <!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
-<div id="aboutUs">
+  <div id="ExplicationPossible">
+  <!-- InstanceBeginEditable name="EditRegion5" -->EditRegion5<!-- InstanceEndEditable -->
+  </div>
+ <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
@@ -223,13 +227,15 @@ function MM_nbGroup(event, grpName) { //v6.0
       </tr>
     </table>
   </div>
-  </div>
+
 <div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
 //-->
 </script>
+</div>
+</div>
 </body>
 <!-- InstanceEnd --></html>
 

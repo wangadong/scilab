@@ -32,14 +32,10 @@
 	</script>
 
 	
-        <p><a class="Theme"><strong> Have a try：</strong></a></p>
-    <p><a class="Big" href="./PageRun.jsp">Operation</a><br/>Run ScilabOnline    </p>
-    <p><a class="Big" href="fun_getReleasedFunList">Function</a><br/>See all the functions shared
-    </p><br/>
-<p><a class="Theme"><strong> If you login：</strong></a></p>
-  <p>you can also </p>
-  <p><br/>
-    Set up your own function list<br/>
-    Save and check your task list<br/>
-  </p>
-	
+        <p>
+        <div id="LeftOperation"><a href="./PageRun.jsp" ><img src="images/LeftOperation.png" width="250" height="64" alt="LeftOperation" longdesc="images/LeftOperation.png" /></a></div>
+        <div id="LeftFunction"><a href="fun_getReleasedFunList" ><img src="images/LeftFunction.png" width="250" height="64" alt="LeftFunction" longdesc="images/LeftFunction.png" /></a></div>
+        <div id="LeftShow"><img src="images/LeftShow.png" width="250" height="64" alt="LeftShow" longdesc="images/LeftShow.png" /></div>
+        <div id="LeftTeam"><img src="images/LeftTeam.png" width="250" height="64" alt="LeftTeam" longdesc="images/LeftTeam.png" /></div>
+        <div id="LeftLinks"><img src="images/LeftLinks.png" width="250" height="64" alt="LeftLinks" longdesc="images/LeftLinks.png" /></div>
+        </p>

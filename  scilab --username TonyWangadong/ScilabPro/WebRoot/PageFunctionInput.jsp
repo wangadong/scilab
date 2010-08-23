@@ -176,15 +176,16 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--第二部分：图片轮换结束-->    
  </div>
 <!--第二部分结束--> 
+<div id="Third">
+<!--左导航开始-->
   <div id="LeftDiv">
   <div id="LoginPersonal" align="center">
    <s:if test="#session.user!=null"><jsp:include page="AlreadyLogin.jsp"></jsp:include></s:if>
 <s:else><jsp:include page="NotLogin.jsp"></jsp:include></s:else>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div id="黑白LOGO" align="center"></div>
-  </div>    
+  </div>   
+<!--左导航结束-->
+
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" -->
  <div id="SharePage">
@@ -198,23 +199,26 @@ function MM_nbGroup(event, grpName) { //v6.0
     </s:form>
   </div>
   </div>
-  <div id="Explication">
-  <div id="Welcome">Upload Your Own Function</div>
-  <table width="167" height="386" border="0">
-    <tr>
-      <td width="161" height="102" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please input appropriate informations  </td>
-    </tr>
-    <tr>
-      <td height="116" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Correct and Useful Informations are Encouraged! We have to delete all carelessly written functions.</td>
-    </tr>
-    <tr>
-      <td height="136">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will Inspect your function as soon as possible!</td>
-    </tr>
-  </table>
-  </div>   
+     
   <!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
-<div id="aboutUs">
+  <div id="ExplicationPossible">
+  <!-- InstanceBeginEditable name="EditRegion5" --><div id="Explication">
+  <div id="Welcome" align="center">Upload Your Own Function</div>
+  <table width="268" height="157" border="0">
+    <tr>
+      <td width="268" height="32" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please input appropriate informations  </td>
+    </tr>
+    <tr>
+      <td height="69" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Correct and Useful Informations are Encouraged! We have to delete all carelessly written functions.</td>
+    </tr>
+    <tr>
+      <td height="48">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will Inspect your function as soon as possible!</td>
+    </tr>
+  </table>
+  </div><!-- InstanceEndEditable -->
+  </div>
+ <div id="aboutUs">
     <table width="437" height="97" border="0" align="right">
       <tr>
         <td width="179" height="23">&nbsp;</td>
@@ -234,12 +238,14 @@ function MM_nbGroup(event, grpName) { //v6.0
       </tr>
     </table>
   </div>
-  </div>
+
 <div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
 //-->
 </script>
+</div>
+</div>
 </body>
 <!-- InstanceEnd --></html>
