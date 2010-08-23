@@ -115,6 +115,40 @@
 	$(function(){
 		$.fn.colorbox.settings.bgOpacity = "0.3";
 	});
+	function saveAjax(){
+		var taskname = $("#checkForm_taskname").val();
+		taskname = $.trim(taskname);
+		if (taskname.length==0) {
+			alert("请输入任务名");
+			return false;
+		}
+		$.ajax({
+			type: "post", url: "CheckTask!saveTask", data: "taskname="+taskname+"&date="+new Date(),
+			success:function(e){
+			$("#myajaxdiv").html(e);
+		}
+	});
+	}
+	$(function(){
+		$.fn.colorbox.settings.bgOpacity = "0.3";
+	});
+	function statueAjax(){
+		var taskname = $("#checkForm_taskname").val();
+		taskname = $.trim(taskname);
+		if (taskname.length==0) {
+			alert("请输入任务名");
+			return false;
+		}
+		$.ajax({
+			type: "post", url: "CheckTask!getStatue", data: "taskname="+taskname+"&date="+new Date(),
+			success:function(e){
+				$("#myajaxdiv").html(e);
+			}
+		});
+	}
+	$(function(){
+		$.fn.colorbox.settings.bgOpacity = "0.3";
+	});
 </script>
 	</head>
 	<body>
