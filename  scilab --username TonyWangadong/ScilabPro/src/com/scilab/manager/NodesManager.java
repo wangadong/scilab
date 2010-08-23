@@ -28,8 +28,8 @@ public class NodesManager {
 	 */
 	public static Map<Integer, SciNode> getAllNodes() throws DocumentException {
 		SAXReader reader = new SAXReader();
-		Document document = reader.read(new File(Thread.currentThread()
-				.getContextClassLoader().getResource("").getFile()).getParent()
+		Document document = reader.read(Thread.currentThread()
+				.getContextClassLoader().getResource("")
 				+ File.separator+"NodesManager.xml");
 		Element nodesinfo = document.getRootElement().element("NodesInfo");
 		for (Iterator<?> it = nodesinfo.elementIterator(); it.hasNext();) {
@@ -54,8 +54,8 @@ public class NodesManager {
 	 */
 	public static String getHostIP() throws DocumentException {
 		SAXReader reader = new SAXReader();
-		Document document = reader.read(new File(Thread.currentThread()
-				.getContextClassLoader().getResource("").getFile()).getParent()
+		Document document = reader.read(Thread.currentThread()
+				.getContextClassLoader().getResource("")
 				+ File.separator+"NodesManager.xml");
 		String HostIP = document.getRootElement().element("HostIP")
 				.attributeValue("IPAddress");
