@@ -171,20 +171,20 @@ function MM_nbGroup(event, grpName) { //v6.0
    <div id="Team">
      <div id="TeamShow" class="TabbedPanels">
        <ul class="TabbedPanelsTabGroup">
-         <li id="TeamTab1" class="TabbedPanelsTab" tabindex="0"> 项目指导老师<br />
+         <li id="TeamTab1" class="TabbedPanelsTab" tabindex="0">项目指导老师<br />
          于雷</li>
          <li id="TeamTab3" class="TabbedPanelsTab" tabindex="0">项目总负责人<br />
          宋鸽</li>
          <li id="TeamTab4" class="TabbedPanelsTab" tabindex="0">项目成员<br />
          王鑫东</li>
-         <li id="TeamTab5" class="TabbedPanelsTab" tabindex="0">项目成员<br />
-         董又维</li>
-         <li id="TeamTab6" class="TabbedPanelsTab" tabindex="0"> 项目成员<br />
-         刘海伟</li>
          <li id="TeamTab7" class="TabbedPanelsTab" tabindex="0">项目成员<br />
          曲波</li>
          <li id="TeamTab8" class="TabbedPanelsTab" tabindex="0">项目成员<br />
          周琳</li>
+         <li id="TeamTab5" class="TabbedPanelsTab" tabindex="0">项目成员<br />
+         董又维</li>
+         <li id="TeamTab6" class="TabbedPanelsTab" tabindex="0"> 项目成员<br />
+         刘海伟</li>
          <li class="TabbedPanelsTab" id="TeamTab2" tabindex="0" name="TeamTab2">项目外援<br />
          黄永兴</li>
        </ul>
@@ -192,43 +192,38 @@ function MM_nbGroup(event, grpName) { //v6.0
          <div id="TeamContent1" class="TabbedPanelsContent"></div>
          <div id="TeamContent3" class="TabbedPanelsContent"></div>
          <div id="TeamContent4" class="TabbedPanelsContent"></div>
-         <div id="TeamContent5" class="TabbedPanelsContent"></div>
-         <div id="TeamContent6" class="TabbedPanelsContent"></div>
          <div id="TeamContent7" class="TabbedPanelsContent"></div>
          <div id="TeamContent8" class="TabbedPanelsContent"></div>
+         <div id="TeamContent5" class="TabbedPanelsContent"></div>
+         <div id="TeamContent6" class="TabbedPanelsContent"></div>
          <div id="TeamContent2" class="TabbedPanelsContent"></div>
        </div>
      </div>
    </div>
-<div id="aboutUs">
-    <table width="437" height="97" border="0" align="right">
+<div id="aboutUs" align="center">
+    <table width="686" height="97" border="0" align="left">
       <tr>
-        <td width="179" height="23">&nbsp;</td>
-        <td width="219">Tel:***********</td>
-      </tr>
+        <td width="680" height="23" align="center">This site is managed by The Scilab Cloud Group.</td>
+        </tr>
       <tr>
-        <td height="19">&nbsp;</td>
-        <td>E-mail:**********@gmail.com</td>
-      </tr>
+        <td height="19" align="center">Inquiries specific to page content can be made via the article navigation at the top of each page.</td>
+        </tr>
       <tr>
-        <td height="23">Copyright 2010©www.****.com</td>
-        <td>Address:Ecole Central de Pékin,BeiHang University,XueYuan Road No.37,HaiDian District,BeiJing,China</td>
-      </tr>
-      <tr>
-        <td height="22">&nbsp;</td>
-        <td>Zip Code：100191</td>
-      </tr>
+        <td height="23" align="center">Ecole Centrale de Pekin</td>
+        </tr>
+      
     </table>
   </div>
 
 <div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
-</div>
+
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TeamShow");
 //-->
 </script>
+  </div>
   </div>
 </body>
 </html>

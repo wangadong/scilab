@@ -33,9 +33,9 @@
 
 	
         <p>
-        <div id="LeftOperation"><a href="./PageRun.jsp" ><img src="images/LeftOperation.png" width="250" height="64" alt="LeftOperation" longdesc="images/LeftOperation.png" /></a></div>
-        <div id="LeftFunction"><a href="fun_getReleasedFunList" ><img src="images/LeftFunction.png" width="250" height="64" alt="LeftFunction" longdesc="images/LeftFunction.png" /></a></div>
-        <div id="LeftShow"><img src="images/LeftShow.png" width="250" height="64" alt="LeftShow" longdesc="images/LeftShow.png" /></div>
-        <div id="LeftTeam"><img src="images/LeftTeam.png" width="250" height="64" alt="LeftTeam" longdesc="images/LeftTeam.png" /></div>
-        <div id="LeftLinks"><img src="images/LeftLinks.png" width="250" height="64" alt="LeftLinks" longdesc="images/LeftLinks.png" /></div>
+        <div id="LeftOperation"><a href="./PageRun.jsp" ><img src="images/LeftOperation.png" width="200" height="80" alt="LeftOperation" longdesc="images/LeftOperation.png" /></a></div>
+        <div id="LeftFunction"><a href="fun_getReleasedFunList" ><img src="images/LeftFunction.png" width="200" height="80" alt="LeftFunction" longdesc="images/LeftFunction.png" /></a></div>
+        <div id="LeftShow"><img src="images/LeftShow.png" width="200" height="80" alt="LeftShow" longdesc="images/LeftShow.png" /></div>
+        <div id="LeftTeam"><img src="images/LeftTeam.png" width="200" height="80" alt="LeftTeam" longdesc="images/LeftTeam.png" /></div>
+        <div id="LeftLinks"><img src="images/LeftLinks.png" width="200" height="80" alt="LeftLinks" longdesc="images/LeftLinks.png" /></div>
         </p>
