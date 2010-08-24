@@ -190,7 +190,7 @@ function MM_nbGroup(event, grpName) { //v6.0
        </ul>
        <div class="TabbedPanelsContentGroup">
          <div id="TeamContent1" class="TabbedPanelsContent"></div>
-         <div id="TeamContent3" class="TabbedPanelsContent">宋鸽</div>
+         <div id="TeamContent3" class="TabbedPanelsContent"></div>
          <div id="TeamContent4" class="TabbedPanelsContent">王鑫东</div>
          <div id="TeamContent5" class="TabbedPanelsContent">董又维</div>
          <div id="TeamContent6" class="TabbedPanelsContent">海伟</div>
