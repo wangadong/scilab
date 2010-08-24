@@ -31,7 +31,9 @@ td #N4 {
 	width:100px;
 }
 td #N5 {
-  
+    border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: #000;
 	height:20px;
 	width:100px;
 }
@@ -52,7 +54,7 @@ td #N5 {
 	border-bottom-style: solid;
 	border-bottom-color: #000;
 	
-	width:612px;
+	width:730px;
 }
 -->
 </style>
