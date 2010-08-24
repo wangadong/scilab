@@ -382,6 +382,7 @@ body{/*全局灰色背景*/
 }
 #TeamContent2 {
 	background-image: url(../images/Team2.jpg);
+	background-repeat: no-repeat;
 }
 #TeamContent3 {
 	background-image: url(../images/Team3.jpg);
@@ -389,21 +390,30 @@ body{/*全局灰色背景*/
 }
 #TeamContent4 {
 	background-image: url(../images/Team4.jpg);
+	background-repeat: no-repeat;
 }
 #TeamContent6 {
 	background-image: url(../images/Team6.jpg);
+	background-repeat: no-repeat;
 }
 #TeamContent5 {
 	background-image: url(../images/Team5.jpg);
+	background-repeat: no-repeat;
 }
 
 #TeamContent7 {
 	background-image: url(../images/Team7.jpg);
+	background-repeat: no-repeat;
 }
 #TeamContent8 {
 	background-image: url(../images/Team8.jpg);
+	background-repeat: no-repeat;
 }
 #Third {
 	height: 700px;
 	width: 857px;
+}
+#PresentationForProgram {
+	font-family: "宋体";
+	font-weight: 300;
 }

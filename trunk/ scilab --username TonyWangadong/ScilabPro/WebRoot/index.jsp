@@ -189,8 +189,42 @@ function MM_nbGroup(event, grpName) { //v6.0
 
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" -->
-
-123<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
+<div id="PresentationForProgram">
+  <p><span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们来自北京航空航天大学中法工程师学院。</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;作为国内首批通用工程师，我们充分发挥了“通用”的特点，为Scilab制作了一个云计算平台。</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;首先，我们将Scilab封装成标准的服务（Web Service），实现了任意一台接<br />入网络的电脑通过浏览器就可以运行Scilab代码的功能。这样本地不需安装Scilab，用户通过访问我们的网站就可以轻松快捷的使用Scilab。</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们还给注册用户提供保存任务、保存结果和修改任务等多项功能，实现了用户操作档案的个性化管理。</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;同时我们还精心设计了很多互动功能，提供了分享自己编写的函数的平台。注册用户在登陆后可以上传自己写的函数，并且部分功能强大的函数可以被加载到网站后台的Scilab中，供其他用户使用。这就相当于一个巨大的工具箱，让没有函数编写经验的用户也可以分享Scilab强大的函数功能。</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们最大的贡献在于，将我们的网站做成了一个云计算平台。网站作为服务器，在为用户提供网页服务的同时，还管理多个计算的节点。每个节点都部署了我们的Scilab服务，可以通过标准化的方式被集成和调用。节点的部署非常简单，只需要安装我们制作的一个节点服务软件（一键式安装），就可以让任意一台接入网络的电脑成为我们的节点服务器，集成到我们的系统中来，执行用户的Scilab任务，实现云计算功能。通过对调度算法的优化，以及对服务器间信息传输的分析处理，我们的平台显著缩减任务提交后的等待时间，使得用户可以更快速的获得运算结果，很好的体现了云计算的思想。</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">网站中的特色功能介绍如下：</span><br />
+    Operation<span lang="ZH-CN" xml:lang="ZH-CN">：该链接为</span>Scilab<span lang="ZH-CN" xml:lang="ZH-CN">网站版，点击这个链接就可以通过网站使用</span>Scilab<span lang="ZH-CN" xml:lang="ZH-CN">。</span><br />
+    Function<span lang="ZH-CN" xml:lang="ZH-CN">：该链接为用户分享的函数，每个函数都有自己的源代码，使用说明以及</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">用例。</span><br />
+    Show<span lang="ZH-CN" xml:lang="ZH-CN">：为使用我们网站的简短视频介绍。</span><br />
+    Team: Scilab Cloud<span lang="ZH-CN" xml:lang="ZH-CN">团队成员介绍。</span><br />
+    Contact<span lang="ZH-CN" xml:lang="ZH-CN">：联系我们</span><br />
+    Link<span lang="ZH-CN" xml:lang="ZH-CN">：相关链接</span><br />
+    BBS<span lang="ZH-CN" xml:lang="ZH-CN">：</span>Scilab<span lang="ZH-CN" xml:lang="ZH-CN">的论坛链接</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">可以通过屏幕左上角的</span>Login<span lang="ZH-CN" xml:lang="ZH-CN">和</span>Register<span lang="ZH-CN" xml:lang="ZH-CN">实现登录和注册</span><br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">用户登录后，可以在屏幕左侧的书签中进行账户管理。通过</span>“View my   task list”<br />
+    <span lang="ZH-CN" xml:lang="ZH-CN">查看我保存过的任务。通过</span>“View my function list”<span lang="ZH-CN" xml:lang="ZH-CN">查看我上传过的函数。通过</span>“<br />
+    Share my   functions”<span lang="ZH-CN" xml:lang="ZH-CN">上传我写过的函数。</span></p>
+<br />
+  <br />
+  <div>
+    <blockquote>
+      <div>
+        <div>
+          <div></div>
+          <div><br />
+            <blockquote>&nbsp;</blockquote>
+          </div>
+          </div>
+      </div>
+    </blockquote>
+  </div>
+</div>
+<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
   <div id="ExplicationPossible">
   <!-- InstanceBeginEditable name="EditRegion5" -->EditRegion5<!-- InstanceEndEditable -->
