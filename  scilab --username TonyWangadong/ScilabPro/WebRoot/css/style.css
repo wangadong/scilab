@@ -384,7 +384,8 @@ body{/*全局灰色背景*/
 	background-image: url(../images/Team2.jpg);
 }
 #TeamContent3 {
-	background-image: url(../images/Team3.png);
+	background-image: url(../images/Team3.jpg);
+	background-repeat: no-repeat;
 }
 #TeamContent4 {
 	background-image: url(../images/Team4.jpg);
