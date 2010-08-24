@@ -31,7 +31,13 @@ body{/*全局灰色背景*/
 #global{/*全局白色背景*/
 	width:857px;
 	background-color:#fff;
-	height:auto!important; min-height:500px; height:500px; 
+	height:auto!important; min-height:1100px; height:1100px; 
+	clear:both;
+}
+#globalLinks{/*全局白色背景*/
+	width:857px;
+	background-color:#fff;
+	height:auto!important; min-height:900px; height:900px; 
 	clear:both;
 }
 /*题头开始*/
@@ -137,79 +143,82 @@ body{/*全局灰色背景*/
 }
 #LeftDiv {
 	float: left;
-	height: 300px;
-	width: 270px;
+	height: 400px;
+	width: 266px;
 	overflow: hidden;
 	padding-top: 8px;
 	position:relative;
+	padding-left: 60px;
 }
 #ExplicationPossible{
-    float: left;
-	width: 270px;
+	float: left;
+	width: 240px;
 	overflow: hidden;
+	margin-top: -220px;
+	margin-left: 80px;
 }
 #LeftOperation {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-left:20px;
+	margin-left:31px;
 	z-index: 25;
 }
 #LeftFunction {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:52px;
+	margin-top:66px;
 	z-index: 20;
 }
 #LeftShow {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:104px;
-	margin-left:20px;
+	margin-top:132px;
+	margin-left:31px;
 	z-index: 15;
 }
 #LeftTeam {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:156px;
+	margin-top:198px;
 	z-index: 10;
 }
 #LeftLinks {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:208px;
-	margin-left:20px;
+	margin-top:264px;
+	margin-left:31px;
 	z-index: 5;
 }
 #LeftSignout {
-    width:250px;
+	width:213px;
 	position:absolute;
-	margin-left:20px;
+	margin-left:31px;
 	z-index: 25;
 }
 #LeftRunScilabOnline {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:52px;
+	margin-top:66px;
 	z-index: 20;
 }
 #LeftViewMyTaskList {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:104px;
-	margin-left:20px;
+	margin-top:132px;
+	margin-left:31px;
 	z-index: 15;
 }
 #LeftViewMyFunctions {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:156px;
+	margin-top:198px;
 	z-index: 10;
 }
 #LeftShareMyFunctions {
-    width:250px;
+	width:231px;
 	position:absolute;
-	margin-top:208px;
-	margin-left:20px;
+	margin-top:264px;
+	margin-left:31px;
 	z-index: 5;
 }
 
@@ -223,13 +232,17 @@ body{/*全局灰色背景*/
 	font-size: 14px;
 	color: #009;
 }
+#RefreshDivLinks {
+	float: left;
+	height: 400px;
+	width:450px;
+	font-size: 14px;
+}
 #RefreshDiv {
-	float: right;
-	height: 600px;
-	width:580px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #B8D4E8;
+	float: left;
+	height: 620px;
+	width:450px;
+	font-size: 14px;
 }
 #RefreshDiv #slideshowHolder {
 	width: 350px;
@@ -256,10 +269,12 @@ body{/*全局灰色背景*/
 }
 #RefreshDiv #SharePage {
 	height: 430px;
-	width: 580px;
-	background-color: #F0F5F8;
-	border: 1px ridge #B8D4E8;
+	width: 450px;
+	background-color: #369;
+	border: 1px ridge #09F;
 	float: left;
+	margin-top: 26px;
+	color: #FFF;
 }
 #RefreshDiv #SharePage #ShareContent {
 	margin-top: -30px;
@@ -289,15 +304,15 @@ body{/*全局灰色背景*/
 	width: 400px;
 }
 #Explication {
-	width:270x;
+	width:240px;
 	float: right;
 	height: 200px;
-	background-color: #F0F5F8;
+	background-color: #69F;
 	border: 1px solid #B8D4E8;
 }
 #Welcome {
 	height: 30px;
-	width: 270px;
+	width: 240px;
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bolder;
@@ -313,15 +328,19 @@ body{/*全局灰色背景*/
 #aboutUs   {
 	height: 95px;
 	z-index: -1;
-	float: right;
-	margin-right: 200px;
+	width: 857px;
+	float: left;
+	text-align: center;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #03C;
 }
 
 #EcpknLogo {
 	margin-top: -80px;
 	float: left;
 	z-index: -2;
-	margin-left: 580px;
+	margin-left: 770px;
 }
 #TabbedPanels1 {
 	background-image: url(../images/BookMark.png);

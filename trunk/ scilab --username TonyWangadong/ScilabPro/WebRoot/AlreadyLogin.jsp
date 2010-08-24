@@ -14,11 +14,11 @@
 		}
 	</script>
     <p>
-        <div id="LeftSignout"><a href="SignoutAction!signout" ><img src="images/LeftSignout.png" width="250" height="64" alt="LeftSignout" longdesc="images/LeftSignout.png" /></a></div>
-        <div id="LeftRunScilabOnline"><a href="./PageRun.jsp" ><img src="images/LeftRunScilabOnline.png" width="250" height="64" alt="LeftRunScilabOnline" longdesc="images/LeftRunScilabOnline.png" /></a></div>
-        <div id="LeftViewMyTaskList"><a href="fun_getAllFunctions"><img src="images/LeftViewMyTaskList.png" width="250" height="64" alt="LeftViewMyTaskList" longdesc="images/LeftViewMyTaskList.png" /></a></div>
-        <div id="LeftViewMyFunctions"><a href="fun_getAllFunctions"><img src="images/LeftViewMyFunctions.png" width="250" height="64" alt="LeftViewMyFunctions" longdesc="images/LeftViewMyFunctions.png" /></a></div>
-        <div id="LeftShareMyFunctions"><a href="./PageFunctionInput.jsp"><img src="images/LeftShareMyFunctions.png" width="250" height="64" alt="LeftShareMyFunctions" longdesc="images/LeftShareMyFunctions.png" /></a></div>
+        <div id="LeftSignout"><a href="SignoutAction!signout" ><img src="images/LeftSignout.png" width="200" height="80" alt="LeftSignout" longdesc="images/LeftSignout.png" /></a></div>
+        <div id="LeftRunScilabOnline"><a href="./PageRun.jsp" ><img src="images/LeftRunScilabOnline.png" width="200" height="80" alt="LeftRunScilabOnline" longdesc="images/LeftRunScilabOnline.png" /></a></div>
+        <div id="LeftViewMyTaskList"><a href="task_getAllTask?id=${task.taskId}"><img src="images/LeftViewMyTaskList.png" width="200" height="80" alt="LeftViewMyTaskList" longdesc="images/LeftViewMyTaskList.png" /></a></div>
+        <div id="LeftViewMyFunctions"><a href="fun_getAllFunctions"><img src="images/LeftViewMyFunctionsList.png" width="200" height="80" alt="LeftViewMyFunctionsList" longdesc="images/LeftViewMyFunctions.png" /></a></div>
+        <div id="LeftShareMyFunctions"><a href="./PageFunctionInput.jsp"><img src="images/LeftShareMyFunctionsList.png" width="200" height="80" alt="LeftShareMyFunctionsList" longdesc="images/LeftShareMyFunctions.png" /></a></div>
     </p>
 
   

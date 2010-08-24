@@ -127,7 +127,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td width="106" ><a href="AllFunctionList.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavFunction','',1)" onmouseover="MM_nbGroup('over','NavFunction','images/FunctionMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/FunctionNormal.png" alt="NavFunction" name="NavFunction" border="0"/></a></td>
         <td width="80" ><a href="Show.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavShow','',1)" onmouseover="MM_nbGroup('over','NavShow','images/ShowMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/ShowNormal.png" alt="NavShow" name="NavShow" border="0" /></a></td>
         <td width="80"><a href="Team.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavTeam','',1)" onmouseover="MM_nbGroup('over','NavTeam','images/TeamMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/TeamNormal.png" alt="NavTeam" name="NavTeam" border="0"/></a></td>
-        <td width="215" ><a href="Contact.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavContact','',1)" onmouseover="MM_nbGroup('over','NavContact','images/ContactMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/ContactNormal.png" alt="NavContact" name="NavContact" border="0"/></a></td>
+        <td width="215" ><a href="mailto:scilabecpkn@googlegroups.com" target="_top" onclick="MM_nbGroup('down','group1','NavContact','',1)" onmouseover="MM_nbGroup('over','NavContact','images/ContactMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/ContactNormal.png" alt="NavContact" name="NavContact" border="0"/></a></td>
         <td><a href="Link.jsp" target="_top" onClick="MM_nbGroup('down','group1','NavLink','',1)" onMouseOver="MM_nbGroup('over','NavLink','images/LinkMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavLink" src="images/LinkNormal.png" border="0" alt="NavLink" onLoad="" /></a></td>
         <td><a href="www.scilab.org.cn/bbs/" target="_top" onClick="MM_nbGroup('down','group1','NavBBS','',1)" onMouseOver="MM_nbGroup('over','NavBBS','images/BBSMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavBBS" src="images/BBSNormal.png" border="0" alt="NavBBS" onLoad="" /></a></td>
       </tr>
@@ -137,7 +137,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--题头结束-->
 <!--第二部分开始-->
  <div id="PictureChange">
-   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" -->EditRegion3<!-- InstanceEndEditable --></div>
+   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" --><img src="images/TextShow.png" width="235" height="60" alt="Show" longdesc="images/TextShow.png" /><!-- InstanceEndEditable --></div>
    <div id="BandPictureLeft"><img src="images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
 <!--第二部分：图片轮换开始-->
    <div id="Bandpicture">
@@ -186,29 +186,23 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--左导航结束-->
 
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="Refresh" -->EditRegion2<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
+<!-- InstanceBeginEditable name="Refresh" --><a>Please view the film of our Scilab Cloud Program!</a><!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
   <div id="ExplicationPossible">
-  <!-- InstanceBeginEditable name="EditRegion5" -->EditRegion5<!-- InstanceEndEditable -->
+  <!-- InstanceBeginEditable name="EditRegion5" --><!-- InstanceEndEditable -->
   </div>
- <div id="aboutUs">
-    <table width="437" height="97" border="0" align="right">
+ <div id="aboutUs" align="center">
+    <table width="686" height="97" border="0" align="left">
       <tr>
-        <td width="179" height="23">&nbsp;</td>
-        <td width="219">电话:***********</td>
-      </tr>
+        <td width="680" height="23" align="center">This site is managed by The Scilab Cloud Group.</td>
+        </tr>
       <tr>
-        <td height="19">&nbsp;</td>
-        <td>邮箱:**********@gmail.com</td>
-      </tr>
+        <td height="19" align="center">Inquiries specific to page content can be made via the article navigation at the top of each page.</td>
+        </tr>
       <tr>
-        <td height="23">Copyright 2010©www.****.com</td>
-        <td>地址:北京市海淀区学院路37号中法工程师学院</td>
-      </tr>
-      <tr>
-        <td height="22">&nbsp;</td>
-        <td>邮编：100191</td>
-      </tr>
+        <td height="23" align="center">Ecole Centrale de Pekin</td>
+        </tr>
+      
     </table>
   </div>
 
