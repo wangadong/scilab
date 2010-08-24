@@ -79,6 +79,7 @@ public class Task implements Runnable {
 			stub.submitTask(host);// 执行计算服务中的submitTask方法
 			// System.out.println(content + resultFolder);
 		} catch (AxisFault e) {
+			e.printStackTrace();
 			System.out.println("服务节点" + getNodesId() + "Connection Error");
 		} catch (RemoteException e) {
 			e.printStackTrace();

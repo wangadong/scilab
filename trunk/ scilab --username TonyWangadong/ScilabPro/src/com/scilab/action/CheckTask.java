@@ -110,7 +110,7 @@ public class CheckTask extends BaseAction {
 		getResponse().setHeader("Cache-Control", "no-cache"); // 不定义缓存
 		getResponse().setCharacterEncoding("utf-8");
 		PrintWriter out = getResponse().getWriter();
-		ScilabTaskHostService.getTaskStatue(userId + taskname);// 获取任务状态
+		taskStatue=ScilabTaskHostService.getTaskStatue(userId + taskname);// 获取任务状态
 		out.write(taskStatue);
 		out.close();// 输出状态内容
 		System.out.println(taskStatue);
