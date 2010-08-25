@@ -97,23 +97,12 @@ function MM_nbGroup(event, grpName) { //v6.0
 
 				language : "zh",
 				syntax : "php",
-				toolbar : "new_document, save, load, |, search, go_to_line, |, undo, redo, |, select_font, |, highlight",
-				load_callback : "my_load",
-				save_callback : "my_save",
+				toolbar : "new_document,|, search, go_to_line, |, undo, redo, |, select_font, |, highlight",
 				plugins : "charmap",
 				charmap_default : "arrows",
 				is_multi_files : false
 
 			});
-	function my_save(id, content) {
-		document.getElementById("myForm").submit();
-	}
-
-	function my_load(id) {
-		editAreaLoader
-				.setValue(id,
-						"The content is loaded from the load_callback function into EditArea");
-	}
 	function validate(){
 		var taskName = $("#myForm_taskName").val();
 		taskName = $.trim(taskName);
