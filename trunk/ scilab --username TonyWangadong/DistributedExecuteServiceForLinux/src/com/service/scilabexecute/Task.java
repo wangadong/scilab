@@ -35,9 +35,9 @@ public class Task implements Runnable {
 	public void run() {
 		try {
 			@SuppressWarnings("unused")
-			String[] cmd={"/bin/sh","-c","java -jar "+System.getProperty("user.home")+"/ScilabDistribution/execute.jar"
+			String[] cmd={"/bin/sh","-c",System.getProperty("user.home")+"/ScilabDistribution/execute.sh"
 				+ " \"" + codes + "\" " + "\"" + savePath + "\" "
-				+ "\"" + hostIP + "\">\"" + savePath + "\""};
+				+ "\"" + hostIP + "\""};
 			Process process = Runtime.getRuntime().exec(cmd);
 		} catch (Exception e) {
 			e.printStackTrace();
