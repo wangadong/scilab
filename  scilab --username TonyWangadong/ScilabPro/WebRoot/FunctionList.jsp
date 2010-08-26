@@ -189,17 +189,18 @@ function MM_nbGroup(event, grpName) { //v6.0
 
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" -->
-<table width="500"  border="1" cellspacing="0"  valign="top" >
+
+<table width="450"  border="1" cellspacing="0"  valign="top" >
   
-  <tr><td height="25" width="250" align="left" class="title">Function List</td><td width="250">Function Detail</td></tr> 
+  <tr><td height="25" width="200" align="left" class="title">Function List</td><td width="250">Function Detail</td></tr> 
   <c:if test="${empty list}"><tr height="25"><td width="250"align="left"class="title"> 
           Sorry, no related resources  </td><td width="250">No Information</td></tr></c:if>
   <c:forEach var="fun" items="${list}"> 
-  <tr height="10"><td width="250"align="left"class="title">${fun.funName}</td><td width="250"><a href="fun_getDetail?id=${fun.funId}">View Details</a></td></tr>
+  <tr height="10"><td width="200"align="left"class="title">${fun.funName}</td><td width="250"><a href="fun_getDetail?id=${fun.funId}">View Details</a></td></tr>
   <br/>
-  </c:forEach>
-  
+  </c:forEach>  
   </table>
+
   <br/>
   <a href="PageFunctionInput.jsp">Upload Function</a> 
   <!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
