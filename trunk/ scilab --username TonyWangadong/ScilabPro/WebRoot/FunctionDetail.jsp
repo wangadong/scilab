@@ -188,25 +188,25 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--左导航结束-->
 
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="Refresh" --><table width="1000" height="495" border="1" cellspacing="0"  valign="top" >
+<!-- InstanceBeginEditable name="Refresh" --><table width="450" height="495" border="1" cellspacing="0"  valign="top" >
    
-   <tr height="20"><td width="100"align="center"class="title">Function Name</td><td width="900">${functionInfo.funName}</td></tr>
+   <tr height="20"><td width="100"align="center"class="title">Function Name</td><td width="350">${functionInfo.funName}</td></tr>
     
-   <tr height="135"><td width="100"align="center"class="title">Source Code</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
+   <tr height="135"><td width="100"align="center"class="title">Source Code</td><td width="350"><div style="height:135;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
    
-   <tr height="135"><td width="100"align="center"class="title">Examples</td><td width="900"><div style="height:135;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
+   <tr height="135"><td width="100"align="center"class="title">Examples</td><td width="350"><div style="height:135;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
    
-   <tr height="135"><td width="100"align="center"class="title">Help</td><td width="900"><div style="height:135;overflow:auto">${functionInfo.funHelp}</div></td></tr>
+   <tr height="135"><td width="100"align="center"class="title">Help</td><td width="350"><div style="height:135;overflow:auto">${functionInfo.funHelp}</div></td></tr>
   
-   <tr height="20"><td width="100"align="center"class="title">Publish Status</td><td width="900">
+   <tr height="20"><td width="100"align="center"class="title">Publish Status</td><td width="350">
    <c:choose>
    <c:when test="${functionInfo.funStatue==0}">Unpublished
    </c:when>
    <c:otherwise>    Published 
    </c:otherwise>
    </c:choose></td></tr>   
-   <tr height="20"><td width="100"align="center"class="title">Upload Time</td><td width="900">${functionInfo.saveTime}</td></tr>
-   <tr height="20"><c:if test="${sessionScope.user.userId != functionInfo.userId}"><td width="100"align="center">发布者</td><td width="900">${userInfo.userName}</td></c:if></tr>
+   <tr height="20"><td width="100"align="center"class="title">Upload Time</td><td width="350">${functionInfo.saveTime}</td></tr>
+   <tr height="20"><c:if test="${sessionScope.user.userId != functionInfo.userId}"><td width="100"align="center">publisher</td><td width="350">${userInfo.userName}</td></c:if></tr>
    
   </table>
   <c:if test="${sessionScope.user.userId == functionInfo.userId}">
