@@ -193,7 +193,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <br/><br/>
 <table width="450"  border="1" cellspacing="0"  valign="top" >
   
-  <tr><td height="25" width="200" align="left" class="title">Function List</td><td width="250">Check Out the Function's Information</td></tr> 
+  <tr><td height="25" width="200" align="left" class="title">Function List</td><td width="250">Function Detail</td></tr> 
   <c:if test="${empty list}"><tr height="25"><td width="450"align="left"class="title">
      Sorry, no related resources　　　　　　　　　　
   </td></tr></c:if>
