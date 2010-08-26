@@ -188,15 +188,19 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--左导航结束-->
 
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="Refresh" --><table width="450" height="495" border="1" cellspacing="0"  valign="top" >
+<!-- InstanceBeginEditable name="Refresh" -->
+ <div id="SharePage">
+ <div id="ShareContent" align="left" >
+ <br/><br/>
+ <table width="450" height="425" border="1" cellspacing="0"  valign="top" >
    
    <tr height="20"><td width="100"align="center"class="title">Function Name</td><td width="350">${functionInfo.funName}</td></tr>
     
-   <tr height="135"><td width="100"align="center"class="title">Source Code</td><td width="350"><div style="height:135;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
+   <tr height="160"><td width="100"align="center"class="title">Source Code</td><td width="350"><div style="height:160;overflow:auto"> ${functionInfo.funContent}</div></td></tr>
    
-   <tr height="135"><td width="100"align="center"class="title">Examples</td><td width="350"><div style="height:135;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
+   <tr height="105"><td width="100"align="center"class="title">Examples</td><td width="350"><div style="height:105;overflow:auto"> ${functionInfo.funExample}</div><br></td></tr>
    
-   <tr height="135"><td width="100"align="center"class="title">Help</td><td width="350"><div style="height:135;overflow:auto">${functionInfo.funHelp}</div></td></tr>
+   <tr height="80"><td width="100"align="center"class="title">Help</td><td width="350"><div style="height:80;overflow:auto">${functionInfo.funHelp}</div></td></tr>
   
    <tr height="20"><td width="100"align="center"class="title">Publish Status</td><td width="350">
    <c:choose>
@@ -209,6 +213,8 @@ function MM_nbGroup(event, grpName) { //v6.0
    <tr height="20"><c:if test="${sessionScope.user.userId != functionInfo.userId}"><td width="100"align="center">publisher</td><td width="350">${userInfo.userName}</td></c:if></tr>
    
   </table>
+  </div>
+  </div>
   <c:if test="${sessionScope.user.userId == functionInfo.userId}">
   <br/><br/>
   <a href="fun_deleteById?id=${functionInfo.funId}">Remove this function</a></c:if><br/>
