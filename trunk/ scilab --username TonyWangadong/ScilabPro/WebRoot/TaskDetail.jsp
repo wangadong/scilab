@@ -186,7 +186,26 @@ function MM_nbGroup(event, grpName) { //v6.0
     </div>
   </div>   
 <!--左导航结束-->
-
+<script type="text/javascript">
+<!--
+	$(function(){
+		var name = $("input[type=hidden][name=taskName_h]:eq(0)").val();
+		$("div[name="+name+"]:eq(1)").remove();
+		$("a.taskResult:eq(0)").colorbox({contentWidth:"800px", contentHeight:"450px", contentIframe:true});
+		$("a.taskSave:eq(0)").colorbox({contentWidth:"150px", contentHeight:"100px", contentIframe:true});
+		$("a.taskStatue:eq(0)").colorbox({contentWidth:"150px", contentHeight:"100px", contentIframe:true});
+		$("a.taskSave").click(function(){
+			$.ajax({
+				type: "post", url: $(this).attr("href"), data: "&date="+new Date(),
+				success:function(e){
+					$("#myajaxdiv").html(e);
+				}
+			});
+			return false;
+		});
+	});
+//-->
+</script>
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" --> 
 <table border=1 cellspacing=0 cellpadding=0 width="480">
@@ -199,7 +218,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 	  <br><br>
 	    <div id="myResult">     
 		
-			<a href='<s:url value='/CheckTask!getResult'/>?taskname=${taskInfo.taskName}' class="taskResult" title="<s:property value="taskname"/>" >Get Task Result</a></div></td>
+			<a href='<s:url value='/CheckTask!getResult'/>?taskname=<s:property value="taskname"/>' class="taskResult" title="<s:property value="taskname"/>" >View Task Results</a></div></td>
 			<a href="task_deleteById?id=${taskInfo.taskId}">Delete this task</a>　　　
 			<a href="task_getAllTask">Back to the task list</a>
 			<div id="myajaxdiv"></div><div id="myajaxdiv"></div>
