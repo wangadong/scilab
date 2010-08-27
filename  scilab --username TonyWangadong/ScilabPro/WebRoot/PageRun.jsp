@@ -5,7 +5,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/PageModel.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base href="<%=basePath%>"/>
 	<meta http-equiv="pragma" content="no-cache"/>
@@ -77,9 +77,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 </script>
 
 <!--头文件可编辑区域-->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
 <title>My JSP 'MyJsp.jsp' starting page</title>
 		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox.css'/>" />
 		<link type="text/css" media="screen" rel="stylesheet" href="<s:url value='/js/plugin/colorbox/colorbox-custom.css'/>" />
@@ -103,7 +100,10 @@ function MM_nbGroup(event, grpName) { //v6.0
 				is_multi_files : false
 
 			});
+		var h=620; //主体编辑区高度
+		var h0=1000;//白色背景高度
 	function validate(){
+		
 		var taskName = $("#myForm_taskName").val();
 		taskName = $.trim(taskName);
 		var taskContent = $("#scilabtask_1").val();
@@ -122,8 +122,13 @@ function MM_nbGroup(event, grpName) { //v6.0
 					if($("#myTask div").size()==0){
 						$("#myTask").html(e);
 					}else{
+						
 						$(e).insertBefore("#myTask div:eq(0)");
 					}
+					h+=30;
+						h0+=30;
+						$("#RefreshDiv").css("height", h);
+						$("#globalRun").css("height", h0);
 				}
 			};
 			$("#myForm").ajaxSubmit(options);
@@ -164,11 +169,10 @@ function MM_nbGroup(event, grpName) { //v6.0
 		$.fn.colorbox.settings.bgOpacity = "0.3";
 	});
 </script>
-<!-- InstanceEndEditable -->
 </head>
 <!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
-<div id="global">
+<div id="globalRun">
 <!--题头开始-->
  <div id="BlueTopImage">
   <div id="LoginAndRegister">
@@ -221,7 +225,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--题头结束-->
 <!--第二部分开始-->
  <div id="PictureChange">
-   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" --><img src="images/TextOperation.png" width="235" height="60" alt="TextOperation" longdesc="images/TextOperation.png" /><!-- InstanceEndEditable --></div>
+   <div id=BigText><img src="images/TextOperation.png" width="235" height="60" alt="TextOperation" longdesc="images/TextOperation.png" /></div>
    <div id="BandPictureLeft"><img src="images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
 <!--第二部分：图片轮换开始-->
    <div id="Bandpicture">
@@ -269,8 +273,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   </div>   
 <!--左导航结束-->
 
-  <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="Refresh" -->
+  <div id="RefreshDivRun">
 <s:form action='TaskAction' method='post' id="myForm" target="_blank"
 			theme="simple" onsubmit="return validate()">
 			<p>
@@ -283,27 +286,10 @@ function MM_nbGroup(event, grpName) { //v6.0
 			<s:submit value='Submit the task' method="submitTask"/>
 		</s:form>   
 		<div id="myTask"></div>
-		<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
-  </div>
-  <div id="ExplicationPossible">
-  <!-- InstanceBeginEditable name="EditRegion5" --><!-- InstanceEndEditable -->
-  </div>
- <div id="aboutUs" align="center">
-    <table width="686" height="97" border="0" align="left">
-      <tr>
-        <td width="680" height="23" align="center">This site is managed by The Scilab Cloud Group.</td>
-        </tr>
-      <tr>
-        <td height="19" align="center">Inquiries specific to page content can be made via the article navigation at the top of each page.</td>
-        </tr>
-      <tr>
-        <td height="23" align="center">Ecole Centrale de Pekin</td>
-        </tr>
-      
-    </table>
+		<a href="PageModel.dwt"></a>     
   </div>
 
-<div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+ 
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
@@ -312,4 +298,4 @@ swfobject.registerObject("FlashID");
 </div>
 </div>
 </body>
-<!-- InstanceEnd --></html>
+</html>

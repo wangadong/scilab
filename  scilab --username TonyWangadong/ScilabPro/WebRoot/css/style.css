@@ -31,13 +31,37 @@ body{/*全局灰色背景*/
 #global{/*全局白色背景*/
 	width:857px;
 	background-color:#fff;
-	height:auto!important; min-height:1100px; height:1100px; 
+	height:auto!important; min-height:600px; height:600px; 
+	clear:both;
+}
+#globalIndex{/*全局白色背景*/
+	width:857px;
+	background-color:#fff;
+	height:1400px;
+	clear:both;
+}
+#globalIndexChinese{/*全局白色背景*/
+	width:857px;
+	background-color:#fff;
+	height:1200px;
+	clear:both;
+}
+#globalRun{/*全局白色背景*/
+	width:857px;
+	background-color:#fff;
+	height:1100px;
 	clear:both;
 }
 #globalLinks{/*全局白色背景*/
 	width:857px;
 	background-color:#fff;
-	height:auto!important; min-height:900px; height:900px; 
+	height:900px;
+	clear:both;
+}
+#globalTeam{/*全局白色背景*/
+	width:857px;
+	background-color:#fff;
+	height:1000px; 
 	clear:both;
 }
 /*题头开始*/
@@ -232,6 +256,22 @@ body{/*全局灰色背景*/
 	font-size: 14px;
 	color: #009;
 }
+#Language {
+	margin-top:10px;
+	margin-left:300px;
+	float:left;
+}
+#Chinese {
+	width:50px;
+	height:34px;
+	float:left;
+}
+#English {
+	width:50px;
+	height:34px;
+	float:left;
+	margin-left:10px;
+}
 #RefreshDivLinks {
 	float: left;
 	height: 400px;
@@ -240,35 +280,18 @@ body{/*全局灰色背景*/
 }
 #RefreshDiv {
 	float: left;
-	height: 620px;
+	height: 700px;
 	width:450px;
 	font-size: 14px;
 }
-#RefreshDiv #slideshowHolder {
-	width: 350px;
+#RefreshDivRun {
 	float: left;
-	height: 240px;
-	margin-left: 20px;
-}
-#RefreshDiv #select {
-	width: 250px;
-	height: 240px;
-	margin-left: 390px;
-}
-#RefreshDiv #select #try {
-	height: 60px;
-}
-#RefreshDiv #select #share {
-	height: 60px;
-}
-#RefreshDiv #select #presentation {
-	height: 60px;
-}
-#RefreshDiv #select #How  {
-	height: 60px;
+	height: 560px;
+	width:450px;
+	font-size: 14px;
 }
 #RefreshDiv #SharePage {
-	height: 430px;
+	height: 580px;
 	width: 450px;
 	background-color: #369;
 	border: 1px ridge #09F;
@@ -278,30 +301,6 @@ body{/*全局灰色背景*/
 }
 #RefreshDiv #SharePage #ShareContent {
 	margin-top: -30px;
-}
-#RefreshDiv #SharePage #form1 table {
-	font-family: Tahoma, Geneva, sans-serif;
-	margin-top: 30px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-}
-
-#RefreshDiv #SharePage #form1 table tr td #FonctionName {
-	height: 30px;
-	width: 200px;
-}
-#RefreshDiv #SharePage #form1 table tr td #Code {
-	height: 90px;
-	width: 400px;
-}
-#RefreshDiv #SharePage #form1 table tr td #Help {
-	height: 90px;
-	width: 400px;
-}
-#RefreshDiv #SharePage #form1 table tr td #Exemple {
-	height: 90px;
-	width: 400px;
 }
 #Explication {
 	width:240px;
@@ -429,10 +428,11 @@ body{/*全局灰色背景*/
 	background-repeat: no-repeat;
 }
 #Third {
-	height: 700px;
+	height: 900px;
 	width: 857px;
 }
 #PresentationForProgram {
 	font-family: "宋体";
 	font-weight: 300;
+	height:1000px;
 }

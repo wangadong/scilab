@@ -82,7 +82,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </head>
 <!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
-<div id="global">
+<div id="globalIndex">
 <!--题头开始-->
  <div id="BlueTopImage">
   <div id="LoginAndRegister">
@@ -175,35 +175,36 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--第二部分结束--> 
 <div id="Third">
 <!--左导航开始-->
-  <div id="LeftDiv">
+<div id="LeftDiv">
   <div id="LoginPersonal" align="center">
-   <s:if test="#session.user!=null"><jsp:include page="AlreadyLogin.jsp"></jsp:include></s:if>
-<s:else><jsp:include page="NotLogin.jsp"></jsp:include></s:else>
-    </div>
-  </div>   
+    <s:if test="#session.user!=null">
+      <jsp:include page="AlreadyLogin.jsp"></jsp:include>
+    </s:if>
+    <s:else>
+      <jsp:include page="NotLogin.jsp"></jsp:include>
+    </s:else>
+  </div>
+</div>
 <!--左导航结束-->
 
   <div id="RefreshDiv">
 <div id="PresentationForProgram">
-  <p><span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们来自北京航空航天大学中法工程师学院。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;作为国内首批通用工程师，我们充分发挥了“通用”的特点，为Scilab制作了一个云计算平台。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;首先，我们将Scilab封装成标准的服务（Web Service），<br />实现了任意一台接入网络的电脑通过浏览器就可以运行Scilab代码的功能。这样本地不需安装Scilab，用户通过访问我们的网站就可以轻松快捷的使用Scilab。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们还给注册用户提供保存任务、保存结果和修改任务等多项功能，实现了用户操作档案的个性化管理。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;同时我们还精心设计了很多互动功能，提供了分享自己编写的函数的平台。注册用户在登陆后可以上传自己写的函数，并且部分功能强大的函数可以被加载到网站后台的Scilab中，供其他用户使用。这就相当于一个巨大的工具箱，让没有函数编写经验的用户也可以分享Scilab强大的函数功能。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们最大的贡献在于，将我们的网站做成了一个云计算平台。网站作为服务器，在为用户提供网页服务的同时，还管理多个<br/>计算的节点。每个节点都部署了我们的Scilab服务，可以通过标准化的方式被集成和调用。节点的部署非常简单，只需要安装我们制作的一个节点服务软件（一键式安装），就可以让任意一台<br/>接入网络的电脑成为我们的节点服务器，集成到我们的系统中来，执行用户的Scilab任务，实现云计算功能。通过对调度算法的优化，以及对服务器间信息传输的分析处理，我们的平台显著缩减任务提交后的等待时间，使得用户可以更快速的获得运算结果，很好的体现了云计算的思想。</span></p>
-  <p><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;网站中的特色功能介绍如下：</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;Operation：该链接为</span>Scilab<span lang="ZH-CN" xml:lang="ZH-CN">网站版，点击这个链接就可以通过网站使用</span>Scilab<span lang="ZH-CN" xml:lang="ZH-CN">。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;Function：该链接为用户分享的函数，每个函数都有自己的源代码，使用说明以及</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">用例。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;Show：为使用我们网站的简短视频介绍。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;Team: Scilab Cloud团队成员介绍。</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;Contact：联系我们</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;Link：相关链接</span><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;BBS：</span>Scilab<span lang="ZH-CN" xml:lang="ZH-CN">的论坛链接</span></p>
-  <p><br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;可以通过屏幕左上角的Login和Register实现登录和注册</span>。<br />
-    <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;用户登录后，可以在屏幕左侧的书签中进行账户管理。通过“View my task list”查看我保存过的任务。通过“View my function list“查看我上传过的函数。通过“Share my functions”上传我写过的函数。</span></p>
+    <div id="Language"><div id="Chinese"><a href="indexChinese.jsp" ><img src="images/Chinese.gif" width="50" height="34" alt="Chinese" longdesc="images/Chinese.gif" /></a></div><div id="English"><a href="index.jsp"><img  src="images/English.gif" width="50" height="33" alt="English" longdesc="images/English.gif" /></a></div></div>
+    <p>&nbsp;</p>
+    <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;We are from Beijing University of Aeronautics and   Astronautics,école Centrale de Pékin.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">    As the first general   engineers, we give full play to the `general` character, we produced a cloud   computing platform for Scilab.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">    Firstly, we package the   Scilab as a standard service---Web Service, so that each computer which accesses   the network can run Scilab through Browser, Therefore, we do not need to install   Scilab on our computer. Users can use Scilab easily by using our website. At the   same time, we also provide to save the tasks, to save the results and to modify   tasks for registered users. We achieve the personalized management for   users.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">    And we also design a number   of interactive features, we offer a platform for sharing functions. Registered   users can upload their own function after login, and some powerful functions can   be loaded to the Scilab in the background of our website, so that they can be   used by other users. This is equivalent to a huge toolbox, and even the users   who do not have the experience of making toolbox can now share their wisdom   functions.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">    Our greatest contribution   is making our website a cloud computing platform. Our website as a server,   provide the users with network the page services, while also manage multiple   computing nodes. Each node disposes our service of Scilab, and they can be   integrated and called via a standardized way. The disposition of node is very   simple, only needing to install a node server software (one-click install), and   then each computer with network can be used as our node servers. After that they   can be integrated into the system, and run the Scilab task, to achieve the cloud   computing. By optimization of the scheduling algorithm, as well as the analysis   of information transmission between the server addresses, our platform has much   reduced the time of waiting after submit the tasks, and the users can get the   results much faster, this reflect well the idea of cloud   computing.</span></p>
+  <p><span lang="EN-US" xml:lang="EN-US">    The main features of our   website are as follows:</span></p>
+       <p><span lang="EN-US" xml:lang="EN-US">    Operation: The links for   the Scilab web version, click on the link to use the Scilab   Online.</span></p>
+      <p><span lang="EN-US" xml:lang="EN-US">    Function: The link for   users to share their functions, each function has its own source code,   instructions and use case.</span></p>
+      <p><span lang="EN-US" xml:lang="EN-US">    Show: A short video of   presentation </span></p>
+      <p><span lang="EN-US" xml:lang="EN-US">    Team: Introductions of our   members</span></p>
+      <p><span lang="EN-US" xml:lang="EN-US">    Contact: Contact   us</span></p>
+      <p><span lang="EN-US" xml:lang="EN-US">    </span><span lang="EN-US" xml:lang="EN-US"> We can login and register   via the link `Login` and `Register` on the upper-left   corner.</span></p>
+<p><span lang="EN-US" xml:lang="EN-US">    After logging in, you can   manage your account by using the bookmark on the left side of the   screen.</span></p>
+  </div>
 </div>
 <a href="PageModel.dwt"></a>     
   </div>
