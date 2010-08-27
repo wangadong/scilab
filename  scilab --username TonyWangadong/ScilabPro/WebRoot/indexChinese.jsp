@@ -83,6 +83,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
 <div id="globalIndexChinese">
+ <div id="Third">
 <!--题头开始-->
  <div id="BlueTopImage">
   <div id="LoginAndRegister">
@@ -187,13 +188,11 @@ function MM_nbGroup(event, grpName) { //v6.0
 </div>
 <!--左导航结束-->
 
-  <div id="RefreshDiv">
+  <div id="RefreshDivChinese">
 <div id="PresentationForProgram">
-   <div id="Language">
-    <div id="Chinese"><img href="indexChinese.jsp" src="images/Chinese.gif" width="50" height="34" alt="Chinese" longdesc="images/Chinese.gif" /></div><div id="English"><img href="index.jsp" src="images/English.gif" width="50" height="33" alt="English" longdesc="images/English.gif" /></div>
-  </div>
+   <div id="Language"><div id="Chinese"><a href="indexChinese.jsp" ><img src="images/Chinese.gif" width="50" height="34" alt="Chinese" longdesc="images/Chinese.gif" /></a></div><div id="English"><a href="index.jsp"><img  src="images/English.gif" width="50" height="33" alt="English" longdesc="images/English.gif" /></a></div></div>
   <p>&nbsp;</p>
-   <p><span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;</span><span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;我们来自北京航空航天大学中法工程师学院。</span><br />
+   <p><span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;</span><span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们来自北京航空航天大学中法工程师学院。</span><br />
      <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;作为国内首批通用工程师，我们充分发挥了“通用”的特点，为Scilab制作了一个云计算平台。</span><br />
      <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;首先，我们将Scilab封装成标准的服务（Web Service），<br />实现了任意一台接入网络的电脑通过浏览器就可以运行Scilab代码的功能。这样本地不需安装Scilab，用户通过访问我们的网站就可以轻松快捷的使用Scilab。</span><br />
      <span lang="ZH-CN" xml:lang="ZH-CN">&nbsp;&nbsp;&nbsp;&nbsp;我们还给注册用户提供保存任务、保存结果和修改任务等多项功能，实现了用户操作档案的个性化管理。</span><br />
@@ -228,6 +227,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         </tr>
       
     </table>
+  </div>
   </div>
 
 <div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>

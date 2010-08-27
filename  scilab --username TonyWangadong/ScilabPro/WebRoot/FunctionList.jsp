@@ -126,7 +126,7 @@ function MM_nbGroup(event, grpName) { //v6.0
       <tr>
         <td width="80"><a href="index.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavHome','',1)" onmouseover="MM_nbGroup('over','NavHome','images/HomeMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/HomeNormal.png" alt="NavHome" name="NavHome" width="80" height="43" border="0" id="index"/></a></td>
         <td width="110" ><a href="PageRun.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavOperation','',1)" onmouseover="MM_nbGroup('over','NavOperation','images/OperationMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/OperationNormal.png" alt="NavOperation" name="NavOperation" border="0"id="operation" /></a></td>
-        <td width="106" ><a href="fun_getReleasedFunList" target="_top" onclick="MM_nbGroup('down','group1','NavFunction','',1)" onmouseover="MM_nbGroup('over','NavFunction','images/FunctionMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/FunctionNormal.png" alt="NavFunction" name="NavFunction" border="0"/></a></td>
+        <td width="106" ><a href="AllFunctionList.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavFunction','',1)" onmouseover="MM_nbGroup('over','NavFunction','images/FunctionMouseOn.png','',1)" onmouseout="MM_nbGroup('out')" ><img src="images/FunctionNormal.png" alt="NavFunction" name="NavFunction" border="0"/></a></td>
         <td width="80" ><a href="Show.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavShow','',1)" onmouseover="MM_nbGroup('over','NavShow','images/ShowMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/ShowNormal.png" alt="NavShow" name="NavShow" border="0" /></a></td>
         <td width="80"><a href="Team.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavTeam','',1)" onmouseover="MM_nbGroup('over','NavTeam','images/TeamMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/TeamNormal.png" alt="NavTeam" name="NavTeam" border="0"/></a></td>
         <td width="215" ><a href="mailto:scilabecpkn@googlegroups.com" target="_top" onclick="MM_nbGroup('down','group1','NavContact','',1)" onmouseover="MM_nbGroup('over','NavContact','images/ContactMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/ContactNormal.png" alt="NavContact" name="NavContact" border="0"/></a></td>
@@ -180,7 +180,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <div id="Third">
 <!--左导航开始-->
   <div id="LeftDiv">
-  <div id="LoginPersonal" align="center">
+  <div id="LoginPersonal">
    <s:if test="#session.user!=null"><jsp:include page="AlreadyLogin.jsp"></jsp:include></s:if>
 <s:else><jsp:include page="NotLogin.jsp"></jsp:include></s:else>
     </div>
