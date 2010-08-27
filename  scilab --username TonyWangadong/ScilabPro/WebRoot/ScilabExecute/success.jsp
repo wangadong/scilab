@@ -83,7 +83,7 @@ td #N5 {
      <td width="300"><div id="N2"><s:property value="taskname"/></div></td>
      <td><div id="N3"><a href='<s:url value='/CheckTask!getResult'/>?taskname=<s:property value="taskname"/>' class="taskResult" title="<s:property value="taskname"/>" >查看结果</a></div></td>
      <td><div id="N4"><a href='<s:url value='/CheckTask!saveTask'/>?taskname=<s:property value="taskname"/>' class="taskSave">保存任务</a></div></td>
-     <td><div id="N5"><a href='<s:url value='/CheckTask!getStatue'/>?taskname=<s:property value="taskname"/>' clase="taskStatue">查询状态</a></div>
+     <td><div id="N5"><a href='<s:url value='/CheckTask!getStatue'/>?taskname=<s:property value="taskname"/>' class="taskStatue">查询状态</a></div>
   </tr>
  </table>
 </div>
