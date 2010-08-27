@@ -82,7 +82,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </head>
 <!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
-<div id="globalIndex">
+<div id="globalIndex" style="height:1600px!important; *height:1500px!important;">
 <!--题头开始-->
  <div id="BlueTopImage">
   <div id="LoginAndRegister">
@@ -173,7 +173,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--第二部分：图片轮换结束-->    
  </div>
 <!--第二部分结束--> 
-<div id="Third">
+<div id="Third" style="height:1120px!important; *height:1000px!important;">
 <!--左导航开始-->
 <div id="LeftDiv">
   <div id="LoginPersonal">
@@ -229,7 +229,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 swfobject.registerObject("FlashID");
 //-->
 </script>
-</div>
 </div>
 </body>
 </html>
