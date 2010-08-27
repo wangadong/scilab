@@ -5,7 +5,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/PageModel.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base href="<%=basePath%>"/>
 	<meta http-equiv="pragma" content="no-cache"/>
@@ -77,10 +77,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </script>
 
 <!--头文件可编辑区域-->
-<!-- InstanceBeginEditable name="doctitle" -->
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" --><title>Untitled Document</title>
-<!-- InstanceEndEditable -->
+<title>Untitled Document</title>
 </head>
 <!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
@@ -137,7 +134,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--题头结束-->
 <!--第二部分开始-->
  <div id="PictureChange">
-   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" --><img src="images/TextShow.png" width="235" height="60" alt="Show" longdesc="images/TextShow.png" /><!-- InstanceEndEditable --></div>
+   <div id=BigText><img src="images/TextShow.png" width="235" height="60" alt="Show" longdesc="images/TextShow.png" /></div>
    <div id="BandPictureLeft"><img src="images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
 <!--第二部分：图片轮换开始-->
    <div id="Bandpicture">
@@ -186,7 +183,6 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--左导航结束-->
 
   <div id="RefreshDiv">
-<!-- InstanceBeginEditable name="Refresh" -->
 <p><a>Please view the film of our Scilab Cloud Program!</a></p>
 <p>
   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="250" height="134" id="FlashID2" title="Show">
@@ -208,22 +204,20 @@ function MM_nbGroup(event, grpName) { //v6.0
       <div>
         <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
         <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
-      </div>
+        </div>
       <!--[if !IE]>-->
-    </object>
+      </object>
     <!--<![endif]-->
-  </object>
+    </object>
 </p>
-<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
+<a href="PageModel.dwt"></a>     
   </div>
   <div id="ExplicationPossible">
-  <!-- InstanceBeginEditable name="EditRegion5" -->
-  <script type="text/javascript">
+<script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID2");
 //-->
   </script>
-  <!-- InstanceEndEditable -->
   </div>
  <div id="aboutUs" align="center">
     <table width="686" height="97" border="0" align="left">
@@ -249,5 +243,5 @@ swfobject.registerObject("FlashID");
 </div>
 </div>
 </body>
-<!-- InstanceEnd --></html>
+</html>
 

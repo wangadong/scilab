@@ -192,9 +192,9 @@ function MM_nbGroup(event, grpName) { //v6.0
  <div id="ShareContent" align="left" >
    <s:form action="FunInputAction" namespace="/" method="post" cssStyle="Padding-left:10px">
       <s:textfield name="functionInfo.funName" label="Fuction Name" size="10"  maxlength="100" cssStyle="width:200px"></s:textfield><br/>
-    	<s:textarea name="functionInfo.funContent" label="Function Body" cols="41" rows="8" ></s:textarea><br/>
-    	<s:textarea name="functionInfo.funExample" label="Examples" cols="41" rows="7"></s:textarea><br/>
-    	<s:textarea name="functionInfo.funHelp" label="Remarks"cols="41" rows="7"></s:textarea><br/>
+    	<s:textarea name="functionInfo.funContent" label="Function Body" cols="41" rows="8" cssStyle="width:300px;height:150px"></s:textarea><br/>
+    	<s:textarea name="functionInfo.funExample" label="Examples" cols="41" rows="7" cssStyle="width:300px;height:150px"></s:textarea><br/>
+    	<s:textarea name="functionInfo.funHelp" label="Remarks"cols="41" rows="7" cssStyle="width:300px;height:150px"></s:textarea><br/>
     	<s:submit value="Submit" method="Input"></s:submit>
     </s:form>
   </div>
