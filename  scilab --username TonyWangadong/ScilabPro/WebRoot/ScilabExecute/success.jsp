@@ -7,32 +7,32 @@ td #N1 {
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
-	width:100px;
+	width:75px;
 }
 td #N2 {
 	border-right-width: 2px;
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
-	width:300px;
+	width:170px;
 }
 td #N3 {
 	border-right-width: 2px;
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
-	width:100px;
+	width:65px;
 }
 td #N4 {
 	border-right-width: 2px;
 	border-right-style: solid;
 	border-right-color: #000;
 	height:20px;
-	width:100px;
+	width:65px;
 }
 td #N5 {
     height:20px;
-	width:100px;
+	width:65px;
 }
 #TaskListBottom {
 	border-top-width: 1px;
@@ -51,7 +51,7 @@ td #N5 {
 	border-bottom-style: solid;
 	border-bottom-color: #000;
 	
-	width:730px;
+	width:455px;
 }
 -->
 </style>
@@ -80,7 +80,7 @@ td #N5 {
  <table border="0" height="20" cellspacing="0">
   <tr>
      <td><div id="N1">任务名称：</div></td>
-     <td width="300"><div id="N2"><s:property value="taskname"/></div></td>
+     <td><div id="N2"><s:property value="taskname"/></div></td>
      <td><div id="N3"><a href='<s:url value='/CheckTask!getResult'/>?taskname=<s:property value="taskname"/>' class="taskResult" title="<s:property value="taskname"/>" >查看结果</a></div></td>
      <td><div id="N4"><a href='<s:url value='/CheckTask!saveTask'/>?taskname=<s:property value="taskname"/>' class="taskSave">保存任务</a></div></td>
      <td><div id="N5"><a href='<s:url value='/CheckTask!getStatue'/>?taskname=<s:property value="taskname"/>' class="taskStatue">查询状态</a></div>
