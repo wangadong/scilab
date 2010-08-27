@@ -37,7 +37,7 @@ public class NodesManager {
 			Element element = (Element) it.next();
 			SciNode node = new SciNode(Integer.parseInt(element.attribute("ID")
 					.getValue()), element.attribute("NodeName").getValue(),
-					element.attribute("IPAddress").getValue(), Integer
+					element.attribute("IPAddress").getValue(),element.attribute("HostIP").getValue(), Integer
 							.parseInt(element.attribute("CpuCoreNum")
 									.getValue()), Float.parseFloat(element
 							.attribute("MainFrequence").getValue()));

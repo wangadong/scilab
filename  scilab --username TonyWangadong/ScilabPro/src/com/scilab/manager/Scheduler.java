@@ -64,7 +64,7 @@ public class Scheduler implements Runnable {
 					currentTask.setNodesId(currentNode.getID());
 					currentTask.setNodesIp(currentNode.getIPAddress());
 					currentTask.setNodeName(currentNode.getNodeName());
-					currentTask.setHostIP(hostIP);// 设置任务节点信息
+					currentTask.setHostIP(currentNode.getHostIP());// 设置任务节点信息
 					exec.execute(currentTask);// 提交当前任务到计算节点服务
 					TaskDispatcher.getInstance().addTaskToNode(
 							currentNode.getID());// 当前节点任务数加1

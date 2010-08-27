@@ -16,6 +16,7 @@ public class SciNode implements Comparable<SciNode> {
 	private volatile int TaskNumCnt;// 节点正在运行任务数
 	private float MainFrequence;// 节点服务器CPU主频
 	private float NodePriorityValue;// 节点调度优先值
+	private String HostIP;//与节点对应的主服务器地址
 
 	/**
 	 * 节点信息构造函数
@@ -31,11 +32,12 @@ public class SciNode implements Comparable<SciNode> {
 	 * @param MainFrequence
 	 *            节点服务器CPU主频
 	 */
-	public SciNode(int ID, String NodeName, String IPAddress, int CpuCoreNum,
+	public SciNode(int ID, String NodeName, String IPAddress,String HostIP, int CpuCoreNum,
 			float MainFrequence) {
 		this.ID = ID;
 		this.NodeName = NodeName;
 		this.IPAddress = IPAddress;
+		this.HostIP=HostIP;
 		this.CpuCoreNum = CpuCoreNum;
 		this.MainFrequence = MainFrequence;
 	}
@@ -114,6 +116,14 @@ public class SciNode implements Comparable<SciNode> {
 
 	public float getMainFrequence() {
 		return MainFrequence;
+	}
+
+	public String getHostIP() {
+		return HostIP;
+	}
+
+	public void setHostIP(String hostIP) {
+		HostIP = hostIP;
 	}
 
 	/**
