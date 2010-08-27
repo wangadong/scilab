@@ -189,8 +189,8 @@ function MM_nbGroup(event, grpName) { //v6.0
 
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" --> 
-<table border=1 cellspacing=0 cellpadding=0 width="800" height="387">
-	  <tr><td width="100">　Task name </td><td>　　　${taskInfo.taskName}</td></tr>
+<table border=1 cellspacing=0 cellpadding=0 width="533" height="387">
+	  <tr><td width="100">　Task name </td><td width="427">　　　${taskInfo.taskName}</td></tr>
 	    </br>
 	  <tr><td width="100">　Task content</td><td><div style="height:240;overflow:auto">${taskInfo.taskContent}</div></td></tr>
 	    </br>

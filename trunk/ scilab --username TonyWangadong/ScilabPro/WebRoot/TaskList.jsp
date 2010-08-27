@@ -139,7 +139,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--题头结束-->
 <!--第二部分开始-->
  <div id="PictureChange">
-   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" -->EditRegion3<!-- InstanceEndEditable --></div>
+   <div id=BigText><!-- InstanceBeginEditable name="EditRegion3" --><!-- InstanceEndEditable --></div>
    <div id="BandPictureLeft"><img src="images/BandPictureLeft.png" width="696" height="172" alt="BandPictureLeft" longdesc="../images/BandPictureLeft.png" /></div>
 <!--第二部分：图片轮换开始-->
    <div id="Bandpicture">
@@ -203,7 +203,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 	   　<a href="PageRun.jsp">Continue to upload tasks</a>　　　<!-- InstanceEndEditable --><a href="PageModel.dwt"></a>     
   </div>
   <div id="ExplicationPossible">
-  <!-- InstanceBeginEditable name="EditRegion5" -->EditRegion5<!-- InstanceEndEditable -->
+  <!-- InstanceBeginEditable name="EditRegion5" --><!-- InstanceEndEditable -->
   </div>
  <div id="aboutUs" align="center">
     <table width="686" height="97" border="0" align="left">
