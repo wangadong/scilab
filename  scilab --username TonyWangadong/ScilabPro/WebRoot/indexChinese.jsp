@@ -174,7 +174,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--第二部分：图片轮换结束-->    
  </div>
 <!--第二部分结束--> 
-<div id="Third">
+<div id="Third" style="height:1000px;">
 <!--左导航开始-->
 <div id="LeftDiv">
   <div id="LoginPersonal">
