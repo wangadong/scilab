@@ -175,7 +175,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <div id="Third">
 <!--左导航开始-->
   <div id="LeftDiv">
-  <div id="LoginPersonal" align="center">
+  <div id="LoginPersonal">
    <s:if test="#session.user!=null"><jsp:include page="AlreadyLogin.jsp"></jsp:include></s:if>
 <s:else><jsp:include page="NotLogin.jsp"></jsp:include></s:else>
     </div>
