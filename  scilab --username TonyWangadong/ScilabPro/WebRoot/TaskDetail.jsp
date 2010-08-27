@@ -189,17 +189,17 @@ function MM_nbGroup(event, grpName) { //v6.0
 
   <div id="RefreshDiv">
 <!-- InstanceBeginEditable name="Refresh" --> 
-<table border=1 cellspacing=0 cellpadding=0 width="533" height="387">
-	  <tr><td width="100">　Task name </td><td width="427">　　　${taskInfo.taskName}</td></tr>
+<table border=1 cellspacing=0 cellpadding=0 width="533">
+	  <tr><td width="110" height="30">　TaskName </td><td width="427">　　　${taskInfo.taskName}</td></tr>
 	    </br>
-	  <tr><td width="100">　Task content</td><td><div style="height:240;overflow:auto">${taskInfo.taskContent}</div></td></tr>
+	  <tr><td width="110" height="100">　TaskContent</td><td><div style="overflow:auto">${taskInfo.taskContent}</div></td></tr>
 	    </br>
-	  <tr><td width="100">　Submit time </td><td>　　　${taskInfo.saveTime}</td></tr>
+	  <tr><td width="110" height="30">　SubmitTime </td><td>　　　${taskInfo.saveTime}</td></tr>
 	  </table>
 	  <br><br>
 	    <div id="myResult">     
 		
-			<a href='<s:url value='/CheckTask!getResult'/>?taskname=${taskInfo.taskName}' class="taskResult" title="<s:property value="taskname"/>" >查看结果</a></div></td>
+			<a href='<s:url value='/CheckTask!getResult'/>?taskname=${taskInfo.taskName}' class="taskResult" title="<s:property value="taskname"/>" >Get Task Result</a></div></td>
 			<a href="task_deleteById?id=${taskInfo.taskId}">Delete this task</a>　　　
 			<a href="task_getAllTask">Back to the task list</a>
 			<div id="myajaxdiv"></div><div id="myajaxdiv"></div>
