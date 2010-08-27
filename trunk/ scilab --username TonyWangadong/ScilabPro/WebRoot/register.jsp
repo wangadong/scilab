@@ -16,10 +16,10 @@
 						success: function(e){
 							if(e=='exist'){
 								b = false;
-								$("#isExist").text("用户名“"+username+"”已存在，请重新输入！").attr("color", "red");
+								$("#isExist").text("Username“"+username+"”is still existed，please change!").attr("color", "red");
 							}else if(e=="notexist"){
 								b = true;
-								$("#isExist").text("用户名“"+username+"”可以使用！").attr("color", "green");
+								$("#isExist").text("Username“"+username+"”can be used！").attr("color", "green");
 							}
 						}
 					});
@@ -29,7 +29,7 @@
 				var username = $("#userName").val();
 				username = $.trim(username);
 				if(username.length<1){
-					$("#isExist").text("请输入用户名！").attr("color", "red");
+					$("#isExist").text("Please enter the username！").attr("color", "red");
 					return false;
 				}
 				if(b){
