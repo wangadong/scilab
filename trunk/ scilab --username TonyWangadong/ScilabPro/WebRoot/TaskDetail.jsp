@@ -217,7 +217,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 	  <br><br>
 	    <div id="myResult">     
 		
-			<a href='<s:url value='/CheckTask!getResult'/>?taskname=<s:property value="taskname"/>' class="taskResult" title="<s:property value="taskname"/>" >查看结果</a></div></td>
+			<a href='<s:url value='/CheckTask!getResult'/>?taskname=${taskInfo.taskName}' class="taskResult" title="<s:property value="taskname"/>" >查看结果</a></div></td>
 			<a href="task_deleteById?id=${taskInfo.taskId}">Delete this task</a>　　　
 			<a href="task_getAllTask">Back to the task list</a>
 			<div id="myajaxdiv"></div><div id="myajaxdiv"></div>
