@@ -78,7 +78,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </script>
 
 <!--头文件可编辑区域-->
-<title>Index</title>
+<title>ScilabCloud-Index</title>
 </head>
 <!--布局详见style.css-->
 <body onload="MM_preloadImages('images/HomeMouseOn.png','images/OperationMouseOn.png','images/FunctionMouseOn.png','images/ShowMouseOn.png','images/TeamMouseOn.png','images/ContactMouseOn.png','images/LinkMouseOn.png','images/BBSMouseOn.png')">
@@ -127,7 +127,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td width="80"><a href="Team.jsp" target="_top" onclick="MM_nbGroup('down','group1','NavTeam','',1)" onmouseover="MM_nbGroup('over','NavTeam','images/TeamMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/TeamNormal.png" alt="NavTeam" name="NavTeam" border="0"/></a></td>
         <td width="215" ><a href="mailto:scilabecpkn@googlegroups.com" target="_top" onclick="MM_nbGroup('down','group1','NavContact','',1)" onmouseover="MM_nbGroup('over','NavContact','images/ContactMouseOn.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/ContactNormal.png" alt="NavContact" name="NavContact" border="0"/></a></td>
         <td><a href="Link.jsp" target="_top" onClick="MM_nbGroup('down','group1','NavLink','',1)" onMouseOver="MM_nbGroup('over','NavLink','images/LinkMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavLink" src="images/LinkNormal.png" border="0" alt="NavLink" onLoad="" /></a></td>
-        <td><a href="www.scilab.org.cn/bbs/" target="_top" onClick="MM_nbGroup('down','group1','NavBBS','',1)" onMouseOver="MM_nbGroup('over','NavBBS','images/BBSMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavBBS" src="images/BBSNormal.png" border="0" alt="NavBBS" onLoad="" /></a></td>
+        <td><a href="http://www.scilab.org.cn" target="_top" onClick="MM_nbGroup('down','group1','NavBBS','',1)" onMouseOver="MM_nbGroup('over','NavBBS','images/BBSMouseOn.png','',1)" onMouseOut="MM_nbGroup('out')"><img name="NavBBS" src="images/BBSNormal.png" border="0" alt="NavBBS" onLoad="" /></a></td>
       </tr>
     </table>
   </div>
