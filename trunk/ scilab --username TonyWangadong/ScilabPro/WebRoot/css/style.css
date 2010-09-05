@@ -286,7 +286,7 @@ body{/*全局灰色背景*/
 }
 #RefreshDiv {
 	float: left;
-	height: 700px;
+	height: 1000px;
 	width:450px;
 	font-size: 14px;
 }
