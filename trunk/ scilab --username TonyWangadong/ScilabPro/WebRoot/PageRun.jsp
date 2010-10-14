@@ -293,7 +293,8 @@ plot(a);
 		<a href="PageModel.dwt"></a>     
   </div>
 
- 
+<div class="clear"></div>
+
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");

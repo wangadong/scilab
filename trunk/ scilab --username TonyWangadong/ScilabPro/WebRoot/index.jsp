@@ -141,7 +141,7 @@ function MM_nbGroup(event, grpName) { //v6.0
    <div id="Bandpicture">
  <div class="fcnt" id="ppt">
     	<div class="mimg" id="mpc">
-        	<div style="display:block"><a href="PageRun.jsp"><img src="images/Picture0.jpg" alt="" /></a></div>
+        	<div style="display:block;"><a href="PageRun.jsp"><img src="images/Picture0.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture2.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture1.jpg" alt="" /></a></div>
             <div><a href="PageRun.jsp"><img src="images/Picture3.jpg" alt="" /></a></div>
@@ -189,41 +189,37 @@ function MM_nbGroup(event, grpName) { //v6.0
 
   <div id="RefreshDiv">
 <div id="PresentationForProgram">
-    <div id="Language"><div id="Chinese"><a href="indexChinese.jsp" ><img src="images/Chinese.gif" width="50" height="34" alt="Chinese" longdesc="images/Chinese.gif" /></a></div><div id="English"><a href="index.jsp"><img  src="images/English.gif" width="50" height="33" alt="English" longdesc="images/English.gif" /></a></div></div>
-    <p>&nbsp;</p>
-    <p><span lang="EN-US" xml:lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are from Beijing University of Aeronautics and   Astronautics,école Centrale de Pékin.</span></p>
-    <p><span lang="EN-US" xml:lang="EN-US">    As the first general   engineers, we give full play to the `general` character, we produced a cloud   computing platform for Scilab.</span></p>
-    <p><span lang="EN-US" xml:lang="EN-US">    Firstly, we package the   Scilab as a standard service---Web Service, so that each computer which accesses   the network can run Scilab through Browser, Therefore, we do not need to install   Scilab on our computer. Users can use Scilab easily by using our website. At the   same time, we also provide to save the tasks, to save the results and to modify   tasks for registered users. We achieve the personalized management for   users.</span></p>
-    <p><span lang="EN-US" xml:lang="EN-US">    And we also design a number   of interactive features, we offer a platform for sharing functions. Registered   users can upload their own function after login, and some powerful functions can   be loaded to the Scilab in the background of our website, so that they can be   used by other users. This is equivalent to a huge toolbox, and even the users   who do not have the experience of making toolbox can now share their wisdom   functions.</span></p>
-    <p><span lang="EN-US" xml:lang="EN-US">    Our greatest contribution   is making our website a cloud computing platform. Our website as a server,   provide the users with network the page services, while also manage multiple   computing nodes. Each node disposes our service of Scilab, and they can be   integrated and called via a standardized way. The disposition of node is very   simple, only needing to install a node server software (one-click install), and   then each computer with network can be used as our node servers. After that they   can be integrated into the system, and run the Scilab task, to achieve the cloud   computing. By optimization of the scheduling algorithm, as well as the analysis   of information transmission between the server addresses, our platform has much   reduced the time of waiting after submit the tasks, and the users can get the   results much faster, this reflect well the idea of cloud   computing.</span></p>
-  <p><span lang="EN-US" xml:lang="EN-US">    The main features of our   website are as follows:</span></p>
-       <p><span lang="EN-US" xml:lang="EN-US">    Operation: The links for   the Scilab web version, click on the link to use the Scilab   Online.</span></p>
-      <p><span lang="EN-US" xml:lang="EN-US">    Function: The link for   users to share their functions, each function has its own source code,   instructions and use case.</span></p>
-      <p><span lang="EN-US" xml:lang="EN-US">    Show: A short video of   presentation </span></p>
-      <p><span lang="EN-US" xml:lang="EN-US">    Team: Introductions of our   members</span></p>
-      <p><span lang="EN-US" xml:lang="EN-US">    Contact: Contact   us</span></p>
-      <p><span lang="EN-US" xml:lang="EN-US">    </span><span lang="EN-US" xml:lang="EN-US"> We can login and register   via the link `Login` and `Register` on the upper-left   corner.</span></p>
-<p><span lang="EN-US" xml:lang="EN-US">    After logging in, you can   manage your account by using the bookmark on the left side of the   screen.</span></p>
+    <div id="Language"><div id="Chinese"><a href="indexChinese.jsp" ><img src="images/Chinese.jpg" width="22" height="15" alt="简体中文" />&nbsp;简体中文</a></div><div id="English"><a href="index.jsp"><img src="images/English.jpg" width="26" height="15" alt="English" />&nbsp;English</a></div></div>
+    <div class="clear"></div>
+    <div id="art">
+    <p><span lang="EN-US" xml:lang="EN-US">We are from Beijing University of Aeronautics and Astronautics, Ecole Centrale de Pékin.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">As the first general engineers, we give full play to the `general` character, we produced a cloud computing platform for Scilab.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Firstly, we package the Scilab as a standard service--Web Service, so that each computer which accesses the network can run Scilab through Browser, Therefore, we do not need to install Scilab on our computer. Users can use Scilab easily by using our website. At the same time, we also provide to save the tasks, to save the results and to modify tasks for registered users. We achieve the personalized management for users.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">And we also design a number of interactive features, we offer a platform for sharing functions. Registered users can upload their own function after login, and some powerful functions can be loaded to the Scilab in the background of our website, so that they can be used by other users. This is equivalent to a huge toolbox, and even the users who do not have the experience of making toolbox can now share their wisdom functions.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Our greatest contribution is making our website a cloud computing platform. Our website as a server, provide the users with network the page services, while also manage multiple computing nodes. Each node disposes our service of Scilab, and they can be integrated and called via a standardized way. The disposition of node is very simple, only needing to install a node server software (one-click install), and then each computer with network can be used as our node servers. After that they can be integrated into the system, and run the Scilab task, to achieve the cloud computing. By optimization of the scheduling algorithm, as well as the analysis of information transmission between the server addresses, our platform has much reduced the time of waiting after submit the tasks, and the users can get the results much faster, this reflect well the idea of cloud computing.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">The main features of our website are as follows:</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Operation: The links for the Scilab web version, click on the link to use the Scilab Online.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Function: The link for users to share their functions, each function has its own source code, instructions and use case.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Show: A short video of presentation </span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Team: Introductions of our members</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">Contact: Contact us</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">We can login and register via the link `Login` and `Register` on the upper-left corner.</span></p>
+    <p><span lang="EN-US" xml:lang="EN-US">After logging in, you can manage your account by using the bookmark on the left side of the screen.</span></p>
+    </div>
   </div>
 </div>
 <a href="PageModel.dwt"></a>     
   </div>
-  <div id="aboutUs" align="center">
-    <table width="686" height="97" border="0" align="left">
-      <tr>
-        <td width="680" height="23" align="center">This site is managed by The Scilab Cloud Group.</td>
-        </tr>
-      <tr>
-        <td height="19" align="center">Inquiries specific to page content can be made via the article navigation at the top of each page.</td>
-        </tr>
-      <tr>
-        <td height="23" align="center">Ecole Centrale de Pekin</td>
-        </tr>
-      
-    </table>
+<div class="clear"></div>
+<div id="footer">
+  <div id="aboutUs">
+       <p>This site is managed by The Scilab Cloud Group.</p>
+       <p>Inquiries specific to page content can be made via the article navigation at the top of each page.</p>
+       <p>Ecole Centrale de Pekin</p>
   </div>
 
 <div id="EcpknLogo"><img src="images/ecpknLOGO.png" alt="ecpknLOGO" longdesc="images/ecpknLOGO.png" /></div>
+</div>
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
